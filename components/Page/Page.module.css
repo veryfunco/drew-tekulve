@@ -13,3 +13,24 @@
   max-width: 1280px;
   padding: var(--spacing-base);
 }
+
+.Footer {
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding-bottom: var(--spacing-loose);
+}
+
+.SocialIconsContainer {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.SocialIcon {
+  margin: 0 var(--spacing-tight);
+}
+
+.CopyrightContainer {
+  text-align: right;
+}
