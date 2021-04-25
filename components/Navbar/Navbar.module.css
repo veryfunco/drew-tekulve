@@ -6,6 +6,11 @@
   text-transform: uppercase;
 }
 
+.Title {
+  font-size: var(--font-navbar);
+}
+
 .Link {
+  font-size: var(--font-navbar);
   margin: 0 var(--spacing-base);
 }

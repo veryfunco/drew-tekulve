@@ -3,7 +3,10 @@
 }
 
 :root {
-  --base-size: 16px;
+  --base-size: 14px;
+
+  --font-normal: 1rem;
+  --font-navbar: 1.142rem; /* roughly 16px */
 
   --spacing-tight: 0.5rem;
   --spacing-base: 1rem;
