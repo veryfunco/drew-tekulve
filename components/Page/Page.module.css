@@ -1,0 +1,9 @@
+.Page {
+  background: #000;
+}
+
+.Container {
+  margin: auto;
+  max-width: 1280px;
+  padding: 1rem;
+}
