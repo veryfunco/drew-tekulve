@@ -1,0 +1,11 @@
+.Container {
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  text-transform: uppercase;
+}
+
+.Link {
+  margin: 0 1rem;
+}
