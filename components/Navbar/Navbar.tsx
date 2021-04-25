@@ -9,7 +9,7 @@ export function Navbar() {
       </div>
 
       <div>
-        <Link href="/work">
+        <Link href="/">
           <a className={styles.Link}>Work</a>
         </Link>
 

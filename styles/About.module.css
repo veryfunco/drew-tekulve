@@ -1,0 +1,8 @@
+.Container {
+  text-align: center;
+}
+
+.Description {
+  margin: calc(var(--spacing-base) * 10) auto;
+  max-width: 600px;
+}

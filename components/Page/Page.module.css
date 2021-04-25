@@ -1,5 +1,11 @@
 .Page {
   background: var(--color-black);
+  color: var(--color-white);
+  min-height: 100vh;
+}
+
+.Page-blue {
+  background: var(--color-blue);
 }
 
 .Container {

@@ -2,7 +2,7 @@
   color: #fff;
   display: flex;
   justify-content: space-between;
-  padding: var(--spacing-loose);
+  padding: var(--spacing-loose) 0;
   text-transform: uppercase;
 }
 
