@@ -8,6 +8,7 @@
   --font-normal: 1rem;
   --font-navbar: 1.142rem; /* roughly 16px */
 
+  --spacing-extra-tight: 0.25rem;
   --spacing-tight: 0.5rem;
   --spacing-base: 1rem;
   --spacing-loose: 1.5rem;

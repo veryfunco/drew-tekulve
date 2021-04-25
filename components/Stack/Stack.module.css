@@ -1,0 +1,8 @@
+.Stack {
+  display: flex;
+  margin: 0 calc(var(--spacing-extra-tight) * -1);
+}
+
+.Child {
+  padding: 0 var(--spacing-extra-tight);
+}
