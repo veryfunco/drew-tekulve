@@ -1,0 +1,1 @@
+export { homeData } from "./home";
