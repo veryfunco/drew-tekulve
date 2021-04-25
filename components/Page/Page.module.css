@@ -1,9 +1,9 @@
 .Page {
-  background: #000;
+  background: var(--color-black);
 }
 
 .Container {
   margin: auto;
   max-width: 1280px;
-  padding: 1rem;
+  padding: var(--spacing-base);
 }

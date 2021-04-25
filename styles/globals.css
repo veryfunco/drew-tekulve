@@ -1,3 +1,19 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --base-size: 16px;
+
+  --spacing-tight: 0.5rem;
+  --spacing-base: 1rem;
+  --spacing-loose: 1.5rem;
+
+  --color-white: #fff;
+  --color-black: #000;
+  --color-blue: #1c19c7;
+}
+
 @font-face {
   font-family: "Max Fett";
   src: url("/fonts/MaxFett/MaaxFett-Black.otf");
@@ -14,14 +30,10 @@
   font-display: swap;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 html,
 body {
   font-family: "Suisse Intl Mono", monospace;
-  font-size: 16px;
+  font-size: var(--base-size);
   margin: 0;
   padding: 0;
 }
