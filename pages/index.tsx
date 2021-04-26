@@ -41,7 +41,7 @@ export default function Home(
       <div className={styles.ProjectsContainer}>
         <p className={styles.FilterTitle}>Filter work by category</p>
 
-        <Stack>
+        <Stack spacing="extraTight" align="center">
           <Button
             onClick={() => handleCategoryButtonClick(null)}
             wide

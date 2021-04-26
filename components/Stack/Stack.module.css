@@ -1,8 +1,37 @@
 .Stack {
   display: flex;
-  margin: 0 calc(var(--spacing-extra-tight) * -1);
+  flex-wrap: wrap;
+  margin: calc(var(--spacing-base) * -1);
+}
+
+.Stack-alignCenter {
+  align-items: center;
+}
+
+.Stack-justifyCenter {
+  justify-content: center;
+}
+
+.Stack-tight {
+  margin: calc(var(--spacing-tight) * -1);
+}
+.Stack-extraTight {
+  margin: calc(var(--spacing-extra-tight) * -1);
+}
+.Stack-loose {
+  margin: calc(var(--spacing-loose) * -1);
 }
 
 .Child {
-  padding: 0 var(--spacing-extra-tight);
+  padding: var(--spacing-base);
+}
+
+.Stack-tight .Child {
+  padding: var(--spacing-tight);
+}
+.Stack-extraTight .Child {
+  padding: var(--spacing-extra-tight);
+}
+.Stack-loose .Child {
+  padding: var(--spacing-loose);
 }
