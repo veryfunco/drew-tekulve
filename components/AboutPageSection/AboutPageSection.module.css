@@ -1,0 +1,21 @@
+.Container {
+  margin: calc(var(--spacing-extra-loose) * 5) 0;
+  text-align: center;
+}
+
+.Container:first-of-type {
+  margin-top: 0;
+}
+
+.Title {
+  text-transform: uppercase;
+}
+
+.Lead {
+  margin: var(--spacing-loose) auto;
+  max-width: 475px;
+}
+
+.Lead-wide {
+  max-width: 600px;
+}

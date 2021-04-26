@@ -12,29 +12,7 @@
   max-width: 600px;
 }
 
-.ContentContainer {
-  text-align: center;
-}
-
-.Description {
-  margin: 0 auto var(--spacing-extra-loose);
-  max-width: 600px;
-}
-
-.ClientsContainer {
-  margin: calc(var(--spacing-extra-loose) * 5) 0;
-}
-
-.ClientsTitle {
-  text-transform: uppercase;
-}
-
-.ClientsLead {
-  margin: var(--spacing-loose) auto 0;
-  max-width: 475px;
-}
-
 .ClientLogosContainer {
-  margin: calc(var(--spacing-extra-loose) * 2) auto;
+  margin: var(--spacing-extra-loose) auto;
   max-width: 800px;
 }
