@@ -9,3 +9,13 @@
 .ProjectsContainer {
   margin: var(--spacing-base) 0;
 }
+
+.FilterTitle {
+  text-transform: uppercase;
+}
+
+.ProjectsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: var(--spacing-tight);
+}

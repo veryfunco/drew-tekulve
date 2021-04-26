@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { InferGetStaticPropsType } from "next";
+import Link from "next/link";
 
 import { Button } from "../components/Button";
 import { Navbar } from "../components/Navbar";
@@ -10,11 +11,12 @@ import { homeData } from "../lib/api";
 import styles from "../styles/Home.module.css";
 
 export const getStaticProps = async () => {
-  const { projectCategoryCollection } = await homeData();
+  const { projectCategoryCollection, projectCollection } = await homeData();
 
   return {
     props: {
       categories: projectCategoryCollection.items,
+      projects: projectCollection.items,
     },
   };
 };
@@ -37,6 +39,8 @@ export default function Home(
       </div>
 
       <div className={styles.ProjectsContainer}>
+        <p className={styles.FilterTitle}>Filter work by category</p>
+
         <Stack>
           <Button
             onClick={() => handleCategoryButtonClick(null)}
@@ -56,6 +60,28 @@ export default function Home(
             </Button>
           ))}
         </Stack>
+
+        <div className={styles.ProjectsGrid}>
+          {props.projects.map((project) => {
+            if (
+              selectedCategory != null &&
+              project.category.title !== selectedCategory
+            ) {
+              return null;
+            }
+
+            return (
+              <Link key={project.slug} href={`/projects/${project.slug}`}>
+                <a>
+                  <div>
+                    <h3>{project.title}</h3>
+                    <p>{project.year}</p>
+                  </div>
+                </a>
+              </Link>
+            );
+          })}
+        </div>
       </div>
     </Page>
   );
