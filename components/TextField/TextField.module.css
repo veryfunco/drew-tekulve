@@ -1,0 +1,22 @@
+.Input {
+  background: none;
+  border: 1px solid var(--color-white);
+  border-radius: 5px;
+  box-shadow: 0 0 0 2px transparent;
+  color: var(--color-white);
+  display: block;
+  font: inherit;
+  outline: none;
+  padding: var(--spacing-base) var(--spacing-base);
+  transition: box-shadow 150ms ease-out;
+  width: 100%;
+}
+
+.Input::placeholder {
+  color: var(--color-white);
+  opacity: 0.75;
+}
+
+.Input:focus {
+  box-shadow: 0 0 0 2px var(--color-white);
+}
