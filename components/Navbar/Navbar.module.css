@@ -1,16 +1,35 @@
 .Container {
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.Content {
+  align-items: center;
   color: #fff;
-  display: flex;
-  justify-content: space-between;
-  padding: var(--spacing-loose) 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: var(--navbar-height);
+  justify-content: center;
+  margin: auto;
+  max-width: var(--page-max-width);
+  padding: var(--spacing-base);
   text-transform: uppercase;
+  width: 100%;
 }
 
 .Title {
   font-size: var(--font-navbar);
 }
 
+.Logo {
+  display: block;
+  margin: auto;
+  width: 150px;
+}
+
 .Link {
   font-size: var(--font-navbar);
-  margin: 0 var(--spacing-base);
 }

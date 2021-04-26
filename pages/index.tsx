@@ -9,6 +9,7 @@ import { Stack } from "../components/Stack";
 import { homeData } from "../lib/api";
 
 import styles from "../styles/Home.module.css";
+import classNames from "classnames";
 
 export const getStaticProps = async () => {
   const { projectCategoryCollection, projectCollection } = await homeData();
@@ -32,10 +33,17 @@ export default function Home(
 
   return (
     <Page title="Work">
-      <Navbar />
+      <Navbar hideLogo />
 
       <div className={styles.HeroContainer}>
-        <p>Home</p>
+        <iframe
+          title="vimeo-player"
+          src="https://player.vimeo.com/video/527679440?title=0&byline=0&portrait=0&background=1"
+          className={styles["HeroContainer-cover"]}
+          frameBorder="0"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowFullScreen
+        ></iframe>
       </div>
 
       <div className={styles.ProjectsContainer}>

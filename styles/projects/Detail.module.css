@@ -1,5 +1,6 @@
 .DetailsContainer {
   text-align: center;
+  padding-top: var(--navbar-height);
 }
 
 .Title {

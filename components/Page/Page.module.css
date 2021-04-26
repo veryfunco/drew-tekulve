@@ -10,8 +10,10 @@
 
 .Container {
   margin: auto;
-  max-width: 1280px;
-  padding: var(--spacing-base);
+  max-width: var(--page-max-width);
+  padding: 0 var(--spacing-base) var(--spacing-base);
+  position: relative;
+  width: 100%;
 }
 
 .Footer {
