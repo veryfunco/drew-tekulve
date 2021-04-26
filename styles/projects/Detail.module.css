@@ -1,0 +1,9 @@
+.DetailsContainer {
+  text-align: center;
+}
+
+.Title {
+  font-family: "Max Fett", sans-serif;
+  font-size: 30px;
+  text-transform: uppercase;
+}
