@@ -9,6 +9,8 @@ interface Props {
   transparent?: boolean;
   type?: ButtonHTMLAttributes<HTMLButtonElement>["type"];
   wide?: boolean;
+  loading?: boolean;
+  disabled?: boolean;
 }
 
 export function Button({
@@ -17,18 +19,23 @@ export function Button({
   wide = false,
   transparent = false,
   type = "button",
+  loading,
+  disabled,
 }: Props) {
   return (
     <button
       className={classnames(
         styles.Button,
         wide && styles["Button-wide"],
-        transparent && styles["Button-transparent"]
+        transparent && styles["Button-transparent"],
+        loading && styles["Button-loading"]
       )}
       onClick={onClick}
       type={type}
+      disabled={disabled}
     >
-      {children}
+      <div className={styles.Spinner}></div>
+      <div className={styles.Content}>{children}</div>
     </button>
   );
 }
