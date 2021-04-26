@@ -7,7 +7,11 @@ export default function About() {
     <Page title="About" background="blue">
       <Navbar />
 
-      <div className={styles.Container}>
+      <div className={styles.HeroContainer}>
+        <img className={styles.Logo} src="/images/logo.svg" />
+      </div>
+
+      <div className={styles.ContentContainer}>
         <p className={styles.Description}>
           Everything from TV shows and commercials to feature films that have
           screened at Sundance Film Festival. Working primarily in DaVinci

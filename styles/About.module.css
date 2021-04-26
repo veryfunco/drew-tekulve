@@ -1,8 +1,23 @@
-.Container {
+.HeroContainer {
+  align-items: center;
+  display: flex;
+  height: 65vh;
+  justify-content: center;
+  min-height: 100px;
+  padding: 0 var(--spacing-extra-loose);
+}
+
+.Logo {
+  margin: auto;
+  max-width: 600px;
+}
+
+.ContentContainer {
+  /* margin-bottom: calc(var(--spacing-extra-loose) * 5); */
   text-align: center;
 }
 
 .Description {
-  margin: calc(var(--spacing-base) * 10) auto;
+  margin: 0 auto var(--spacing-extra-loose);
   max-width: 600px;
 }
