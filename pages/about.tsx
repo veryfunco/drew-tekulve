@@ -1,4 +1,5 @@
 import { InferGetStaticPropsType } from "next";
+import { FormEvent, useState } from "react";
 import { AboutPageSection } from "../components/AboutPageSection";
 import { Button } from "../components/Button";
 import { Navbar } from "../components/Navbar";
@@ -24,6 +25,39 @@ export const getStaticProps = async () => {
 export default function About(
   props: InferGetStaticPropsType<typeof getStaticProps>
 ) {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+  const [formState, setFormState] = useState<
+    "idle" | "success" | "error" | "loading"
+  >("idle");
+
+  async function handleFormSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+
+    setFormState("loading");
+
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name,
+        email,
+        message,
+        subject,
+      }),
+    });
+
+    if (response.status === 200) {
+      setFormState("success");
+    } else {
+      setFormState("error");
+    }
+  }
+
   return (
     <Page title="About" background="blue">
       <Navbar />
@@ -60,35 +94,39 @@ export default function About(
         title="Contact"
         lead="Want to work together? Describe your project below and I’ll send you a quote."
       >
-        <form
-          onSubmit={(e) => e.preventDefault()}
-          className={styles.ContactForm}
-        >
+        <form onSubmit={handleFormSubmit} className={styles.ContactForm}>
           <Stack direction="column" spacing="tight" justify="center">
-            <TextField
-              placeholder="Name"
-              value=""
-              onChange={(value) => console.log(value)}
-            />
-            <TextField
-              placeholder="Email"
-              value=""
-              onChange={(value) => console.log(value)}
-            />
+            <TextField placeholder="Name" value={name} onChange={setName} />
+
+            <TextField placeholder="Email" value={email} onChange={setEmail} />
+
             <TextField
               placeholder="Subject"
-              value=""
-              onChange={(value) => console.log(value)}
+              value={subject}
+              onChange={setSubject}
             />
+
             <TextField
               placeholder="Message"
               multiline
-              value=""
-              onChange={(value) => console.log(value)}
+              value={message}
+              onChange={setMessage}
             />
-            <Button type="submit" wide>
+
+            <Button
+              type="submit"
+              wide
+              disabled={formState === "loading"}
+              loading={formState === "loading"}
+            >
               Send
             </Button>
+
+            {formState === "success" ? (
+              <p>Email sent! I'll get back to you soon.</p>
+            ) : formState === "error" ? (
+              <p>Uh oh...something went wrong. Try again later.</p>
+            ) : null}
           </Stack>
         </form>
       </AboutPageSection>
