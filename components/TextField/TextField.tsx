@@ -35,15 +35,14 @@ export function TextField({
   const commonProps: CommonInputProps = {
     placeholder,
     required,
+    value,
     className: styles.Input,
     onChange: handleChange,
   };
 
   return multiline ? (
-    <textarea {...commonProps} rows={5}>
-      {value}
-    </textarea>
+    <textarea {...commonProps} rows={5} />
   ) : (
-    <input {...commonProps} value={value} />
+    <input {...commonProps} />
   );
 }
