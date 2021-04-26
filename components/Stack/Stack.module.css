@@ -4,6 +4,10 @@
   margin: calc(var(--spacing-base) * -1);
 }
 
+.Stack-column {
+  flex-direction: column;
+}
+
 .Stack-alignCenter {
   align-items: center;
 }
