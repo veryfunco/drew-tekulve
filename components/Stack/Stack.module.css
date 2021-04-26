@@ -16,6 +16,10 @@
   justify-content: center;
 }
 
+.Stack-justifyEnd {
+  justify-content: flex-end;
+}
+
 .Stack-tight {
   margin: calc(var(--spacing-tight) * -1);
 }

@@ -6,7 +6,7 @@ import styles from "./Stack.module.css";
 interface Props {
   children: ReactNode;
   align?: "center";
-  justify?: "center";
+  justify?: "center" | "end";
   spacing?: "tight" | "extraTight" | "loose";
   direction?: "row" | "column";
 }
@@ -24,6 +24,7 @@ export function Stack({
         styles.Stack,
         align === "center" && styles["Stack-alignCenter"],
         justify === "center" && styles["Stack-justifyCenter"],
+        justify === "end" && styles["Stack-justifyEnd"],
         spacing && styles[`Stack-${spacing}`],
         direction === "column" && styles["Stack-column"]
       )}
