@@ -1,12 +1,13 @@
-import { ReactNode } from "react";
+import { ButtonHTMLAttributes, ReactNode } from "react";
 import classnames from "classnames";
 
 import styles from "./Button.module.css";
 
 interface Props {
   children: ReactNode;
-  onClick(): void;
+  onClick?(): void;
   transparent?: boolean;
+  type?: ButtonHTMLAttributes<HTMLButtonElement>["type"];
   wide?: boolean;
 }
 
@@ -15,6 +16,7 @@ export function Button({
   onClick,
   wide = false,
   transparent = false,
+  type = "button",
 }: Props) {
   return (
     <button
@@ -24,6 +26,7 @@ export function Button({
         transparent && styles["Button-transparent"]
       )}
       onClick={onClick}
+      type={type}
     >
       {children}
     </button>

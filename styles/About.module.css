@@ -16,3 +16,8 @@
   margin: var(--spacing-extra-loose) auto;
   max-width: 800px;
 }
+
+.ContactForm {
+  margin: auto;
+  max-width: 475px;
+}

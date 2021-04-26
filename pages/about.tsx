@@ -1,8 +1,10 @@
 import { InferGetStaticPropsType } from "next";
 import { AboutPageSection } from "../components/AboutPageSection";
+import { Button } from "../components/Button";
 import { Navbar } from "../components/Navbar";
 import { Page } from "../components/Page";
 import { Stack } from "../components/Stack";
+import { TextField } from "../components/TextField";
 import { aboutData } from "../lib/api/about";
 
 import styles from "../styles/About.module.css";
@@ -58,7 +60,37 @@ export default function About(
         title="Contact"
         lead="Want to work together? Describe your project below and I’ll send you a quote."
       >
-        <p>Form</p>
+        <form
+          onSubmit={(e) => e.preventDefault()}
+          className={styles.ContactForm}
+        >
+          <Stack direction="column" spacing="tight" justify="center">
+            <TextField
+              placeholder="Name"
+              value=""
+              onChange={(value) => console.log(value)}
+            />
+            <TextField
+              placeholder="Email"
+              value=""
+              onChange={(value) => console.log(value)}
+            />
+            <TextField
+              placeholder="Subject"
+              value=""
+              onChange={(value) => console.log(value)}
+            />
+            <TextField
+              placeholder="Message"
+              multiline
+              value=""
+              onChange={(value) => console.log(value)}
+            />
+            <Button type="submit" wide>
+              Send
+            </Button>
+          </Stack>
+        </form>
       </AboutPageSection>
     </Page>
   );

@@ -17,7 +17,7 @@
 }
 
 .Button-wide {
-  padding: var(--spacing-tight) calc(var(--spacing-loose) * 2);
+  padding: var(--spacing-tight) calc(var(--spacing-loose) * 2.5);
 }
 
 .Button-transparent {
