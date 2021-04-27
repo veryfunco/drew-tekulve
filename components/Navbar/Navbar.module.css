@@ -32,4 +32,25 @@
 
 .Link {
   font-size: var(--font-navbar);
+  opacity: 0.6;
+  position: relative;
+  transition: opacity 250ms;
+}
+
+.Link:hover {
+  opacity: 1;
+}
+
+.Link-active {
+  opacity: 1;
+}
+
+.Link-active::after {
+  background: var(--color-white);
+  bottom: -5px;
+  content: " ";
+  height: 1px;
+  left: calc(var(--spacing-base) / 2 * -1);
+  position: absolute;
+  width: calc(100% + var(--spacing-base));
 }
