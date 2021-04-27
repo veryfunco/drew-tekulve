@@ -1,0 +1,36 @@
+{
+  "clients": [
+    {
+      "name": "Purple",
+      "logo": "/images/union-3.svg"
+    },
+    {
+      "name": "Verizon",
+      "logo": "/images/union-5.svg"
+    },
+    {
+      "name": "Wells Fargo",
+      "logo": "/images/union-8.svg"
+    },
+    {
+      "name": "T-Mobile",
+      "logo": "/images/union-6.svg"
+    },
+    {
+      "name": "USPS",
+      "logo": "/images/union-4.svg"
+    },
+    {
+      "name": "Vivint SmartHome",
+      "logo": "/images/union-7.svg"
+    },
+    {
+      "name": "The Killing of Two Lovers",
+      "logo": "/images/frame.svg"
+    },
+    {
+      "name": "Recovery",
+      "logo": "/images/vector-3.svg"
+    }
+  ]
+}
