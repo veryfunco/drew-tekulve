@@ -6,18 +6,20 @@ import { Button } from "../components/Button";
 import { Navbar } from "../components/Navbar";
 import { Page } from "../components/Page";
 import { Stack } from "../components/Stack";
-import { homeData } from "../lib/api";
+
+import { allProjectCategories } from "../lib/data/allProjectCategories";
+import { allProjects } from "../lib/data/allProjects";
 
 import styles from "../styles/Home.module.css";
-import classNames from "classnames";
 
 export const getStaticProps = async () => {
-  const { projectCategoryCollection, projectCollection } = await homeData();
+  const categories = await allProjectCategories();
+  const projects = await allProjects();
 
   return {
     props: {
-      categories: projectCategoryCollection.items,
-      projects: projectCollection.items,
+      categories,
+      projects,
     },
   };
 };
@@ -70,25 +72,24 @@ export default function Home(
         </Stack>
 
         <div className={styles.ProjectsGrid}>
-          {props.projects.map((project) => {
-            if (
-              selectedCategory != null &&
-              project.category.title !== selectedCategory
-            ) {
-              return null;
-            }
-
-            return (
-              <Link key={project.slug} href={`/projects/${project.slug}`}>
-                <a>
-                  <div>
-                    <h3>{project.title}</h3>
-                    <p>{project.year}</p>
-                  </div>
-                </a>
-              </Link>
-            );
-          })}
+          {props.projects
+            .filter(
+              (project) =>
+                selectedCategory == null ||
+                project.category === selectedCategory
+            )
+            .map((project) => {
+              return (
+                <Link key={project.slug} href={`/projects/${project.slug}`}>
+                  <a>
+                    <div>
+                      <h3>{project.title}</h3>
+                      <p>{project.year}</p>
+                    </div>
+                  </a>
+                </Link>
+              );
+            })}
         </div>
       </div>
     </Page>

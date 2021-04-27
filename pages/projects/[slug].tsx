@@ -1,4 +1,6 @@
 import { GetStaticPropsContext } from "next";
+import { promises as fs } from "fs";
+import path from "path";
 
 import { Navbar } from "../../components/Navbar";
 import { Page } from "../../components/Page";
@@ -15,28 +17,43 @@ export const getStaticProps = async (
 ) => {
   const { slug } = context.params;
 
-  const { projectCollection } = await projectDetailData(slug);
+  const projectContentPath = path.join(
+    process.cwd(),
+    "content",
+    "projects",
+    `${slug}.json`
+  );
 
-  if (projectCollection.items.length < 1) {
+  try {
+    const projectFile = await fs.readFile(projectContentPath, "utf-8");
+
+    const project = JSON.parse(projectFile);
+
+    return {
+      props: {
+        project,
+      },
+    };
+  } catch (error) {
     return {
       notFound: true,
     };
   }
-
-  return {
-    props: {
-      project: projectCollection.items[0],
-    },
-  };
 };
 
 export const getStaticPaths = async () => {
-  const slugs = await allProjectSlugs();
+  const filenames = await fs.readdir(
+    path.join(process.cwd(), "content", "projects")
+  );
+
+  const slugs = filenames.map((filename) => {
+    const extension = path.extname(filename);
+
+    return path.basename(filename, extension);
+  });
 
   return {
-    paths: slugs.projectCollection.items.map(({ slug }) => ({
-      params: { slug },
-    })),
+    paths: slugs.map((slug) => ({ params: { slug } })),
     fallback: false,
   };
 };
