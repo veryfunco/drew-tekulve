@@ -6,18 +6,16 @@ import { Navbar } from "../components/Navbar";
 import { Page } from "../components/Page";
 import { Stack } from "../components/Stack";
 import { TextField } from "../components/TextField";
-import { aboutData } from "../lib/api/about";
+import { aboutPage } from "../lib/data/aboutPage";
 
 import styles from "../styles/About.module.css";
 
 export const getStaticProps = async () => {
-  const { aboutPageCollection } = await aboutData();
-
-  const aboutPage = aboutPageCollection.items[0];
+  const { clients } = await aboutPage();
 
   return {
     props: {
-      clients: aboutPage.clientsCollection.items,
+      clients,
     },
   };
 };
@@ -79,11 +77,7 @@ export default function About(
           <Stack align="center" justify="center" spacing="loose">
             {props.clients.map((client) => (
               <div key={client.name}>
-                <img
-                  key={client.name}
-                  alt={client.name}
-                  src={client.logo.url}
-                />
+                <img key={client.name} alt={client.name} src={client.logo} />
               </div>
             ))}
           </Stack>
