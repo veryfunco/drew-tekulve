@@ -1,6 +1,6 @@
 # `drew-tekulve`
 
-Deployed on [Vercel](https://vercel.com) • Content on [Contentful](https://www.contentful.com)
+Deployed on [Vercel](https://vercel.com)
 
 This is a Next.js app. Learn more at the [Next.js Documentation](https://nextjs.org/docs).
 

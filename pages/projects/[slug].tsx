@@ -4,10 +4,6 @@ import path from "path";
 
 import { Navbar } from "../../components/Navbar";
 import { Page } from "../../components/Page";
-import {
-  allProjectSlugs,
-  projectDetailData,
-} from "../../lib/api/projects/detail";
 import { StaticProps } from "../../types";
 
 import styles from "../../styles/projects/Detail.module.css";
