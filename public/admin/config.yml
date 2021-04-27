@@ -1,0 +1,15 @@
+backend:
+  name: github
+  branch: main
+  repo: asmockler/drew-tekulve
+media_folder: "public/images"
+public_folder: "/images"
+collections:
+  - name: "project"
+    label: "Project"
+    folder: "content/projects"
+    create: true
+    format: json
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image"}

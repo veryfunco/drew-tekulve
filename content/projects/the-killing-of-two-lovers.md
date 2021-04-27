@@ -1,4 +1,0 @@
----
-title: The Killing of Two Lovers
-thumbnail: /images/image-asset-2.jpg
----
