@@ -15,7 +15,7 @@
   justify-content: center;
   margin: auto;
   max-width: var(--page-max-width);
-  padding: var(--spacing-base);
+  padding: var(--spacing-base) var(--spacing-loose);
   text-transform: uppercase;
   width: 100%;
 }
