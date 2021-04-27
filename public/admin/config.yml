@@ -27,3 +27,18 @@ collections:
     format: json
     fields:
       - {label: "Title", name: "title", widget: "string"}
+  - name: "pages"
+    label: "Pages"
+    files:
+      - label: "About Page"
+        name: "about"
+        file: "content/pages/about.json"
+        format: json
+        fields:
+          - label: Clients
+            name: clients
+            widget: list
+            fields:
+              - {label: Name, name: name, widget: string}
+              - {label: Logo, name: logo, widget: image}
+
