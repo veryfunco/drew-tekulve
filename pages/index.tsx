@@ -82,7 +82,11 @@ export default function Home(
               return (
                 <Link key={project.slug} href={`/projects/${project.slug}`}>
                   <a>
-                    <div>
+                    <div className={styles.Project}>
+                      <img
+                        src={project.thumbnail}
+                        className={styles.Thumbnail}
+                      />
                       <h3>{project.title}</h3>
                       <p>{project.year}</p>
                     </div>
