@@ -1,12 +1,17 @@
 .HeroContainer {
   height: 80vh;
   min-height: 300px;
+  padding-top: var(--navbar-height);
 }
 
 .Thumbnail {
-  display: block;
+  align-items: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
   height: 100%;
-  object-fit: cover;
+  justify-content: center;
   width: 100%;
 }
 

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { GetStaticPropsContext } from "next";
 import { promises as fs } from "fs";
 import path from "path";
@@ -6,9 +7,11 @@ import { Navbar } from "../../components/Navbar";
 import { Page } from "../../components/Page";
 import { StaticProps } from "../../types";
 import { projectBySlug } from "../../lib/data/projectBySlug";
+import { getVideoEmbedLink } from "../../lib/getVideoEmbedLink";
 
 import styles from "../../styles/projects/Detail.module.css";
 import { Stack } from "../../components/Stack";
+import { Button } from "../../components/Button";
 
 export const getStaticProps = async (
   context: GetStaticPropsContext<{ slug: string }>
@@ -40,12 +43,34 @@ export const getStaticPaths = async () => {
 export default function ProjectDetail({
   project,
 }: StaticProps<typeof getStaticProps>) {
+  const [videoActive, setVideoActive] = useState(false);
+
   return (
     <Page>
       <Navbar backgroundColor="black" />
 
       <div className={styles.HeroContainer}>
-        <img className={styles.Thumbnail} src={project.thumbnail} />
+        {videoActive ? (
+          <iframe
+            src={`${getVideoEmbedLink(project.video_url)}`}
+            frameBorder="0"
+            allowFullScreen
+            style={{ height: "100%", width: "100%" }}
+          ></iframe>
+        ) : (
+          <div
+            className={styles.Thumbnail}
+            style={{
+              backgroundImage: `url("${project.thumbnail}")`,
+            }}
+          >
+            {project.video_url == null ? null : (
+              <Button wide onClick={() => setVideoActive(true)}>
+                Play
+              </Button>
+            )}
+          </div>
+        )}
       </div>
 
       <div className={styles.DetailsContainer}>
