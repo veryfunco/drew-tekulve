@@ -59,7 +59,7 @@ export default function ProjectDetail({
 }: StaticProps<typeof getStaticProps>) {
   return (
     <Page>
-      <Navbar />
+      <Navbar backgroundColor="black" />
 
       <div className={styles.DetailsContainer}>
         <h2 className={styles.Title}>{project.title}</h2>

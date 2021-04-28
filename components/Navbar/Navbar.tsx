@@ -5,15 +5,26 @@ import { Stack } from "../Stack";
 import styles from "./Navbar.module.css";
 
 interface Props {
+  backgroundColor?: "black" | "blue";
   hideLogo?: boolean;
 }
 
-export function Navbar({ hideLogo }: Props) {
+export function Navbar({ hideLogo, backgroundColor }: Props) {
   const router = useRouter();
 
   return (
     <nav className={styles.Container}>
-      <div className={styles.Content}>
+      <div
+        className={styles.Content}
+        style={{
+          background:
+            backgroundColor === "black"
+              ? "var(--color-black)"
+              : backgroundColor === "blue"
+              ? "var(--color-blue)"
+              : "transparent",
+        }}
+      >
         <div>
           <h2 className={styles.Title}>Freelance Colorist</h2>
         </div>
