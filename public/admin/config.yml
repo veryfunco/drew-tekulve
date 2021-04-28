@@ -23,6 +23,12 @@ collections:
         collection: "project_category"
         value_field: title
         search_fields: ["title"]
+      - label: Contributors
+        name: contributors
+        widget: list
+        fields:
+          - {label: Name, name: name, widget: string}
+          - {label: Role, name: role, widget: string}
   - name: "project_category"
     label: "Project Category"
     folder: "content/project_categories"
