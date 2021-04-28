@@ -2,5 +2,31 @@
   "title": "The Killing of Two Lovers",
   "thumbnail": "/images/image-asset-2.jpg",
   "category": "Narrative",
-  "year": "2020"
+  "year": "2020",
+  "contributors": [
+    {
+      "name": "Jeremy Miller",
+      "role": "Director"
+    },
+    {
+      "role": "DP",
+      "name": "Talmage Chromar"
+    },
+    {
+      "name": "Devin Sumner",
+      "role": "Producer"
+    },
+    {
+      "name": "Chandler Arnold",
+      "role": "Editor"
+    },
+    {
+      "name": "Drew Tekulve",
+      "role": "Colorist"
+    },
+    {
+      "name": "Palmer Sound",
+      "role": "Sound Mixer"
+    }
+  ]
 }
