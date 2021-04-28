@@ -58,10 +58,10 @@ export default function About(
 
   return (
     <Page title="About" background="blue">
-      <Navbar hideLogo backgroundColor="blue" />
+      <Navbar logoVariant="scrolly" backgroundColor="blue" />
 
       <div className={styles.HeroContainer}>
-        <img className={styles.Logo} src="/images/logo.svg" />
+        {/* <img className={styles.Logo} src="/images/logo.svg" /> */}
       </div>
 
       <AboutPageSection

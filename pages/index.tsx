@@ -35,7 +35,7 @@ export default function Home(
 
   return (
     <Page title="Work">
-      <Navbar hideLogo />
+      <Navbar logoVariant="scrolly" />
 
       <div className={styles.HeroContainer}>
         <iframe

@@ -1,16 +1,33 @@
 import classNames from "classnames";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 import { Stack } from "../Stack";
 import styles from "./Navbar.module.css";
 
 interface Props {
   backgroundColor?: "black" | "blue";
-  hideLogo?: boolean;
+  logoVariant?: "hidden" | "scrolly" | "static";
 }
 
-export function Navbar({ hideLogo, backgroundColor }: Props) {
+export function Navbar({ logoVariant = "static", backgroundColor }: Props) {
   const router = useRouter();
+
+  // Number between 0 and 1 showing how much of the viewport height
+  // has been scrolled through
+  const [scrollAmount, setScrollAmount] = useState(0);
+
+  useEffect(() => {
+    function handleScroll(event) {
+      setScrollAmount(
+        Math.max(0, Math.min(1, window.scrollY / (window.innerHeight * 0.5)))
+      );
+    }
+
+    document.addEventListener("scroll", handleScroll);
+
+    return () => document.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <nav className={styles.Container}>
@@ -30,13 +47,31 @@ export function Navbar({ hideLogo, backgroundColor }: Props) {
         </div>
 
         <div>
-          {hideLogo ? null : (
+          {logoVariant === "static" ? (
             <Link href="/">
               <a>
                 <img src="/images/logo.svg" className={styles.Logo} />
               </a>
             </Link>
-          )}
+          ) : null}
+
+          {logoVariant === "scrolly" ? (
+            <Link href="/">
+              <a>
+                <img
+                  src="/images/logo.svg"
+                  style={{
+                    position: "absolute",
+                    top: `calc(${30 * (1 - scrollAmount)}vh + 1rem)`,
+                    width: `${450 * (1 - scrollAmount) + 150}px`,
+                    left: `calc(50% - ${
+                      (450 * (1 - scrollAmount) + 150) / 2
+                    }px)`,
+                  }}
+                />
+              </a>
+            </Link>
+          ) : null}
         </div>
 
         <Stack justify="end">
