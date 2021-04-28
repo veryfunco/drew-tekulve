@@ -26,3 +26,9 @@
   margin-bottom: var(--spacing-loose);
   text-transform: uppercase;
 }
+
+@media screen and (max-width: 600px) {
+  .HeroContainer {
+    height: 50vh;
+  }
+}
