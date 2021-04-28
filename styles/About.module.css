@@ -10,6 +10,7 @@
 .Logo {
   margin: auto;
   max-width: 600px;
+  width: 100%;
 }
 
 .ClientLogosContainer {
@@ -20,4 +21,11 @@
 .ContactForm {
   margin: auto;
   max-width: 475px;
+}
+
+@media screen and (max-width: 600px) {
+  .HeroContainer {
+    height: 40vh;
+    padding-top: var(--spacing-extra-loose);
+  }
 }

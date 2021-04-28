@@ -19,3 +19,9 @@
 .Lead-wide {
   max-width: 600px;
 }
+
+@media screen and (max-width: 600px) {
+  .Container {
+    margin: calc(var(--spacing-extra-loose) * 3) 0;
+  }
+}
