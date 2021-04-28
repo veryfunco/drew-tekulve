@@ -24,6 +24,7 @@
 .Footer {
   align-items: center;
   display: grid;
+  gap: var(--spacing-base);
   grid-template-columns: 1fr 1fr 1fr;
   margin: auto;
   max-width: var(--page-max-width);
@@ -42,4 +43,15 @@
 
 .CopyrightContainer {
   text-align: right;
+}
+
+@media screen and (max-width: 600px) {
+  .Footer {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .CopyrightContainer {
+    text-align: center;
+  }
 }
