@@ -4,7 +4,7 @@ import Link from "next/link";
 
 import { Button } from "../components/Button";
 import { Navbar } from "../components/Navbar";
-import { Page } from "../components/Page";
+import { Container, Page } from "../components/Page";
 import { Stack } from "../components/Stack";
 
 import { allProjectCategories } from "../lib/data/allProjectCategories";
@@ -34,68 +34,66 @@ export default function Home(
   }
 
   return (
-    <Page title="Work">
-      <Navbar hideLogo />
+    <Page title="Work" padding={false}>
+      <Navbar />
 
-      <div className={styles.HeroContainer}>
+      <div className={styles.VideoBackground}>
         <iframe
           title="vimeo-player"
           src="https://player.vimeo.com/video/527679440?title=0&byline=0&portrait=0&background=1"
-          className={styles["HeroContainer-cover"]}
           frameBorder="0"
           allow="autoplay; fullscreen; picture-in-picture"
           allowFullScreen
         ></iframe>
       </div>
 
-      <div className={styles.ProjectsContainer}>
-        <p className={styles.FilterTitle}>Filter work by category</p>
-
-        <Stack spacing="extraTight" align="center">
-          <Button
-            onClick={() => handleCategoryButtonClick(null)}
-            wide
-            transparent={selectedCategory != null}
-          >
-            All
-          </Button>
-
-          {props.categories.map((category) => (
+      <Container>
+        <div className={styles.ProjectsContainer}>
+          <p className={styles.FilterTitle}>Filter work by category</p>
+          <Stack spacing="extraTight" align="center">
             <Button
-              transparent={selectedCategory !== category.title}
-              onClick={() => handleCategoryButtonClick(category.title)}
-              key={category.title}
+              onClick={() => handleCategoryButtonClick(null)}
+              wide
+              transparent={selectedCategory != null}
             >
-              {category.title}
+              All
             </Button>
-          ))}
-        </Stack>
-
-        <div className={styles.ProjectsGrid}>
-          {props.projects
-            .filter(
-              (project) =>
-                selectedCategory == null ||
-                project.category === selectedCategory
-            )
-            .map((project) => {
-              return (
-                <Link key={project.slug} href={`/projects/${project.slug}`}>
-                  <a>
-                    <div className={styles.Project}>
-                      <img
-                        src={project.thumbnail}
-                        className={styles.Thumbnail}
-                      />
-                      <h3>{project.title}</h3>
-                      <p>{project.year}</p>
-                    </div>
-                  </a>
-                </Link>
-              );
-            })}
+            {props.categories.map((category) => (
+              <Button
+                transparent={selectedCategory !== category.title}
+                onClick={() => handleCategoryButtonClick(category.title)}
+                key={category.title}
+              >
+                {category.title}
+              </Button>
+            ))}
+          </Stack>
+          <div className={styles.ProjectsGrid}>
+            {props.projects
+              .filter(
+                (project) =>
+                  selectedCategory == null ||
+                  project.category === selectedCategory
+              )
+              .map((project) => {
+                return (
+                  <Link key={project.slug} href={`/projects/${project.slug}`}>
+                    <a>
+                      <div className={styles.Project}>
+                        <img
+                          src={project.thumbnail}
+                          className={styles.Thumbnail}
+                        />
+                        <h3>{project.title}</h3>
+                        <p>{project.year}</p>
+                      </div>
+                    </a>
+                  </Link>
+                );
+              })}
+          </div>
         </div>
-      </div>
+      </Container>
     </Page>
   );
 }

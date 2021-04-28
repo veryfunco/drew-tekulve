@@ -16,11 +16,18 @@
   width: 100%;
 }
 
+.Container-noPadding {
+  padding: 0;
+  max-width: none;
+}
+
 .Footer {
   align-items: center;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  padding: var(--spacing-extra-loose) 0;
+  margin: auto;
+  max-width: var(--page-max-width);
+  padding: var(--spacing-extra-loose) var(--spacing-loose);
 }
 
 .SocialIconsContainer {
