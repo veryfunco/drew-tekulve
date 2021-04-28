@@ -5,6 +5,7 @@ import path from "path";
 import { Navbar } from "../../components/Navbar";
 import { Page } from "../../components/Page";
 import { StaticProps } from "../../types";
+import { projectBySlug } from "../../lib/data/projectBySlug";
 
 import styles from "../../styles/projects/Detail.module.css";
 
@@ -13,28 +14,9 @@ export const getStaticProps = async (
 ) => {
   const { slug } = context.params;
 
-  const projectContentPath = path.join(
-    process.cwd(),
-    "content",
-    "projects",
-    `${slug}.json`
-  );
+  const project = await projectBySlug(slug);
 
-  try {
-    const projectFile = await fs.readFile(projectContentPath, "utf-8");
-
-    const project = JSON.parse(projectFile);
-
-    return {
-      props: {
-        project,
-      },
-    };
-  } catch (error) {
-    return {
-      notFound: true,
-    };
-  }
+  return project == null ? { notFound: true } : { props: { project } };
 };
 
 export const getStaticPaths = async () => {
