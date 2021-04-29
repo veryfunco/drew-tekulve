@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { InferGetStaticPropsType } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 import { Button } from "../components/Button";
@@ -80,9 +81,12 @@ export default function Home(
                   <Link key={project.slug} href={`/projects/${project.slug}`}>
                     <a>
                       <div className={styles.Project}>
-                        <img
+                        <Image
+                          height={250}
+                          width={500}
                           src={project.thumbnail}
                           className={styles.Thumbnail}
+                          layout="responsive"
                         />
                         <h3>{project.title}</h3>
                         <p>{project.year}</p>
