@@ -102,8 +102,8 @@ export function Page({
               <img
                 src="/icons/letterboxd.svg"
                 alt="Letterboxd"
-                width="24px"
-                height="17px"
+                width="33px"
+                height="14px"
               />
             </a>
             <a
@@ -112,7 +112,25 @@ export function Page({
               target="_blank"
               rel="noreferrer"
             >
-              <img src="/icons/email.svg" alt="Email" />
+              <img
+                src="/icons/email.svg"
+                alt="Email"
+                width="24px"
+                height="17px"
+              />
+            </a>
+            <a
+              href="https://www.imdb.com/name/nm6235937/?ref_=fn_al_nm_1"
+              className={styles.SocialIcon}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                src="/icons/imdb.svg"
+                width="36px"
+                height="18px"
+                alt="IMDb"
+              />
             </a>
           </div>
 
