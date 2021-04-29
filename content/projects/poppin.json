@@ -1,0 +1,30 @@
+{
+  "id": "732f3cc8-8a33-4885-8d45-e8fbecb798e2",
+  "thumbnail": "/images/oppin.jpeg",
+  "title": "Poppin'",
+  "year": "2020",
+  "video_url": "https://vimeo.com/383391048",
+  "category": "Music Video",
+  "contributors": [
+    {
+      "name": "McKenzie Thompson",
+      "role": "Director & Editor"
+    },
+    {
+      "name": "Oliver Jevremov",
+      "role": "DP"
+    },
+    {
+      "name": "Stephanie Tricola",
+      "role": "Fashion Stylist"
+    },
+    {
+      "name": "Prop Stylist",
+      "role": "Ash Coppins"
+    },
+    {
+      "name": "Colorist",
+      "role": "Drew Tekulve"
+    }
+  ]
+}
