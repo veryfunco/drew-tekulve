@@ -1,0 +1,26 @@
+{
+  "id": "4b0ffbc7-1ff6-499f-bf34-aac34b9942b3",
+  "title": "Goldmyth - Has To Be Better",
+  "year": "2016",
+  "video_url": "https://www.youtube.com/watch?v=at-BdTsGxXI&ab_channel=Goldmyth",
+  "category": "Music Video",
+  "contributors": [
+    {
+      "name": "Alex Vaughn",
+      "role": "Director"
+    },
+    {
+      "name": "Tess Kelly",
+      "role": "Producer"
+    },
+    {
+      "name": "Nate Balli",
+      "role": "DP"
+    },
+    {
+      "name": "Drew Tekulve",
+      "role": "Editor & Colorist"
+    }
+  ],
+  "thumbnail": "/images/goldm.jpeg"
+}
