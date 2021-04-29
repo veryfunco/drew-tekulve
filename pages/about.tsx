@@ -117,7 +117,7 @@ export default function About(
             </Button>
 
             {formState === "success" ? (
-              <p>Email sent! I'll get back to you soon.</p>
+              <p>Email sent! I&apos;ll get back to you soon.</p>
             ) : formState === "error" ? (
               <p>Uh oh...something went wrong. Try again later.</p>
             ) : null}

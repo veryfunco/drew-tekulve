@@ -5,7 +5,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "eslint components lib pages",
+    "lint:prettier": "prettier --check components lib pages",
+    "typecheck": "tsc"
   },
   "dependencies": {
     "@sendgrid/mail": "^7.4.2",
@@ -16,6 +19,11 @@
   },
   "devDependencies": {
     "@types/react": "^17.0.3",
+    "@typescript-eslint/eslint-plugin": "^4.22.0",
+    "@typescript-eslint/parser": "^4.22.0",
+    "eslint": "^7.25.0",
+    "eslint-plugin-react": "^7.23.2",
+    "eslint-plugin-react-hooks": "^4.2.0",
     "prettier": "^2.2.1",
     "typescript": "^4.2.4"
   }
