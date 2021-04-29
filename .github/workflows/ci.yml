@@ -28,4 +28,8 @@ jobs:
     - name: Install dependencies
       run: yarn
     - name: Typecheck
-      run: yarn tsc
+      run: yarn typecheck
+    - name: Lint
+      run: yarn lint
+    - name: Check Prettier
+      run: yarn lint:prettier
