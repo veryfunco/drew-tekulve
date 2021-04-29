@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { InferGetStaticPropsType } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -29,6 +29,11 @@ export default function Home(
   props: InferGetStaticPropsType<typeof getStaticProps>
 ) {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [lazyCanLoad, setLazyCanLoad] = useState(false);
+
+  useEffect(() => {
+    setLazyCanLoad(true);
+  }, []);
 
   function handleCategoryButtonClick(category: string) {
     setSelectedCategory(category);
@@ -39,13 +44,15 @@ export default function Home(
       <Navbar />
 
       <div className={styles.VideoBackground}>
-        <iframe
-          title="vimeo-player"
-          src="https://player.vimeo.com/video/527679440?title=0&byline=0&portrait=0&background=1"
-          frameBorder="0"
-          allow="autoplay; fullscreen; picture-in-picture"
-          allowFullScreen
-        ></iframe>
+        {lazyCanLoad ? (
+          <iframe
+            title="vimeo-player"
+            src="https://player.vimeo.com/video/527679440?title=0&byline=0&portrait=0&background=1"
+            frameBorder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        ) : null}
       </div>
 
       <Container>
@@ -87,6 +94,7 @@ export default function Home(
                           src={project.thumbnail}
                           className={styles.Thumbnail}
                           layout="responsive"
+                          alt=""
                         />
                         <h3>{project.title}</h3>
                         <p>{project.year}</p>

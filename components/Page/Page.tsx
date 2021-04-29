@@ -73,7 +73,12 @@ export function Page({
               target="_blank"
               rel="noreferrer"
             >
-              <img src="/icons/instagram.svg" alt="Instagram" />
+              <img
+                src="/icons/instagram.svg"
+                alt="Instagram"
+                width="22px"
+                height="22px"
+              />
             </a>
             <a
               href="https://www.linkedin.com/in/drewtekulve"
@@ -81,7 +86,12 @@ export function Page({
               target="_blank"
               rel="noreferrer"
             >
-              <img src="/icons/linkedin.svg" alt="LinkedIn" />
+              <img
+                src="/icons/linkedin.svg"
+                alt="LinkedIn"
+                width="22px"
+                height="22px"
+              />
             </a>
             <a
               href="https://letterboxd.com/drewtekulve"
@@ -89,7 +99,12 @@ export function Page({
               target="_blank"
               rel="noreferrer"
             >
-              <img src="/icons/letterboxd.svg" alt="Letterboxd" />
+              <img
+                src="/icons/letterboxd.svg"
+                alt="Letterboxd"
+                width="24px"
+                height="17px"
+              />
             </a>
             <a
               href="mailto:drewtekulve@gmail.com"

@@ -61,7 +61,11 @@ export default function About(
       <Navbar hideLogo backgroundColor="blue" />
 
       <div className={styles.HeroContainer}>
-        <img className={styles.Logo} src="/images/logo.svg" />
+        <img
+          className={styles.Logo}
+          src="/images/logo.svg"
+          alt="Drew Tekulve"
+        />
       </div>
 
       <AboutPageSection

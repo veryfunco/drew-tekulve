@@ -33,7 +33,11 @@ export function Navbar({ hideLogo, backgroundColor }: Props) {
           {hideLogo ? null : (
             <Link href="/">
               <a>
-                <img src="/images/logo.svg" className={styles.Logo} />
+                <img
+                  src="/images/logo.svg"
+                  className={styles.Logo}
+                  alt="Drew Tekulve"
+                />
               </a>
             </Link>
           )}
