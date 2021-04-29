@@ -1,4 +1,14 @@
 {
   "hero_video_url": "https://vimeo.com/527679440",
-  "projects": []
+  "projects": [
+    {
+      "project": "The Killing of Two Lovers"
+    },
+    {
+      "project": "Jeep"
+    },
+    {
+      "project": "viruserv // Restoring Life"
+    }
+  ]
 }
