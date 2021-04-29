@@ -18,16 +18,16 @@ import styles from "../styles/Home.module.css";
 export const getStaticProps = async () => {
   const categories = await allProjectCategories();
   const projects = await allProjects();
-  const { projects: projectRelations, hero_video_url } = await homePage();
+  const { projects: projectIds, hero_video_url } = await homePage();
 
-  const mappedProjects = projectRelations.map(({ project: title }) => {
-    return projects.find((project) => project.title === title);
+  const joinedProjects = projectIds.map(({ project_id }) => {
+    return projects.find(({ id }) => id === project_id);
   });
 
   return {
     props: {
       categories,
-      projects: mappedProjects,
+      projects: joinedProjects,
       heroVideoUrl: hero_video_url,
     },
   };
