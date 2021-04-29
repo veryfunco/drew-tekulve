@@ -20,7 +20,7 @@ export const getStaticProps = async () => {
   const projects = await allProjects();
   const { projects: projectRelations, hero_video_url } = await homePage();
 
-  const mappedProjects = projectRelations.map((title) => {
+  const mappedProjects = projectRelations.map(({ project: title }) => {
     return projects.find((project) => project.title === title);
   });
 
