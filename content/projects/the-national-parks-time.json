@@ -1,0 +1,30 @@
+{
+  "id": "c88ec1f5-4f95-4667-9a46-29bd6d4c880e",
+  "title": "The National Parks - Time",
+  "year": "2020",
+  "video_url": "https://www.youtube.com/watch?v=ib4YF0VTrYU&ab_channel=TheNationalParksBand",
+  "category": "Music Video",
+  "contributors": [
+    {
+      "name": "Jeremy Prusso",
+      "role": "Director"
+    },
+    {
+      "name": "Bradley Crane",
+      "role": "DP"
+    },
+    {
+      "name": "Jeremy and Trieste Prusso",
+      "role": "Editor"
+    },
+    {
+      "name": "Cameron Harper",
+      "role": "Producer"
+    },
+    {
+      "name": "Drew Tekulve",
+      "role": "Colorist"
+    }
+  ],
+  "thumbnail": "/images/time.jpeg"
+}
