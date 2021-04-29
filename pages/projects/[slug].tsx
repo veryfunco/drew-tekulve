@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { GetStaticPropsContext } from "next";
+import Image from "next/image";
 import { promises as fs } from "fs";
 import path from "path";
 
@@ -58,17 +59,20 @@ export default function ProjectDetail({
             style={{ height: "100%", width: "100%" }}
           ></iframe>
         ) : (
-          <div
-            className={styles.Thumbnail}
-            style={{
-              backgroundImage: `url("${project.thumbnail}")`,
-            }}
-          >
-            {project.video_url == null ? null : (
-              <Button wide onClick={() => setVideoActive(true)}>
-                Play
-              </Button>
-            )}
+          <div className={styles.HeroImageContainer}>
+            <Image
+              src={project.thumbnail}
+              layout="fill"
+              className={styles.PreviewImage}
+            />
+
+            <div className={styles.PlayButtonContainer}>
+              {project.video_url == null ? null : (
+                <Button wide onClick={() => setVideoActive(true)}>
+                  Play
+                </Button>
+              )}
+            </div>
           </div>
         )}
       </div>
