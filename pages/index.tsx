@@ -8,19 +8,27 @@ import { Navbar } from "../components/Navbar";
 import { Container, Page } from "../components/Page";
 import { Stack } from "../components/Stack";
 
-import { allProjectCategories } from "../lib/data/allProjectCategories";
 import { allProjects } from "../lib/data/allProjects";
+import { allProjectCategories } from "../lib/data/allProjectCategories";
+import { homePage } from "../lib/data/homePage";
+import { getVideoEmbedLink } from "../lib/getVideoEmbedLink";
 
 import styles from "../styles/Home.module.css";
 
 export const getStaticProps = async () => {
   const categories = await allProjectCategories();
   const projects = await allProjects();
+  const { projects: projectRelations, hero_video_url } = await homePage();
+
+  const mappedProjects = projectRelations.map((title) => {
+    return projects.find((project) => project.title === title);
+  });
 
   return {
     props: {
       categories,
-      projects,
+      projects: mappedProjects,
+      heroVideoUrl: hero_video_url,
     },
   };
 };
@@ -47,7 +55,12 @@ export default function Home(
         {lazyCanLoad ? (
           <iframe
             title="vimeo-player"
-            src="https://player.vimeo.com/video/527679440?title=0&byline=0&portrait=0&background=1"
+            src={getVideoEmbedLink(props.heroVideoUrl, {
+              title: "0",
+              byline: "0",
+              portrait: "0",
+              background: "1",
+            })}
             frameBorder="0"
             allow="autoplay; fullscreen; picture-in-picture"
             allowFullScreen

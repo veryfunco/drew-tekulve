@@ -39,6 +39,25 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
+      - label: "Home Page"
+        name: home
+        file: "content/pages/home.json"
+        format: json
+        fields:
+          - label: "Hero Video URL"
+            name: hero_video_url
+            widget: string
+            hint: "e.g. https://vimeo.com/123456789"
+          - label: Projects
+            name: projects
+            widget: list
+            fields:
+              - label: Project
+                name: project
+                widget: relation
+                collection: project
+                value_field: title
+                search_fields: ["title"]
       - label: "About Page"
         name: "about"
         file: "content/pages/about.json"
@@ -50,4 +69,3 @@ collections:
             fields:
               - {label: Name, name: name, widget: string}
               - {label: Logo, name: logo, widget: image}
-
