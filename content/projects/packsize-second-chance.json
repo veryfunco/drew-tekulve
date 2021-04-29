@@ -1,0 +1,30 @@
+{
+  "id": "54971934-5bde-4111-aece-e5ca6c7096a7",
+  "title": "Packsize // Second Chance",
+  "thumbnail": "/images/second.jpeg",
+  "year": "2019",
+  "video_url": "https://player.vimeo.com/video/421653187",
+  "category": "Commercial",
+  "contributors": [
+    {
+      "name": "Jeremy Mills",
+      "role": "Director"
+    },
+    {
+      "name": "Ian Rigby",
+      "role": "DP"
+    },
+    {
+      "name": "Peter Jodlowski",
+      "role": "Editor"
+    },
+    {
+      "name": "Talmage Cromar",
+      "role": "Producer"
+    },
+    {
+      "name": "Drew Tekulve",
+      "role": "Colorist"
+    }
+  ]
+}
