@@ -1,18 +1,17 @@
 import { useState } from "react";
 import { GetStaticPropsContext } from "next";
 import Image from "next/image";
-import { promises as fs } from "fs";
-import path from "path";
 
+import { Button } from "../../components/Button";
 import { Navbar } from "../../components/Navbar";
 import { Page } from "../../components/Page";
+import { Stack } from "../../components/Stack";
 import { StaticProps } from "../../types";
+import { allProjects } from "../../lib/data/allProjects";
 import { projectBySlug } from "../../lib/data/projectBySlug";
 import { getVideoEmbedLink } from "../../lib/getVideoEmbedLink";
 
 import styles from "../../styles/projects/Detail.module.css";
-import { Stack } from "../../components/Stack";
-import { Button } from "../../components/Button";
 
 export const getStaticProps = async (
   context: GetStaticPropsContext<{ slug: string }>
@@ -25,15 +24,7 @@ export const getStaticProps = async (
 };
 
 export const getStaticPaths = async () => {
-  const filenames = await fs.readdir(
-    path.join(process.cwd(), "content", "projects")
-  );
-
-  const slugs = filenames.map((filename) => {
-    const extension = path.extname(filename);
-
-    return path.basename(filename, extension);
-  });
+  const slugs = await allProjects({ slugsOnly: true });
 
   return {
     paths: slugs.map((slug) => ({ params: { slug } })),
@@ -64,6 +55,7 @@ export default function ProjectDetail({
               src={project.thumbnail}
               layout="fill"
               className={styles.PreviewImage}
+              alt=""
             />
 
             <div className={styles.PlayButtonContainer}>

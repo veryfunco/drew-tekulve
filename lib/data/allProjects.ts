@@ -3,10 +3,21 @@ import path from "path";
 
 import { slugFromFilename } from "./utils/slugFromFilename";
 
-export async function allProjects() {
+interface Options {
+  slugsOnly: boolean;
+}
+
+export async function allProjects(options: Partial<Options> = {}) {
+  const { slugsOnly = false } = options;
+
   const projectsDir = path.join(process.cwd(), "content", "projects");
 
   const projectFiles = await fs.readdir(projectsDir);
+
+  if (slugsOnly) {
+    return projectFiles.map((filename) => slugFromFilename(filename));
+  }
+
   const projects = await Promise.all(
     projectFiles.map(async (filename) => {
       const file = await fs.readFile(path.join(projectsDir, filename), "utf-8");
