@@ -14,9 +14,9 @@ collections:
     format: json
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: Subtitle, name: subtitle, widget: string}
+      - {label: Subtitle, name: subtitle, widget: string, required: false}
       - {label: "Year", name: "year", widget: "string"}
-      - {label: Description, name: description, widget: text}
+      - {label: Description, name: description, widget: text, required: false}
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
       - {label: "Video URL", name: "video_url", widget: "string"}
       - label: "Category"
