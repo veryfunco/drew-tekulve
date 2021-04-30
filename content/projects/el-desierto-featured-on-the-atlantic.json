@@ -1,18 +1,24 @@
 {
-  "id": "99f37fdc-5f1c-4944-8fdd-c0bd26893899",
-  "title": "El Desierto (Featured on The Atlantic)",
+  "video_url": "https://youtu.be/a5FQSsdRJvs",
   "thumbnail": "/images/cowb.png",
-  "year": "2018",
-  "video_url": "https://www.youtube.com/watch?v=a5FQSsdRJvs&t=753s&ab_channel=TheAtlantic",
-  "category": "Narrative",
+  "subtitle": "Featured on The Atlantic Selects",
+  "title": "El Desierto",
   "contributors": [
     {
+      "name": "Jared Jakins & Carly Jakins",
+      "role": "Directors"
+    },
+    {
       "name": "Jared Jakins",
-      "role": "Director & DP"
+      "role": "DP"
     },
     {
       "name": "Drew Tekulve",
       "role": "Colorist"
     }
-  ]
+  ],
+  "id": "99f37fdc-5f1c-4944-8fdd-c0bd26893899",
+  "description": "Amid a terrible winter drought, a migrant worker struggles with the task of caring for thousands of sheep in the Great Basin desert—completely and utterly alone.",
+  "year": "2019",
+  "category": "Narrative"
 }
