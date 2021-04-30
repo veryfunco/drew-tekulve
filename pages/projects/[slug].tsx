@@ -80,21 +80,34 @@ export default function ProjectDetail({
       </div>
 
       <div className={styles.DetailsContainer}>
-        <h2 className={styles.Title}>{project.title}</h2>
+        <Stack spacing="loose" direction="column" align="center">
+          <Stack spacing="extraTight" direction="column">
+            <h2 className={styles.Title}>{project.title}</h2>
+            {project.subtitle == null || project.subtitle === "" ? null : (
+              <p className={styles.Subtitle}>{project.subtitle}</p>
+            )}
+          </Stack>
 
-        <Stack direction="column" spacing="tight">
-          <p>
-            {project.year} – {project.category}
-          </p>
+          <Stack direction="column" spacing="tight">
+            <p>
+              {project.year} – {project.category}
+            </p>
+            {project.description == null ||
+            project.description === "" ? null : (
+              <p className={styles.Description}>{project.description}</p>
+            )}
+          </Stack>
 
-          {project.contributors == null
-            ? null
-            : project.contributors.map(({ name, role }) => (
-                <div key={`${name}-${role}`} className={styles.Contributor}>
-                  <p>{role}</p>
-                  <p style={{ textTransform: "uppercase" }}>{name}</p>
-                </div>
-              ))}
+          <Stack direction="column" spacing="tight">
+            {project.contributors == null
+              ? null
+              : project.contributors.map(({ name, role }) => (
+                  <div key={`${name}-${role}`} className={styles.Contributor}>
+                    <p>{role}</p>
+                    <p style={{ textTransform: "uppercase" }}>{name}</p>
+                  </div>
+                ))}
+          </Stack>
         </Stack>
       </div>
     </Page>

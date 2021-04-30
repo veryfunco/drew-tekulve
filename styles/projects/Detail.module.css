@@ -43,8 +43,16 @@
 .Title {
   font-family: "Max Fett", sans-serif;
   font-size: 30px;
-  margin-bottom: var(--spacing-loose);
   text-transform: uppercase;
+}
+
+.Subtitle {
+  text-transform: uppercase;
+}
+
+.Description {
+  margin: auto;
+  max-width: 450px;
 }
 
 @media screen and (max-width: 600px) {
