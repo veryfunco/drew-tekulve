@@ -1,12 +1,15 @@
 .HeroContainer {
-  height: 80vh;
+  height: calc(80vh - var(--navbar-height));
   min-height: 300px;
-  padding-top: var(--navbar-height);
+  margin-top: var(--navbar-height);
+  position: relative;
 }
 
 .HeroImageContainer {
   height: 100%;
-  position: relative;
+  left: 0;
+  position: absolute;
+  top: 0;
   width: 100%;
 }
 
