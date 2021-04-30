@@ -7,7 +7,7 @@ interface Props {
   children: ReactNode;
   align?: "center";
   justify?: "center" | "end";
-  spacing?: "tight" | "extraTight" | "loose";
+  spacing?: "extraTight" | "tight" | "loose" | "extraLoose";
   direction?: "row" | "column";
   wrap?: boolean;
 }
