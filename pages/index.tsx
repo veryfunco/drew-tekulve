@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import { InferGetStaticPropsType } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { animated, useTransition } from "@react-spring/web";
 
 import { Button } from "../components/Button";
 import { Navbar } from "../components/Navbar";
@@ -47,6 +48,20 @@ export default function Home(
     setSelectedCategory(category);
   }
 
+  const filteredProjects = useMemo(() => {
+    return props.projects.filter(
+      (project) =>
+        selectedCategory == null || selectedCategory === project.category
+    );
+  }, [props.projects, selectedCategory]);
+
+  const transition = useTransition(filteredProjects, {
+    keys: selectedCategory,
+    enter: { opacity: 1, transform: "translate3d(0, 0px, 0)" },
+    from: { opacity: 0, transform: "translate3d(0, 20px, 0)" },
+    trail: 100,
+  });
+
   return (
     <Page title="Work" padding={false}>
       <Navbar />
@@ -90,15 +105,10 @@ export default function Home(
             ))}
           </Stack>
           <div className={styles.ProjectsGrid}>
-            {props.projects
-              .filter(
-                (project) =>
-                  selectedCategory == null ||
-                  project.category === selectedCategory
-              )
-              .map((project) => {
-                return (
-                  <Link key={project.slug} href={`/projects/${project.slug}`}>
+            {transition((animatedStyles, project) => {
+              return (
+                <animated.div style={animatedStyles}>
+                  <Link href={`/projects/${project.slug}`}>
                     <a>
                       <div className={styles.Project}>
                         <Image
@@ -106,7 +116,7 @@ export default function Home(
                           width={500}
                           src={project.thumbnail}
                           className={styles.Thumbnail}
-                          layout="responsive"
+                          layout="intrinsic"
                           alt=""
                         />
                         <h3>{project.title}</h3>
@@ -114,8 +124,9 @@ export default function Home(
                       </div>
                     </a>
                   </Link>
-                );
-              })}
+                </animated.div>
+              );
+            })}
           </div>
         </div>
       </Container>
