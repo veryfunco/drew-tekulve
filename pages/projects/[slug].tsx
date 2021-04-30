@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { GetStaticPropsContext } from "next";
+import Link from "next/link";
 import Image from "next/image";
 import { animated, useTransition } from "@react-spring/web";
 
@@ -14,6 +15,7 @@ import { getVideoEmbedLink } from "lib/getVideoEmbedLink";
 
 import styles from "styles/projects/Detail.module.css";
 import { globalProps } from "lib/data/globalProps";
+import { adjacentProjects } from "lib/data/adjacentProjects";
 
 export const getStaticProps = async (
   context: GetStaticPropsContext<{ slug: string }>
@@ -21,10 +23,25 @@ export const getStaticProps = async (
   const global = await globalProps();
 
   const { slug } = context.params;
-
   const project = await projectBySlug(slug);
 
-  return project == null ? { notFound: true } : { props: { global, project } };
+  if (project == null) {
+    return { notFound: true };
+  }
+
+  const {
+    previous: previousProject,
+    next: nextProject,
+  } = await adjacentProjects(project.id);
+
+  return {
+    props: {
+      global,
+      project,
+      previousProject,
+      nextProject,
+    },
+  };
 };
 
 export const getStaticPaths = async () => {
@@ -38,6 +55,8 @@ export const getStaticPaths = async () => {
 
 export default function ProjectDetail({
   project,
+  previousProject,
+  nextProject,
 }: StaticProps<typeof getStaticProps>) {
   const [videoActive, setVideoActive] = useState(false);
   const transitions = useTransition(videoActive, {
@@ -111,6 +130,34 @@ export default function ProjectDetail({
                   </div>
                 ))}
           </Stack>
+        </Stack>
+      </div>
+
+      <div className={styles.NavButtonsContainer}>
+        <Stack justify="spaceBetween" align="center" wrap={false}>
+          {previousProject == null ? (
+            <Button disabled aria-hidden="true">
+              &larr;
+            </Button>
+          ) : (
+            <Link href={`/projects/${previousProject}`} passHref>
+              <Button as="link" aria-label="View previous project">
+                &larr;
+              </Button>
+            </Link>
+          )}
+          <p>See more projects</p>
+          {nextProject == null ? (
+            <Button disabled aria-hidden="true">
+              &rarr;
+            </Button>
+          ) : (
+            <Link href={`/projects/${nextProject}`} passHref>
+              <Button as="link" aria-label="View next project">
+                &rarr;
+              </Button>
+            </Link>
+          )}
         </Stack>
       </div>
     </Page>

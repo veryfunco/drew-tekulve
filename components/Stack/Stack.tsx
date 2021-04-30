@@ -2,11 +2,12 @@ import { ReactNode, Children } from "react";
 import classnames from "classnames";
 
 import styles from "./Stack.module.css";
+import { capitalizeFirstLetter } from "lib/capitalizeFirstLetter";
 
 interface Props {
   children: ReactNode;
   align?: "center";
-  justify?: "center" | "end";
+  justify?: "center" | "end" | "spaceBetween";
   spacing?: "extraTight" | "tight" | "loose" | "extraLoose";
   direction?: "row" | "column";
   wrap?: boolean;
@@ -25,8 +26,7 @@ export function Stack({
       className={classnames(
         styles.Stack,
         align === "center" && styles["Stack-alignCenter"],
-        justify === "center" && styles["Stack-justifyCenter"],
-        justify === "end" && styles["Stack-justifyEnd"],
+        justify && styles[`Stack-justify${capitalizeFirstLetter(justify)}`],
         spacing && styles[`Stack-${spacing}`],
         direction === "column" && styles["Stack-column"],
         wrap === false && styles["Stack-noWrap"]

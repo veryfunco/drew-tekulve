@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes, ReactNode } from "react";
+import { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactNode } from "react";
 import classnames from "classnames";
 
 import styles from "./Button.module.css";
@@ -11,7 +11,12 @@ interface Props {
   wide?: boolean;
   loading?: boolean;
   disabled?: boolean;
+  href?: string;
+  as?: "link" | "button";
 }
+
+type CommonButtonAnchorProps = AnchorHTMLAttributes<HTMLAnchorElement> &
+  ButtonHTMLAttributes<HTMLButtonElement>;
 
 export function Button({
   children,
@@ -21,19 +26,25 @@ export function Button({
   type = "button",
   loading,
   disabled,
+  href,
+  ...props
 }: Props) {
+  const commonProps: CommonButtonAnchorProps = {
+    onClick,
+    className: classnames(
+      styles.Button,
+      wide && styles["Button-wide"],
+      transparent && styles["Button-transparent"],
+      loading && styles["Button-loading"]
+    ),
+  };
+
+  if (href != null || props.as === "link") {
+    return <a {...commonProps}>{children}</a>;
+  }
+
   return (
-    <button
-      className={classnames(
-        styles.Button,
-        wide && styles["Button-wide"],
-        transparent && styles["Button-transparent"],
-        loading && styles["Button-loading"]
-      )}
-      onClick={onClick}
-      type={type}
-      disabled={disabled}
-    >
+    <button {...commonProps} type={type} disabled={disabled}>
       <div className={styles.Spinner}></div>
       <div className={styles.Content}>{children}</div>
     </button>

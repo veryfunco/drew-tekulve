@@ -50,6 +50,13 @@
   text-transform: uppercase;
 }
 
+.NavButtonsContainer {
+  margin: auto;
+  max-width: 400px;
+  padding: var(--spacing-extra-loose);
+  width: 100%;
+}
+
 .Description {
   margin: auto;
   max-width: 450px;

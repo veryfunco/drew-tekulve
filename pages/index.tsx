@@ -9,7 +9,6 @@ import { Navbar } from "components/Navbar";
 import { Container, Page } from "components/Page";
 import { Stack } from "components/Stack";
 
-import { allProjects } from "lib/data/allProjects";
 import { allProjectCategories } from "lib/data/allProjectCategories";
 import { globalProps } from "lib/data/globalProps";
 import { homePage } from "lib/data/homePage";
@@ -20,18 +19,13 @@ import styles from "styles/Home.module.css";
 export const getStaticProps = async () => {
   const global = await globalProps();
   const categories = await allProjectCategories();
-  const projects = await allProjects();
-  const { projects: projectIds, hero_video_url } = await homePage();
-
-  const joinedProjects = projectIds.map(({ project_id }) => {
-    return projects.find(({ id }) => id === project_id);
-  });
+  const { projects, hero_video_url } = await homePage();
 
   return {
     props: {
       global,
       categories,
-      projects: joinedProjects,
+      projects,
       heroVideoUrl: hero_video_url,
     },
   };

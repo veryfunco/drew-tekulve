@@ -20,6 +20,10 @@
   justify-content: flex-end;
 }
 
+.Stack-justifySpaceBetween {
+  justify-content: space-between;
+}
+
 .Stack-extraTight {
   margin: calc(var(--spacing-extra-tight) * -1);
 }
