@@ -107,19 +107,6 @@ export function Page({
               />
             </a>
             <a
-              href="mailto:drewtekulve@gmail.com"
-              className={styles.SocialIcon}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img
-                src="/icons/email.svg"
-                alt="Email"
-                width="24px"
-                height="17px"
-              />
-            </a>
-            <a
               href="https://www.imdb.com/name/nm6235937/?ref_=fn_al_nm_1"
               className={styles.SocialIcon}
               target="_blank"
@@ -130,6 +117,19 @@ export function Page({
                 width="36px"
                 height="18px"
                 alt="IMDb"
+              />
+            </a>
+            <a
+              href="mailto:drewtekulve@gmail.com"
+              className={styles.SocialIcon}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                src="/icons/email.svg"
+                alt="Email"
+                width="24px"
+                height="17px"
               />
             </a>
           </div>
