@@ -3,13 +3,13 @@ import { AppProps } from "next/app";
 
 import { AppContextProvider } from "lib/AppContext";
 
-function MyApp({ Component, pageProps }: AppProps) {
-  if (pageProps.global == null) {
+function MyApp({ Component, pageProps, router }: AppProps) {
+  if (router.route !== "/_error" && pageProps.global == null) {
     throw new Error(`Global page props must be defined for all pages`);
   }
 
   return (
-    <AppContextProvider value={{ ...pageProps.global }}>
+    <AppContextProvider value={{ ...(pageProps.global || {}) }}>
       <Component {...pageProps} />
     </AppContextProvider>
   );
