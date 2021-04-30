@@ -2,8 +2,9 @@ import { ReactNode } from "react";
 import Head from "next/head";
 import classnames from "classnames";
 
+import { useAppContext } from "lib/AppContext";
+
 import styles from "./Page.module.css";
-import { useAppContext } from "../../lib/appContext";
 
 interface Props {
   children: ReactNode;

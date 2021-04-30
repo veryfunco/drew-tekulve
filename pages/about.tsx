@@ -1,16 +1,18 @@
 import { InferGetStaticPropsType } from "next";
 import { FormEvent, useState } from "react";
-import { AboutPageSection } from "../components/AboutPageSection";
-import { Button } from "../components/Button";
-import { Navbar } from "../components/Navbar";
-import { Page } from "../components/Page";
-import { Stack } from "../components/Stack";
-import { TextField } from "../components/TextField";
-import { useAppContext } from "../lib/appContext";
-import { aboutPage } from "../lib/data/aboutPage";
-import { globalProps } from "../lib/data/globalProps";
 
-import styles from "../styles/About.module.css";
+import { AboutPageSection } from "components/AboutPageSection";
+import { Button } from "components/Button";
+import { Navbar } from "components/Navbar";
+import { Page } from "components/Page";
+import { Stack } from "components/Stack";
+import { TextField } from "components/TextField";
+
+import { useAppContext } from "lib/AppContext";
+import { aboutPage } from "lib/data/aboutPage";
+import { globalProps } from "lib/data/globalProps";
+
+import styles from "styles/About.module.css";
 
 export const getStaticProps = async () => {
   const global = await globalProps();

@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import sgMail from "@sendgrid/mail";
 
-import { sleep } from "../../lib/sleep";
+import { sleep } from "lib/sleep";
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 

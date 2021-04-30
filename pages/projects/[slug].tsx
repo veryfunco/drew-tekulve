@@ -3,17 +3,17 @@ import { GetStaticPropsContext } from "next";
 import Image from "next/image";
 import { animated, useTransition } from "@react-spring/web";
 
-import { Button } from "../../components/Button";
-import { Navbar } from "../../components/Navbar";
-import { Page } from "../../components/Page";
-import { Stack } from "../../components/Stack";
-import { StaticProps } from "../../types";
-import { allProjects } from "../../lib/data/allProjects";
-import { projectBySlug } from "../../lib/data/projectBySlug";
-import { getVideoEmbedLink } from "../../lib/getVideoEmbedLink";
+import { Button } from "components/Button";
+import { Navbar } from "components/Navbar";
+import { Page } from "components/Page";
+import { Stack } from "components/Stack";
+import { StaticProps } from "types";
+import { allProjects } from "lib/data/allProjects";
+import { projectBySlug } from "lib/data/projectBySlug";
+import { getVideoEmbedLink } from "lib/getVideoEmbedLink";
 
-import styles from "../../styles/projects/Detail.module.css";
-import { globalProps } from "../../lib/data/globalProps";
+import styles from "styles/projects/Detail.module.css";
+import { globalProps } from "lib/data/globalProps";
 
 export const getStaticProps = async (
   context: GetStaticPropsContext<{ slug: string }>

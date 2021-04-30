@@ -1,7 +1,7 @@
-import "../styles/globals.css";
+import "styles/globals.css";
 import { AppProps } from "next/app";
 
-import { AppContextProvider } from "../lib/appContext";
+import { AppContextProvider } from "lib/AppContext";
 
 function MyApp({ Component, pageProps }: AppProps) {
   if (pageProps.global == null) {

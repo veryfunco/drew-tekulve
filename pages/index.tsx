@@ -4,18 +4,18 @@ import Image from "next/image";
 import Link from "next/link";
 import { animated, useTransition } from "@react-spring/web";
 
-import { Button } from "../components/Button";
-import { Navbar } from "../components/Navbar";
-import { Container, Page } from "../components/Page";
-import { Stack } from "../components/Stack";
+import { Button } from "components/Button";
+import { Navbar } from "components/Navbar";
+import { Container, Page } from "components/Page";
+import { Stack } from "components/Stack";
 
-import { allProjects } from "../lib/data/allProjects";
-import { allProjectCategories } from "../lib/data/allProjectCategories";
-import { globalProps } from "../lib/data/globalProps";
-import { homePage } from "../lib/data/homePage";
-import { getVideoEmbedLink } from "../lib/getVideoEmbedLink";
+import { allProjects } from "lib/data/allProjects";
+import { allProjectCategories } from "lib/data/allProjectCategories";
+import { globalProps } from "lib/data/globalProps";
+import { homePage } from "lib/data/homePage";
+import { getVideoEmbedLink } from "lib/getVideoEmbedLink";
 
-import styles from "../styles/Home.module.css";
+import styles from "styles/Home.module.css";
 
 export const getStaticProps = async () => {
   const global = await globalProps();

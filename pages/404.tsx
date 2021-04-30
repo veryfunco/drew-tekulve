@@ -1,10 +1,8 @@
-import Link from "next/link";
-import { Navbar } from "../components/Navbar";
-import { Page } from "../components/Page";
-import { Stack } from "../components/Stack";
-import { globalProps } from "../lib/data/globalProps";
+import { Navbar } from "components/Navbar";
+import { Page } from "components/Page";
+import { globalProps } from "lib/data/globalProps";
 
-import styles from "../styles/404.module.css";
+import styles from "styles/404.module.css";
 
 export const getStaticProps = async () => {
   const global = await globalProps();

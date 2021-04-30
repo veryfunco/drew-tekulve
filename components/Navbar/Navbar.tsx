@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useAppContext } from "../../lib/appContext";
+import { useAppContext } from "lib/AppContext";
 import { Stack } from "../Stack";
 import styles from "./Navbar.module.css";
 
