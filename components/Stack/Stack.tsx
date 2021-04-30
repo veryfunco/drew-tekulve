@@ -9,6 +9,7 @@ interface Props {
   justify?: "center" | "end";
   spacing?: "tight" | "extraTight" | "loose";
   direction?: "row" | "column";
+  wrap?: boolean;
 }
 
 export function Stack({
@@ -17,6 +18,7 @@ export function Stack({
   justify,
   spacing,
   direction = "row",
+  wrap = true,
 }: Props) {
   return (
     <div
@@ -26,7 +28,8 @@ export function Stack({
         justify === "center" && styles["Stack-justifyCenter"],
         justify === "end" && styles["Stack-justifyEnd"],
         spacing && styles[`Stack-${spacing}`],
-        direction === "column" && styles["Stack-column"]
+        direction === "column" && styles["Stack-column"],
+        wrap === false && styles["Stack-noWrap"]
       )}
     >
       {Children.map(children, (child) => {

@@ -30,6 +30,12 @@
   margin: calc(var(--spacing-loose) * -1);
 }
 
+.Stack-noWrap {
+  flex-wrap: nowrap;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .Child {
   padding: var(--spacing-base);
 }
@@ -42,4 +48,10 @@
 }
 .Stack-loose .Child {
   padding: var(--spacing-loose);
+}
+
+.Stack-noWrap .Child {
+  flex-shrink: 0;
+  padding-top: 0;
+  padding-bottom: 0;
 }

@@ -65,4 +65,8 @@
   .ProjectsGrid {
     grid-template-columns: 1fr;
   }
+
+  .FilterButtonContainer {
+    overflow-x: scroll;
+  }
 }

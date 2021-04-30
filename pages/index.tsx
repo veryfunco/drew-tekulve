@@ -86,24 +86,28 @@ export default function Home(
       <Container>
         <div className={styles.ProjectsContainer}>
           <p className={styles.FilterTitle}>Filter work by category</p>
-          <Stack spacing="extraTight" align="center">
-            <Button
-              onClick={() => handleCategoryButtonClick(null)}
-              wide
-              transparent={selectedCategory != null}
-            >
-              All
-            </Button>
-            {props.categories.map((category) => (
+
+          <div className={styles.FilterButtonContainer}>
+            <Stack spacing="extraTight" align="center" wrap={false}>
               <Button
-                transparent={selectedCategory !== category.title}
-                onClick={() => handleCategoryButtonClick(category.title)}
-                key={category.title}
+                onClick={() => handleCategoryButtonClick(null)}
+                wide
+                transparent={selectedCategory != null}
               >
-                {category.title}
+                All
               </Button>
-            ))}
-          </Stack>
+              {props.categories.map((category) => (
+                <Button
+                  transparent={selectedCategory !== category.title}
+                  onClick={() => handleCategoryButtonClick(category.title)}
+                  key={category.title}
+                >
+                  {category.title}
+                </Button>
+              ))}
+            </Stack>
+          </div>
+
           <div className={styles.ProjectsGrid}>
             {transition((animatedStyles, project) => {
               return (
@@ -116,7 +120,7 @@ export default function Home(
                           width={500}
                           src={project.thumbnail}
                           className={styles.Thumbnail}
-                          layout="intrinsic"
+                          layout="responsive"
                           alt=""
                         />
                         <h3>{project.title}</h3>
