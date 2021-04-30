@@ -1,7 +1,7 @@
 .HeroContainer {
   height: calc(80vh - var(--navbar-height));
   min-height: 300px;
-  margin-top: var(--navbar-height);
+  padding-top: var(--navbar-height);
   position: relative;
 }
 
