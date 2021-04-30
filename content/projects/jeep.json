@@ -1,8 +1,36 @@
 {
-  "title": "Jeep",
-  "thumbnail": "/images/dt-jeep3-1-2.png",
-  "year": "2020",
-  "category": "Commercial",
   "video_url": "https://vimeo.com/464439477",
-  "id": "77596f88-8562-4241-b368-7efae1b5706f"
+  "thumbnail": "/images/dt-jeep3-1-2.png",
+  "subtitle": " ",
+  "title": "Jeep - See the Beauty",
+  "contributors": [
+    {
+      "name": "John Foss",
+      "role": "Director"
+    },
+    {
+      "name": "Ty Arnold",
+      "role": "DP"
+    },
+    {
+      "name": "Jess Baclesse",
+      "role": "Editor"
+    },
+    {
+      "name": "Robert Machoian",
+      "role": "Producer"
+    },
+    {
+      "role": "Production Company",
+      "name": "Kaleidoscope Pictures"
+    },
+    {
+      "name": "Drew Tekulve",
+      "role": "Colorist"
+    }
+  ],
+  "id": "77596f88-8562-4241-b368-7efae1b5706f",
+  "description": "   ",
+  "year": "2020",
+  "category": "Commercial"
 }
