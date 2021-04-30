@@ -21,13 +21,13 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     return;
   }
 
-  const { name, email, subject, message } = req.body;
+  const { name, email, subject, message, recipientEmail } = req.body;
 
   try {
     await sgMail.send({
       to:
         process.env.NODE_ENV === "production"
-          ? "drew@drewtekulve.com"
+          ? recipientEmail
           : "asmockler@gmail.com",
       from: "asmockler@gmail.com",
       subject: `\\(^ヮ^)/ Contact form submission: ${subject}`,

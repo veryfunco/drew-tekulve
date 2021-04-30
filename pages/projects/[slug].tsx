@@ -13,15 +13,18 @@ import { projectBySlug } from "../../lib/data/projectBySlug";
 import { getVideoEmbedLink } from "../../lib/getVideoEmbedLink";
 
 import styles from "../../styles/projects/Detail.module.css";
+import { globalProps } from "../../lib/data/globalProps";
 
 export const getStaticProps = async (
   context: GetStaticPropsContext<{ slug: string }>
 ) => {
+  const global = await globalProps();
+
   const { slug } = context.params;
 
   const project = await projectBySlug(slug);
 
-  return project == null ? { notFound: true } : { props: { project } };
+  return project == null ? { notFound: true } : { props: { global, project } };
 };
 
 export const getStaticPaths = async () => {

@@ -73,3 +73,19 @@ collections:
             fields:
               - {label: Name, name: name, widget: string}
               - {label: Logo, name: logo, widget: image}
+  - name: general
+    label: General
+    files:
+      - label: Info
+        name: info
+        file: "content/general/info.json"
+        format: json
+        fields:
+          - label: Job Title
+            name: job_title
+            widget: string
+            hint: "The title that is displayed in the navbar and footer"
+          - label: Email
+            name: email
+            widget: string
+            hint: "The email address used in the mail icon in the footer as well as the destination that contact form responses are sent to"

@@ -6,15 +6,19 @@ import { Navbar } from "../components/Navbar";
 import { Page } from "../components/Page";
 import { Stack } from "../components/Stack";
 import { TextField } from "../components/TextField";
+import { useAppContext } from "../lib/appContext";
 import { aboutPage } from "../lib/data/aboutPage";
+import { globalProps } from "../lib/data/globalProps";
 
 import styles from "../styles/About.module.css";
 
 export const getStaticProps = async () => {
+  const global = await globalProps();
   const { clients } = await aboutPage();
 
   return {
     props: {
+      global,
       clients,
     },
   };
@@ -23,6 +27,8 @@ export const getStaticProps = async () => {
 export default function About(
   props: InferGetStaticPropsType<typeof getStaticProps>
 ) {
+  const { email: recipientEmail } = useAppContext();
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
@@ -46,6 +52,7 @@ export default function About(
         email,
         message,
         subject,
+        recipientEmail,
       }),
     });
 

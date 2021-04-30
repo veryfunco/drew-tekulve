@@ -3,6 +3,7 @@ import Head from "next/head";
 import classnames from "classnames";
 
 import styles from "./Page.module.css";
+import { useAppContext } from "../../lib/appContext";
 
 interface Props {
   children: ReactNode;
@@ -23,6 +24,7 @@ export function Page({
   background = "black",
   padding = true,
 }: Props) {
+  const { jobTitle, email } = useAppContext();
   const fullTitle = title == null ? "Drew Tekulve" : `Drew Tekulve – ${title}`;
 
   return (
@@ -63,7 +65,7 @@ export function Page({
         <footer className={styles.Footer}>
           <div>
             Drew Tekulve <br />
-            Freelance Colorist
+            {jobTitle}
           </div>
 
           <div className={styles.SocialIconsContainer}>
@@ -120,7 +122,7 @@ export function Page({
               />
             </a>
             <a
-              href="mailto:drewtekulve@gmail.com"
+              href={`mailto:${email}`}
               className={styles.SocialIcon}
               target="_blank"
               rel="noreferrer"

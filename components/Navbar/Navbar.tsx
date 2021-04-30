@@ -1,6 +1,7 @@
 import classNames from "classnames";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useAppContext } from "../../lib/appContext";
 import { Stack } from "../Stack";
 import styles from "./Navbar.module.css";
 
@@ -11,6 +12,7 @@ interface Props {
 
 export function Navbar({ hideLogo, backgroundColor }: Props) {
   const router = useRouter();
+  const { jobTitle } = useAppContext();
 
   return (
     <nav className={styles.Container}>
@@ -26,7 +28,7 @@ export function Navbar({ hideLogo, backgroundColor }: Props) {
         }}
       >
         <div>
-          <h2 className={styles.Title}>Freelance Colorist</h2>
+          <h2 className={styles.Title}>{jobTitle}</h2>
         </div>
 
         <div>

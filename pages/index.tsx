@@ -11,12 +11,14 @@ import { Stack } from "../components/Stack";
 
 import { allProjects } from "../lib/data/allProjects";
 import { allProjectCategories } from "../lib/data/allProjectCategories";
+import { globalProps } from "../lib/data/globalProps";
 import { homePage } from "../lib/data/homePage";
 import { getVideoEmbedLink } from "../lib/getVideoEmbedLink";
 
 import styles from "../styles/Home.module.css";
 
 export const getStaticProps = async () => {
+  const global = await globalProps();
   const categories = await allProjectCategories();
   const projects = await allProjects();
   const { projects: projectIds, hero_video_url } = await homePage();
@@ -27,6 +29,7 @@ export const getStaticProps = async () => {
 
   return {
     props: {
+      global,
       categories,
       projects: joinedProjects,
       heroVideoUrl: hero_video_url,
