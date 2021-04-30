@@ -124,6 +124,10 @@ export default function Home(
                           alt=""
                         />
                         <h3>{project.title}</h3>
+                        {project.subtitle == null ||
+                        project.subtitle === "" ? null : (
+                          <p>{project.subtitle}</p>
+                        )}
                         <p>{project.year}</p>
                       </div>
                     </a>
