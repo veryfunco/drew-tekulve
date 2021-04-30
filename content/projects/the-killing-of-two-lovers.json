@@ -1,8 +1,8 @@
 {
-  "title": "The Killing of Two Lovers",
+  "video_url": "https://www.youtube.com/watch?v=DEid4LWdLS0",
   "thumbnail": "/images/screen-shot-2021-04-29-at-3.29.17-pm.png",
-  "category": "Narrative",
-  "year": "2020",
+  "subtitle": "Official Sundance Selection",
+  "title": "The Killing of Two Lovers",
   "contributors": [
     {
       "name": "Robert Machoian",
@@ -29,6 +29,8 @@
       "role": "Sound"
     }
   ],
-  "video_url": "https://www.youtube.com/watch?v=DEid4LWdLS0",
-  "id": "ca46fd90-7d87-4577-b602-ecddb4333007"
+  "id": "ca46fd90-7d87-4577-b602-ecddb4333007",
+  "description": "A man desperately tries to keep his family of six together during a separation from his wife. They both agree to see other people, but he struggles to come to terms with her new relationship.",
+  "year": "2020",
+  "category": "Narrative"
 }
