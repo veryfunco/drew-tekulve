@@ -67,12 +67,23 @@ collections:
         file: "content/pages/about.json"
         format: json
         fields:
+          - label: Description
+            name: description
+            widget: text
+          - label: "Client section lead text"
+            name: clients_lead
+            widget: text
+            hint: "This text displays just above the client icons"
           - label: Clients
             name: clients
             widget: list
             fields:
               - {label: Name, name: name, widget: string}
               - {label: Logo, name: logo, widget: image}
+          - label: "Contact form lead text"
+            name: contact_lead
+            widget: text
+            hint: "This text displays just above the contact form"
   - name: general
     label: General
     files:

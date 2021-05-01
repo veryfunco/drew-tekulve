@@ -16,12 +16,20 @@ import styles from "styles/About.module.css";
 
 export const getStaticProps = async () => {
   const global = await globalProps();
-  const { clients } = await aboutPage();
+  const {
+    description,
+    clients_lead,
+    clients,
+    contact_lead,
+  } = await aboutPage();
 
   return {
     props: {
       global,
+      description,
+      clientsLead: clients_lead,
       clients,
+      contactLead: contact_lead,
     },
   };
 };
@@ -77,15 +85,9 @@ export default function About(
         />
       </div>
 
-      <AboutPageSection
-        wideLead
-        lead="Everything from TV shows and commercials to feature films that have screened at Sundance Film Festival. Working primarily in DaVinci Resolve, with experience in HDR and ACES workflows."
-      />
+      <AboutPageSection wideLead lead={props.description} />
 
-      <AboutPageSection
-        title="Clients"
-        lead="Want to work together? Describe your project below and I’ll send you a quote."
-      >
+      <AboutPageSection title="Clients" lead={props.clientsLead}>
         <div className={styles.ClientLogosContainer}>
           <Stack align="center" justify="center" spacing="loose">
             {props.clients.map((client) => (
@@ -97,10 +99,7 @@ export default function About(
         </div>
       </AboutPageSection>
 
-      <AboutPageSection
-        title="Contact"
-        lead="Want to work together? Describe your project below and I’ll send you a quote."
-      >
+      <AboutPageSection title="Contact" lead={props.contactLead}>
         <form onSubmit={handleFormSubmit} className={styles.ContactForm}>
           <Stack direction="column" spacing="tight" justify="center">
             <TextField placeholder="Name" value={name} onChange={setName} />
