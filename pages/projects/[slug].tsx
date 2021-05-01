@@ -69,36 +69,37 @@ export default function ProjectDetail({
       <Navbar backgroundColor="black" />
 
       <div className={styles.HeroContainer}>
-        {transitions((animatedStyles, item) =>
-          item ? (
-            <iframe
-              src={`${getVideoEmbedLink(project.video_url)}`}
-              frameBorder="0"
-              allowFullScreen
-              style={{ height: "100%", width: "100%" }}
-            ></iframe>
-          ) : (
-            <animated.div
-              className={styles.HeroImageContainer}
-              style={animatedStyles}
-            >
-              <Image
-                src={project.thumbnail}
-                layout="fill"
-                className={styles.PreviewImage}
-                alt=""
-              />
-
-              <div className={styles.PlayButtonContainer}>
-                {project.video_url == null ? null : (
-                  <Button wide onClick={() => setVideoActive(true)}>
-                    Play
-                  </Button>
-                )}
-              </div>
-            </animated.div>
-          )
-        )}
+        <div className={styles.HeroInnerContainer}>
+          {transitions((animatedStyles, item) =>
+            item ? (
+              <iframe
+                src={`${getVideoEmbedLink(project.video_url)}`}
+                frameBorder="0"
+                allowFullScreen
+                style={{ height: "100%", width: "100%" }}
+              ></iframe>
+            ) : (
+              <animated.div
+                className={styles.HeroImageContainer}
+                style={animatedStyles}
+              >
+                <Image
+                  src={project.thumbnail}
+                  layout="fill"
+                  className={styles.PreviewImage}
+                  alt=""
+                />
+                <div className={styles.PlayButtonContainer}>
+                  {project.video_url == null ? null : (
+                    <Button wide onClick={() => setVideoActive(true)}>
+                      Play
+                    </Button>
+                  )}
+                </div>
+              </animated.div>
+            )
+          )}
+        </div>
       </div>
 
       <div className={styles.DetailsContainer}>
@@ -134,7 +135,7 @@ export default function ProjectDetail({
       </div>
 
       <div className={styles.NavButtonsContainer}>
-        <Stack justify="spaceBetween" align="center" wrap={false}>
+        <div className={styles.ButtonPrevious}>
           {previousProject == null ? (
             <Button disabled aria-hidden="true">
               &larr;
@@ -146,7 +147,13 @@ export default function ProjectDetail({
               </Button>
             </Link>
           )}
+        </div>
+
+        <div className={styles.NavText}>
           <p>See more projects</p>
+        </div>
+
+        <div className={styles.ButtonNext}>
           {nextProject == null ? (
             <Button disabled aria-hidden="true">
               &rarr;
@@ -158,7 +165,7 @@ export default function ProjectDetail({
               </Button>
             </Link>
           )}
-        </Stack>
+        </div>
       </div>
     </Page>
   );
