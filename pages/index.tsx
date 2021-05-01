@@ -85,7 +85,7 @@ export default function Home(
           <p className={styles.FilterTitle}>Filter work by category</p>
 
           <div className={styles.FilterButtonContainer}>
-            <Stack spacing="extraTight" align="center" wrap={false}>
+            <Stack align="center" wrap={false}>
               <Button
                 onClick={() => handleCategoryButtonClick(null)}
                 wide

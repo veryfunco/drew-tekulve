@@ -11,7 +11,7 @@
 .Container {
   margin: auto;
   max-width: var(--page-max-width);
-  padding: 0 var(--spacing-loose) var(--spacing-base);
+  padding: 0 var(--spacing-base) var(--spacing-base);
   position: relative;
   width: 100%;
 }

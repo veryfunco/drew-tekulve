@@ -36,6 +36,7 @@ export const getStaticProps = async (
 
   return {
     props: {
+      key: project.id, // Required to ensure state resets on navigation
       global,
       project,
       previousProject,
@@ -103,7 +104,7 @@ export default function ProjectDetail({
       </div>
 
       <div className={styles.DetailsContainer}>
-        <Stack spacing="loose" direction="column" align="center">
+        <Stack spacing="extraLoose" direction="column" align="center">
           <Stack spacing="extraTight" direction="column">
             <h2 className={styles.Title}>{project.title}</h2>
             {project.subtitle == null || project.subtitle === "" ? null : (
@@ -121,7 +122,7 @@ export default function ProjectDetail({
             )}
           </Stack>
 
-          <Stack direction="column" spacing="tight">
+          <Stack direction="column">
             {project.contributors == null
               ? null
               : project.contributors.map(({ name, role }) => (
