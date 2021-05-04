@@ -3,20 +3,20 @@
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 999;
+  z-index: 998;
 }
 
 .Content {
   align-items: center;
   color: #fff;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
   height: var(--navbar-height);
-  justify-content: center;
+  justify-content: space-between;
   margin: auto;
   max-width: var(--page-max-width);
   padding: var(--spacing-base) var(--spacing-loose);
   text-transform: uppercase;
+  transition: background 500ms;
   width: 100%;
 }
 
@@ -24,10 +24,16 @@
   font-size: var(--font-navbar);
 }
 
-.Logo {
-  display: block;
-  margin: auto;
-  width: 150px;
+.ScrollyLogoContainer {
+  position: fixed;
+  left: 50%;
+}
+
+.StaticLogoContainer {
+  left: 50%;
+  position: absolute;
+  top: var(--spacing-base);
+  transform: translate3d(-50%, 0, 0);
 }
 
 .Link {

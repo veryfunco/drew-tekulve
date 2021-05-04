@@ -61,7 +61,7 @@ export default function Home(
 
   return (
     <Page title="Work" padding={false}>
-      <Navbar />
+      <Navbar logoType="scrolly" />
 
       <div className={styles.VideoBackground}>
         {lazyCanLoad ? (

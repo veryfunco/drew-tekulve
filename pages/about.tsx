@@ -75,15 +75,9 @@ export default function About(
 
   return (
     <Page title="About" background="blue">
-      <Navbar hideLogo backgroundColor="blue" />
+      <Navbar logoType="scrolly" backgroundColor="blue" />
 
-      <div className={styles.HeroContainer}>
-        <img
-          className={styles.Logo}
-          src="/images/logo.svg"
-          alt="Drew Tekulve"
-        />
-      </div>
+      <div className={styles.HeroContainer}></div>
 
       <AboutPageSection wideLead lead={props.description} />
 
