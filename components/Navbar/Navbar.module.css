@@ -36,6 +36,10 @@
   transform: translate3d(-50%, 0, 0);
 }
 
+.LinksContainer {
+  flex: 1 0 auto;
+}
+
 .Link {
   font-size: var(--font-navbar);
   opacity: 0.6;
