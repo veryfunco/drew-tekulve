@@ -96,17 +96,30 @@ export default function About(
       <AboutPageSection title="Contact" lead={props.contactLead}>
         <form onSubmit={handleFormSubmit} className={styles.ContactForm}>
           <Stack direction="column" spacing="tight" justify="center">
-            <TextField placeholder="Name" value={name} onChange={setName} />
-
-            <TextField placeholder="Email" value={email} onChange={setEmail} />
+            <TextField
+              required
+              placeholder="Name"
+              value={name}
+              onChange={setName}
+            />
 
             <TextField
+              required
+              placeholder="Email"
+              type="email"
+              value={email}
+              onChange={setEmail}
+            />
+
+            <TextField
+              required
               placeholder="Subject"
               value={subject}
               onChange={setSubject}
             />
 
             <TextField
+              required
               placeholder="Message"
               multiline
               value={message}

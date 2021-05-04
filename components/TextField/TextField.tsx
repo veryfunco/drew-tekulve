@@ -11,6 +11,7 @@ interface Props {
   multiline?: boolean;
   placeholder: string;
   required?: boolean;
+  type?: "text" | "email";
   value: string;
   onChange(value: string): void;
 }
@@ -24,6 +25,7 @@ export function TextField({
   value,
   onChange,
   required,
+  type = "text",
 }: Props) {
   const handleChange = useCallback(
     (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -31,6 +33,10 @@ export function TextField({
     },
     [onChange]
   );
+
+  if (type !== "text" && multiline) {
+    throw new Error(`Cannot use multiline with type other than "text"`);
+  }
 
   const commonProps: CommonInputProps = {
     placeholder,
@@ -43,6 +49,6 @@ export function TextField({
   return multiline ? (
     <textarea {...commonProps} rows={5} />
   ) : (
-    <input {...commonProps} />
+    <input {...commonProps} type={type} />
   );
 }
