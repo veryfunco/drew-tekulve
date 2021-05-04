@@ -1,7 +1,7 @@
 {
   "id": "97cf41a7-9e8a-42d7-bd61-2b01cd2d3dd1",
   "title": "PACKSIZE - Nuts & Bolts",
-  "video_url": "https://player.vimeo.com/video/449761519",
+  "video_url": "https://vimeo.com/449761519",
   "category": "Commercial",
   "year": "2020",
   "contributors": [
@@ -26,5 +26,6 @@
       "role": "Colorist"
     }
   ],
-  "thumbnail": "/images/screen-shot-2021-04-29-at-2.24.18-pm.png"
+  "thumbnail": "/images/screen-shot-2021-04-29-at-2.24.18-pm.png",
+  "description": ""
 }
