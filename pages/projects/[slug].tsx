@@ -2,7 +2,6 @@ import { useState } from "react";
 import { GetStaticPropsContext } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import Head from "next/head";
 import { animated, useTransition } from "@react-spring/web";
 
 import { Button } from "components/Button";
@@ -17,6 +16,7 @@ import { getVideoEmbedLink } from "lib/getVideoEmbedLink";
 import styles from "styles/projects/Detail.module.css";
 import { globalProps } from "lib/data/globalProps";
 import { adjacentProjects } from "lib/data/adjacentProjects";
+import { SEOImage } from "components/SEOImage";
 
 export const getStaticProps = async (
   context: GetStaticPropsContext<{ slug: string }>
@@ -68,14 +68,7 @@ export default function ProjectDetail({
 
   return (
     <Page>
-      <Head>
-        <meta property="og:image" content={project.thumbnail} key="og:image" />
-        <meta
-          name="twitter:image"
-          content={project.thumbnail}
-          key="twitter:image"
-        />
-      </Head>
+      <SEOImage src={project.thumbnail} />
 
       <Navbar backgroundColor="black" />
 

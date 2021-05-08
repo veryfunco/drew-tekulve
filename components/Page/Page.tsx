@@ -3,7 +3,9 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import classnames from "classnames";
 
+import { SEOImage } from "components/SEOImage";
 import { useAppContext } from "lib/AppContext";
+import { makeAbsoluteURL } from "lib/makeAbsoluteURL";
 
 import styles from "./Page.module.css";
 
@@ -29,7 +31,7 @@ export function Page({
   const router = useRouter();
   const { jobTitle, email } = useAppContext();
   const fullTitle = title == null ? "Drew Tekulve" : `Drew Tekulve – ${title}`;
-  const url = `https://www.drewtekulve.com${router.asPath}`;
+  const url = makeAbsoluteURL(router.asPath);
 
   return (
     <>
@@ -39,15 +41,13 @@ export function Page({
         <meta property="og:title" content={fullTitle} key="og:title" />
         <meta property="og:url" content={url} key="og:url" />
         <meta property="og:type" content="website" key="og:type" />
-        <meta property="og:image" content="/images/logo.svg" key="og:image" />
-        <meta name="twitter:card" content="summary" key="twitter:card" />
+        <meta
+          name="twitter:card"
+          content="summary_large_image"
+          key="twitter:card"
+        />
         <meta name="twitter:url" content={url} key="twitter:url" />
         <meta name="twitter:title" content={fullTitle} key="twitter:title" />
-        <meta
-          name="twitter:image"
-          content="/images/logo.svg"
-          key="twitter:image"
-        />
 
         <link rel="icon" href="/favicon.ico" />
 
@@ -64,6 +64,7 @@ export function Page({
           crossOrigin=""
         />
       </Head>
+      <SEOImage src="/images/logo.svg" />
 
       <div
         className={classnames(
