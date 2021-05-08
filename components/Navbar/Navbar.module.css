@@ -24,11 +24,6 @@
   font-size: var(--font-navbar);
 }
 
-.ScrollyLogoContainer {
-  position: fixed;
-  left: 50%;
-}
-
 .StaticLogoContainer {
   left: 50%;
   position: absolute;

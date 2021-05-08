@@ -1,11 +1,17 @@
 import { useEffect, useState } from "react";
 import classNames from "classnames";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
 import { useAppContext } from "lib/AppContext";
 import { useWindowSize } from "lib/useWindowSize";
 import { Stack } from "../Stack";
+
 import styles from "./Navbar.module.css";
+
+const ScrollyLogo = dynamic(() => import("./components/ScrollyLogo"), {
+  ssr: false,
+});
 
 const MOBILE_NAV_BREAKPOINT_WIDTH = 700;
 
@@ -21,25 +27,29 @@ export function Navbar({
   const router = useRouter();
   const { jobTitle } = useAppContext();
   const [scrollEffectAmount, setScrollEffectAmount] = useState(0);
-  const { width, height } = useWindowSize();
+  const windowSize = useWindowSize();
 
   useEffect(() => {
     function handleScroll() {
+      if (windowSize == null) {
+        return;
+      }
+
       const { scrollY } = window;
 
-      if (scrollY > height) {
+      if (scrollY > windowSize.height) {
         setScrollEffectAmount(0);
         return;
       }
 
-      const proportionScrolled = Math.max(0, scrollY) / height;
+      const proportionScrolled = Math.max(0, scrollY) / windowSize.height;
       setScrollEffectAmount(1 - proportionScrolled);
     }
     handleScroll();
     window.addEventListener("scroll", handleScroll);
 
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [height]);
+  }, [windowSize]);
 
   // Make the logo effect happen twice as fast as the background effect
   const logoScrollAmount = Math.max(0, (scrollEffectAmount - 0.5) / 0.5);
@@ -57,25 +67,7 @@ export function Navbar({
   return (
     <nav className={styles.Container}>
       {logoType === "scrolly" ? (
-        <div
-          style={{
-            top: `max(${50 * logoScrollAmount}%, var(--spacing-base))`,
-            transform: `translate3d(-50%, -${60 * logoScrollAmount}%, 0)`,
-          }}
-          className={styles.ScrollyLogoContainer}
-        >
-          <Link href="/">
-            <a>
-              <img
-                src="/images/logo.svg"
-                style={{
-                  width: 150 + 400 * logoScrollAmount,
-                  maxWidth: "85vw",
-                }}
-              />
-            </a>
-          </Link>
-        </div>
+        <ScrollyLogo scrollAmount={logoScrollAmount} />
       ) : null}
 
       <div
@@ -85,7 +77,8 @@ export function Navbar({
             backgroundScrollAmount < 0.01 ? background : "transparent",
         }}
       >
-        {width > MOBILE_NAV_BREAKPOINT_WIDTH ? (
+        {windowSize == null ||
+        windowSize.width > MOBILE_NAV_BREAKPOINT_WIDTH ? (
           <div>
             <h2 className={styles.Title}>{jobTitle}</h2>
           </div>
@@ -104,7 +97,10 @@ export function Navbar({
         <div className={styles.LinksContainer}>
           <Stack
             justify={
-              width > MOBILE_NAV_BREAKPOINT_WIDTH ? "end" : "spaceBetween"
+              windowSize == null ||
+              windowSize.width > MOBILE_NAV_BREAKPOINT_WIDTH
+                ? "end"
+                : "spaceBetween"
             }
             spacing="loose"
           >
