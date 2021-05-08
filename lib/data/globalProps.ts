@@ -7,7 +7,13 @@ export async function globalProps() {
     "utf-8"
   );
 
-  const { job_title, email } = JSON.parse(infoFile);
+  const seoFile = await fs.readFile(
+    path.join(process.cwd(), "content/general/seo.json"),
+    "utf-8"
+  );
 
-  return { email, jobTitle: job_title };
+  const { job_title, email } = JSON.parse(infoFile);
+  const { description } = JSON.parse(seoFile);
+
+  return { email, jobTitle: job_title, metaDescription: description };
 }

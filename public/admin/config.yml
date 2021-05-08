@@ -87,6 +87,15 @@ collections:
   - name: general
     label: General
     files:
+      - label: SEO
+        name: seo
+        file: "content/general/seo.json"
+        format: json
+        fields:
+          - label: Site Description
+            name: description
+            widget: string
+            hint: "This will be used for the description meta tag e.g. og:description"
       - label: Info
         name: info
         file: "content/general/info.json"

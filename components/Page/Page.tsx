@@ -29,7 +29,7 @@ export function Page({
   padding = true,
 }: Props) {
   const router = useRouter();
-  const { jobTitle, email } = useAppContext();
+  const { jobTitle, email, metaDescription } = useAppContext();
   const fullTitle = title == null ? "Drew Tekulve" : `Drew Tekulve – ${title}`;
   const url = makeAbsoluteURL(router.asPath);
 
@@ -42,12 +42,22 @@ export function Page({
         <meta property="og:url" content={url} key="og:url" />
         <meta property="og:type" content="website" key="og:type" />
         <meta
+          property="og:description"
+          content={metaDescription}
+          key="og:description"
+        />
+        <meta
           name="twitter:card"
           content="summary_large_image"
           key="twitter:card"
         />
         <meta name="twitter:url" content={url} key="twitter:url" />
         <meta name="twitter:title" content={fullTitle} key="twitter:title" />
+        <meta
+          property="twitter:description"
+          content={metaDescription}
+          key="twitter:description"
+        />
 
         <link rel="icon" href="/favicon.ico" />
 
