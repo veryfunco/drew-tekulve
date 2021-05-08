@@ -82,11 +82,9 @@ export function Navbar({
             backgroundScrollAmount < 0.01 ? background : "transparent",
         }}
       >
-        {isMobileNav ? null : (
-          <div>
-            <h2 className={styles.Title}>{jobTitle}</h2>
-          </div>
-        )}
+        <div className={styles.JobTitleContainer}>
+          <h2 className={styles.Title}>{jobTitle}</h2>
+        </div>
 
         {logoType === "static" ? (
           <div className={styles.StaticLogoContainer}>
