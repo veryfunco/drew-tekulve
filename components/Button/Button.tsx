@@ -1,4 +1,9 @@
-import { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactNode } from "react";
+import {
+  AnchorHTMLAttributes,
+  ButtonHTMLAttributes,
+  ReactNode,
+  forwardRef,
+} from "react";
 import classnames from "classnames";
 
 import styles from "./Button.module.css";
@@ -18,35 +23,46 @@ interface Props {
 type CommonButtonAnchorProps = AnchorHTMLAttributes<HTMLAnchorElement> &
   ButtonHTMLAttributes<HTMLButtonElement>;
 
-export function Button({
-  children,
-  onClick,
-  wide = false,
-  transparent = false,
-  type = "button",
-  loading,
-  disabled,
-  href,
-  ...props
-}: Props) {
-  const commonProps: CommonButtonAnchorProps = {
-    onClick,
-    className: classnames(
-      styles.Button,
-      wide && styles["Button-wide"],
-      transparent && styles["Button-transparent"],
-      loading && styles["Button-loading"]
-    ),
-  };
+/* eslint-disable react/display-name, react/prop-types */
+export const Button = forwardRef<HTMLAnchorElement & HTMLButtonElement, Props>(
+  (
+    {
+      children,
+      onClick,
+      wide = false,
+      transparent = false,
+      type = "button",
+      loading,
+      disabled,
+      href,
+      ...props
+    },
+    ref
+  ) => {
+    const commonProps: CommonButtonAnchorProps = {
+      onClick,
+      className: classnames(
+        styles.Button,
+        wide && styles["Button-wide"],
+        transparent && styles["Button-transparent"],
+        loading && styles["Button-loading"]
+      ),
+    };
 
-  if (href != null || props.as === "link") {
-    return <a {...commonProps}>{children}</a>;
+    if (href != null || props.as === "link") {
+      return (
+        <a ref={ref} {...commonProps}>
+          {children}
+        </a>
+      );
+    }
+
+    return (
+      <button ref={ref} {...commonProps} type={type} disabled={disabled}>
+        <div className={styles.Spinner}></div>
+        <div className={styles.Content}>{children}</div>
+      </button>
+    );
   }
-
-  return (
-    <button {...commonProps} type={type} disabled={disabled}>
-      <div className={styles.Spinner}></div>
-      <div className={styles.Content}>{children}</div>
-    </button>
-  );
-}
+);
+/* eslint-enable react/display-name, react/prop-types */
