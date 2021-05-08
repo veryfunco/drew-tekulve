@@ -20,6 +20,10 @@
   width: 100%;
 }
 
+.JobTitleContainer {
+  display: block;
+}
+
 .Title {
   font-size: var(--font-navbar);
 }
