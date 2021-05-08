@@ -1,4 +1,4 @@
-import React from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useSpring, animated } from "@react-spring/web";
 import { useWindowSize } from "lib/useWindowSize";
@@ -11,14 +11,20 @@ interface Props {
 
 export function ScrollyLogo({ scrollAmount }: Props) {
   const windowSize = useWindowSize();
+  const [isFirstRender, setIsFirstRender] = useState(true);
 
-  const windowHeight = windowSize == null ? 60 : windowSize.height;
+  const windowHeight = windowSize == null ? 0 : windowSize.height;
   const animatedStyles = useSpring({
     from: { width: 550, y: windowHeight / 3 },
     width: 150 + 400 * scrollAmount,
     y: Math.max((windowHeight / 3) * scrollAmount, 12),
-    immediate: true,
+    immediate: isFirstRender,
+    duration: 50,
   });
+
+  useEffect(() => {
+    setIsFirstRender(windowSize == null);
+  }, [windowSize, scrollAmount]);
 
   return (
     <animated.div

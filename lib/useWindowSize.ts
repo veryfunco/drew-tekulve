@@ -6,16 +6,21 @@ interface WindowSize {
 }
 
 export function useWindowSize() {
-  const initialState =
+  const [windowSize, setWindowSize] = useState<WindowSize | null>(
     typeof window === "undefined"
       ? null
-      : { width: window.innerWidth, height: window.innerHeight };
-
-  const [windowSize, setWindowSize] = useState<WindowSize | null>(initialState);
+      : {
+          width: window.innerWidth,
+          height: window.innerHeight,
+        }
+  );
 
   useEffect(() => {
     function handleResize() {
-      setWindowSize({ width: window.innerWidth, height: window.innerHeight });
+      setWindowSize({
+        width: window.screen.width,
+        height: window.innerHeight,
+      });
     }
     handleResize();
     window.addEventListener("resize", handleResize);

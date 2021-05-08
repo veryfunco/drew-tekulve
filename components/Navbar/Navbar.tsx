@@ -8,6 +8,7 @@ import { useWindowSize } from "lib/useWindowSize";
 import { Stack } from "../Stack";
 
 import styles from "./Navbar.module.css";
+import { useMediaQuery } from "lib/useMediaQuery";
 
 const ScrollyLogo = dynamic(() => import("./components/ScrollyLogo"), {
   ssr: false,
@@ -26,8 +27,9 @@ export function Navbar({
 }: Props) {
   const router = useRouter();
   const { jobTitle } = useAppContext();
-  const [scrollEffectAmount, setScrollEffectAmount] = useState(0);
+  const [scrollEffectAmount, setScrollEffectAmount] = useState(null);
   const windowSize = useWindowSize();
+  const isMobileNav = useMediaQuery(MOBILE_NAV_BREAKPOINT_WIDTH);
 
   useEffect(() => {
     function handleScroll() {
@@ -52,7 +54,10 @@ export function Navbar({
   }, [windowSize]);
 
   // Make the logo effect happen twice as fast as the background effect
-  const logoScrollAmount = Math.max(0, (scrollEffectAmount - 0.5) / 0.5);
+  const logoScrollAmount =
+    scrollEffectAmount == null
+      ? null
+      : Math.max(0, (scrollEffectAmount - 0.5) / 0.5);
   const backgroundScrollAmount = scrollEffectAmount;
 
   let background: string;
@@ -66,7 +71,7 @@ export function Navbar({
 
   return (
     <nav className={styles.Container}>
-      {logoType === "scrolly" ? (
+      {logoType === "scrolly" && logoScrollAmount != null ? (
         <ScrollyLogo scrollAmount={logoScrollAmount} />
       ) : null}
 
@@ -77,12 +82,11 @@ export function Navbar({
             backgroundScrollAmount < 0.01 ? background : "transparent",
         }}
       >
-        {windowSize == null ||
-        windowSize.width > MOBILE_NAV_BREAKPOINT_WIDTH ? (
+        {isMobileNav ? null : (
           <div>
             <h2 className={styles.Title}>{jobTitle}</h2>
           </div>
-        ) : null}
+        )}
 
         {logoType === "static" ? (
           <div className={styles.StaticLogoContainer}>
@@ -95,15 +99,7 @@ export function Navbar({
         ) : null}
 
         <div className={styles.LinksContainer}>
-          <Stack
-            justify={
-              windowSize == null ||
-              windowSize.width > MOBILE_NAV_BREAKPOINT_WIDTH
-                ? "end"
-                : "spaceBetween"
-            }
-            spacing="loose"
-          >
+          <Stack justify={isMobileNav ? "spaceBetween" : "end"} spacing="loose">
             <Link href="/">
               <a
                 className={classNames(
