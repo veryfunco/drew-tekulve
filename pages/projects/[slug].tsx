@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { GetStaticPropsContext } from "next";
-import Link from "next/link";
+import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import { animated, useTransition } from "@react-spring/web";
 
 import { Button } from "components/Button";
@@ -68,6 +69,18 @@ export default function ProjectDetail({
 
   return (
     <Page>
+      <Head>
+        <meta
+          property="og:description"
+          content={project.description}
+          key="og:description"
+        />
+        <meta
+          property="twitter:description"
+          content={project.description}
+          key="twitter:description"
+        />
+      </Head>
       <SEOImage src={project.thumbnail} />
 
       <Navbar backgroundColor="black" />
