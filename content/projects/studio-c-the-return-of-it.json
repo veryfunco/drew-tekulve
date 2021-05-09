@@ -1,0 +1,30 @@
+{
+  "id": "1beeba4f-799c-4479-a4cd-d8ab3c010452",
+  "title": "Studio C - The Return of It",
+  "year": "2018",
+  "video_url": "https://www.youtube.com/watch?v=4TE7Yi6qRPw&list=PLGVpxD1HlmJ_27A29yqs0d2ZyuneTZMin&index=85&ab_channel=StudioC",
+  "thumbnail": "/images/it_1.png",
+  "contributors": [
+    {
+      "name": "Jeremy Warner",
+      "role": "Director"
+    },
+    {
+      "name": "Luiz Malaman",
+      "role": "Producer"
+    },
+    {
+      "name": "Tess Kelly",
+      "role": "Line Producer"
+    },
+    {
+      "name": "Trent Woolford",
+      "role": "Editor"
+    },
+    {
+      "name": "Drew Tekulve",
+      "role": "Colorist"
+    }
+  ],
+  "category": "Narrative"
+}
