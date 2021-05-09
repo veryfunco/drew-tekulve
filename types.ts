@@ -1,7 +1,3 @@
-export interface Category {
-  title: string;
-}
-
 export type Await<T> = T extends PromiseLike<infer U> ? U : T;
 
 // Next includes a type that attempts to extract static props,
