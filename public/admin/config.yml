@@ -51,6 +51,9 @@ collections:
             name: hero_video_url
             widget: string
             hint: "e.g. https://vimeo.com/123456789"
+          - label: "Reel Button Text"
+            name: reel_button_text
+            widget: string
           - label: Projects
             name: projects
             widget: list
@@ -62,6 +65,23 @@ collections:
                 value_field: id
                 display_fields: [title]
                 search_fields: [title]
+      - label: "Reel Page"
+        name: reel
+        file: "content/pages/reel.json"
+        format: json
+        fields:
+          - label: "Reel Video URL"
+            name: reel_url
+            widget: string
+          - label: "Reel Cover Image"
+            name: reel_cover_image
+            widget: image
+          - label: Title
+            name: title
+            widget: string
+          - label: "Description"
+            name: description
+            widget: text
       - label: "About Page"
         name: "about"
         file: "content/pages/about.json"

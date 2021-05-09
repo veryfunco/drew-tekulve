@@ -19,7 +19,7 @@ import styles from "styles/Home.module.css";
 export const getStaticProps = async () => {
   const global = await globalProps();
   const categories = await allProjectCategories();
-  const { projects, hero_video_url } = await homePage();
+  const { projects, hero_video_url, reel_button_text } = await homePage();
 
   return {
     props: {
@@ -27,6 +27,7 @@ export const getStaticProps = async () => {
       categories,
       projects,
       heroVideoUrl: hero_video_url,
+      reelButtonText: reel_button_text,
     },
   };
 };
@@ -78,6 +79,12 @@ export default function Home(
             allowFullScreen
           ></iframe>
         ) : null}
+
+        <div className={styles.ReelButton}>
+          <Link href="/reel" passHref>
+            <Button as="link">{props.reelButtonText}</Button>
+          </Link>
+        </div>
       </div>
 
       <Container>

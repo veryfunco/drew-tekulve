@@ -1,0 +1,56 @@
+.HeroContainer {
+  height: calc(80vh - var(--navbar-height));
+  min-height: 300px;
+  padding-top: var(--navbar-height);
+}
+
+.HeroInnerContainer {
+  height: 100%;
+  position: relative;
+}
+
+.HeroImageContainer {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.PreviewImage {
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.PlayButtonContainer {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 20;
+}
+
+.DetailsContainer {
+  margin: var(--spacing-loose) 0 var(--spacing-extra-loose);
+  text-align: center;
+}
+
+.Title {
+  font-family: "Max Fett", sans-serif;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.Description {
+  margin: auto;
+  max-width: 450px;
+}
