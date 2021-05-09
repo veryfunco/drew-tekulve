@@ -13,7 +13,12 @@ export async function globalProps() {
   );
 
   const { job_title, email } = JSON.parse(infoFile);
-  const { description } = JSON.parse(seoFile);
+  const { description, meta_image } = JSON.parse(seoFile);
 
-  return { email, jobTitle: job_title, metaDescription: description };
+  return {
+    email,
+    jobTitle: job_title,
+    metaDescription: description,
+    metaImage: meta_image,
+  };
 }

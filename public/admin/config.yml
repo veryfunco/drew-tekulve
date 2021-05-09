@@ -96,6 +96,10 @@ collections:
             name: description
             widget: string
             hint: "This will be used for the description meta tag e.g. og:description"
+          - label: Default social share image
+            name: meta_image
+            widget: image
+            hint: "This image will show when the home and about pages are shared"
       - label: Info
         name: info
         file: "content/general/info.json"

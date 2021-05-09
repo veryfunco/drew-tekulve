@@ -4,6 +4,7 @@ const AppContext = createContext({
   jobTitle: "",
   email: "",
   metaDescription: "",
+  metaImage: "",
 });
 
 export const AppContextProvider = AppContext.Provider;

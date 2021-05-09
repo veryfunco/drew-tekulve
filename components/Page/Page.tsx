@@ -29,7 +29,7 @@ export function Page({
   padding = true,
 }: Props) {
   const router = useRouter();
-  const { jobTitle, email, metaDescription } = useAppContext();
+  const { jobTitle, email, metaDescription, metaImage } = useAppContext();
   const fullTitle = title == null ? "Drew Tekulve" : `Drew Tekulve – ${title}`;
   const url = makeAbsoluteURL(router.asPath);
 
@@ -74,7 +74,7 @@ export function Page({
           crossOrigin=""
         />
       </Head>
-      <SEOImage src="/images/logo.svg" />
+      <SEOImage src={metaImage} />
 
       <div
         className={classnames(
