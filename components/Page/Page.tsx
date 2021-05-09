@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import classnames from "classnames";
 
 import { SEOImage } from "components/SEOImage";
+import { Stack } from "components/Stack";
 import { useAppContext } from "lib/AppContext";
 import { makeAbsoluteURL } from "lib/makeAbsoluteURL";
 
@@ -97,10 +98,9 @@ export function Page({
             {jobTitle}
           </div>
 
-          <div className={styles.SocialIconsContainer}>
+          <Stack align="center" justify="center">
             <a
               href="https://instagram.com/drewtekulve"
-              className={styles.SocialIcon}
               target="_blank"
               rel="noreferrer"
             >
@@ -113,7 +113,6 @@ export function Page({
             </a>
             <a
               href="https://www.linkedin.com/in/drewtekulve"
-              className={styles.SocialIcon}
               target="_blank"
               rel="noreferrer"
             >
@@ -126,7 +125,6 @@ export function Page({
             </a>
             <a
               href="https://letterboxd.com/drewtekulve"
-              className={styles.SocialIcon}
               target="_blank"
               rel="noreferrer"
             >
@@ -139,7 +137,6 @@ export function Page({
             </a>
             <a
               href="https://www.imdb.com/name/nm6235937/?ref_=fn_al_nm_1"
-              className={styles.SocialIcon}
               target="_blank"
               rel="noreferrer"
             >
@@ -150,12 +147,7 @@ export function Page({
                 alt="IMDb"
               />
             </a>
-            <a
-              href={`mailto:${email}`}
-              className={styles.SocialIcon}
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a href={`mailto:${email}`} target="_blank" rel="noreferrer">
               <img
                 src="/icons/email.svg"
                 alt="Email"
@@ -163,7 +155,7 @@ export function Page({
                 height="17px"
               />
             </a>
-          </div>
+          </Stack>
 
           <div className={styles.CopyrightContainer}>
             &copy;{new Date().getFullYear()} All Rights Reserved <br />

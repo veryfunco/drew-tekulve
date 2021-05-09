@@ -31,16 +31,6 @@
   padding: var(--spacing-extra-loose) var(--spacing-loose);
 }
 
-.SocialIconsContainer {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-}
-
-.SocialIcon {
-  margin: 0 var(--spacing-tight);
-}
-
 .CopyrightContainer {
   text-align: right;
 }
