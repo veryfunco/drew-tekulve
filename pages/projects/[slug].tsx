@@ -1,18 +1,15 @@
-import { useState } from "react";
 import { GetStaticPropsContext } from "next";
 import Head from "next/head";
-import Image from "next/image";
 import Link from "next/link";
-import { animated, useTransition } from "@react-spring/web";
 
 import { Button } from "components/Button";
 import { Navbar } from "components/Navbar";
 import { Page } from "components/Page";
 import { Stack } from "components/Stack";
+import { VideoEmbed } from "components/VideoEmbed";
 import { StaticProps } from "types";
 import { allProjects } from "lib/data/allProjects";
 import { projectBySlug } from "lib/data/projectBySlug";
-import { getVideoEmbedLink } from "lib/getVideoEmbedLink";
 
 import styles from "styles/projects/Detail.module.css";
 import { globalProps } from "lib/data/globalProps";
@@ -61,12 +58,6 @@ export default function ProjectDetail({
   previousProject,
   nextProject,
 }: StaticProps<typeof getStaticProps>) {
-  const [videoActive, setVideoActive] = useState(false);
-  const transitions = useTransition(videoActive, {
-    from: { opacity: 1, transform: "scale(1)" },
-    leave: { opacity: 0, transform: "scale(0.99)" },
-  });
-
   return (
     <Page>
       <Head>
@@ -86,37 +77,10 @@ export default function ProjectDetail({
       <Navbar backgroundColor="black" />
 
       <div className={styles.HeroContainer}>
-        <div className={styles.HeroInnerContainer}>
-          {transitions((animatedStyles, item) =>
-            item ? (
-              <iframe
-                src={`${getVideoEmbedLink(project.video_url)}`}
-                frameBorder="0"
-                allowFullScreen
-                style={{ height: "100%", width: "100%" }}
-              ></iframe>
-            ) : (
-              <animated.div
-                className={styles.HeroImageContainer}
-                style={animatedStyles}
-              >
-                <Image
-                  src={project.thumbnail}
-                  layout="fill"
-                  className={styles.PreviewImage}
-                  alt=""
-                />
-                <div className={styles.PlayButtonContainer}>
-                  {project.video_url == null ? null : (
-                    <Button wide onClick={() => setVideoActive(true)}>
-                      Play
-                    </Button>
-                  )}
-                </div>
-              </animated.div>
-            )
-          )}
-        </div>
+        <VideoEmbed
+          videoUrl={project.video_url}
+          coverImageUrl={project.thumbnail}
+        />
       </div>
 
       <div className={styles.DetailsContainer}>
