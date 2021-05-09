@@ -1,0 +1,30 @@
+{
+  "id": "ea69253e-6a76-4ff0-be8e-416e75dfcb6a",
+  "title": "Studio C - One Last Dance",
+  "video_url": "https://youtu.be/EA3qE3TiFsE",
+  "year": "2017",
+  "thumbnail": "/images/unnamed.png",
+  "contributors": [
+    {
+      "name": "Jed Wells",
+      "role": "Director"
+    },
+    {
+      "name": "Luiz Malaman",
+      "role": "Producer"
+    },
+    {
+      "name": "Trent Woolford",
+      "role": "Editor"
+    },
+    {
+      "name": "Tess Kelly",
+      "role": "Line Producer"
+    },
+    {
+      "name": "Drew Tekulve",
+      "role": "Colorist"
+    }
+  ],
+  "category": "Narrative"
+}
