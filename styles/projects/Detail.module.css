@@ -1,5 +1,6 @@
 .HeroContainer {
-  height: calc(80vh - var(--navbar-height));
+  height: calc(90vh - var(--navbar-height));
+  max-height: 700px;
   min-height: 300px;
   padding-top: var(--navbar-height);
 }
@@ -47,6 +48,6 @@
 
 @media screen and (max-width: 600px) {
   .HeroContainer {
-    height: 50vh;
+    height: 65vh;
   }
 }
