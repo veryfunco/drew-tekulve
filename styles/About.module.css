@@ -18,6 +18,11 @@
   max-width: 800px;
 }
 
+.ClientLogo {
+  max-width: 200px;
+  width: 100%;
+}
+
 .ContactForm {
   margin: auto;
   max-width: 475px;

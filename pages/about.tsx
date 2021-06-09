@@ -86,7 +86,12 @@ export default function About(
           <Stack align="center" justify="center" spacing="loose">
             {props.clients.map((client) => (
               <div key={client.name}>
-                <img key={client.name} alt={client.name} src={client.logo} />
+                <img
+                  key={client.name}
+                  alt={client.name}
+                  className={styles.ClientLogo}
+                  src={client.logo}
+                />
               </div>
             ))}
           </Stack>
