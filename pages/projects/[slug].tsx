@@ -115,39 +115,51 @@ export default function ProjectDetail({
         </Stack>
       </div>
 
-      <div className={styles.NavButtonsContainer}>
-        <div className={styles.ButtonPrevious}>
-          {previousProject == null ? (
-            <Button disabled aria-hidden="true">
-              &larr;
-            </Button>
-          ) : (
-            <Link href={`/projects/${previousProject}`} passHref>
-              <Button as="link" aria-label="View previous project">
+      {nextProject == null && previousProject == null ? (
+        <div className={styles.NavButtonsContainer}>
+          <div />
+          <div className={styles.NavText}>
+            <Link href="/">
+              <a>See more projects &rarr;</a>
+            </Link>
+          </div>
+          <div />
+        </div>
+      ) : (
+        <div className={styles.NavButtonsContainer}>
+          <div className={styles.ButtonPrevious}>
+            {previousProject == null ? (
+              <Button disabled aria-hidden="true">
                 &larr;
               </Button>
-            </Link>
-          )}
-        </div>
+            ) : (
+              <Link href={`/projects/${previousProject}`} passHref>
+                <Button as="link" aria-label="View previous project">
+                  &larr;
+                </Button>
+              </Link>
+            )}
+          </div>
 
-        <div className={styles.NavText}>
-          <p>See more projects</p>
-        </div>
+          <div className={styles.NavText}>
+            <p>See more projects</p>
+          </div>
 
-        <div className={styles.ButtonNext}>
-          {nextProject == null ? (
-            <Button disabled aria-hidden="true">
-              &rarr;
-            </Button>
-          ) : (
-            <Link href={`/projects/${nextProject}`} passHref>
-              <Button as="link" aria-label="View next project">
+          <div className={styles.ButtonNext}>
+            {nextProject == null ? (
+              <Button disabled aria-hidden="true">
                 &rarr;
               </Button>
-            </Link>
-          )}
+            ) : (
+              <Link href={`/projects/${nextProject}`} passHref>
+                <Button as="link" aria-label="View next project">
+                  &rarr;
+                </Button>
+              </Link>
+            )}
+          </div>
         </div>
-      </div>
+      )}
     </Page>
   );
 }

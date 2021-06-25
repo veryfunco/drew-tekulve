@@ -6,8 +6,8 @@ export async function adjacentProjects(id: string) {
     (project) => project.id === id
   );
 
-  if (currentProjectIndex == null) {
-    throw new Error(`Could not find project with id ${id}`);
+  if (currentProjectIndex === -1) {
+    return { previous: null, next: null };
   }
 
   const isFirst = currentProjectIndex === 0;
