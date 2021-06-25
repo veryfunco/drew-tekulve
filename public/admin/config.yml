@@ -62,6 +62,7 @@ collections:
                 name: project_id
                 widget: relation
                 collection: project
+                options_length: 100
                 value_field: id
                 display_fields: [title]
                 search_fields: [title]
