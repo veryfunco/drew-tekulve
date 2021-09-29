@@ -1,7 +1,10 @@
 .Container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 200px);
+  grid-template-rows: repeat(
+    2,
+    minmax(200px, min(((90vh - var(--navbar-height)) / 2), 300px))
+  );
 }
 
 .ImageContainer {
