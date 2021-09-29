@@ -62,6 +62,8 @@ export function Page({
 
         <link rel="icon" href="/favicon.ico" />
 
+        <meta name="theme-color" content="var(--color-black)" />
+
         <link
           rel="preload"
           href="/fonts/SuisseIntlMono/SuisseIntlMono-Regular.otf"
