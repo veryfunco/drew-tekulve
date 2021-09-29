@@ -62,7 +62,7 @@ export function Page({
 
         <link rel="icon" href="/favicon.ico" />
 
-        <meta name="theme-color" content="var(--color-black)" />
+        <meta name="theme-color" content="#000" />
 
         <link
           rel="preload"
