@@ -1,10 +1,13 @@
 .Container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(
-    2,
-    clamp(200px, ((90vh - var(--navbar-height)) / 2), 300px)
-  );
+  grid-template-rows: repeat(2, 300px);
+}
+
+@media screen and (max-width: 600px) {
+  .Container {
+    grid-template-rows: repeat(2, 200px);
+  }
 }
 
 .ImageContainer {
