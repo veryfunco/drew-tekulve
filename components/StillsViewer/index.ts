@@ -1,1 +1,1 @@
-export {StillsViewer} from './StillsViewer';
+export { StillsViewer } from "./StillsViewer";
