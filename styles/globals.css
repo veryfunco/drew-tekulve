@@ -40,6 +40,7 @@
 
 html,
 body {
+  background-color: var(--color-black);
   font-family: "Suisse Intl Mono", monospace;
   font-size: var(--base-size);
   margin: 0;
