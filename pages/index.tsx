@@ -5,7 +5,6 @@ import Link from "next/link";
 import { animated, useTransition } from "@react-spring/web";
 
 import { Button } from "components/Button";
-import { Navbar } from "components/Navbar";
 import { Container, Page } from "components/Page";
 import { Stack } from "components/Stack";
 
@@ -61,9 +60,7 @@ export default function Home(
   });
 
   return (
-    <Page title="Work" padding={false}>
-      <Navbar logoType="scrolly" />
-
+    <Page title="Work" padding={false} navbarLogoType="scrolly">
       <div className={styles.VideoBackground}>
         {lazyCanLoad ? (
           <iframe

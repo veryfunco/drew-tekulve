@@ -3,7 +3,6 @@ import { FormEvent, useState } from "react";
 
 import { AboutPageSection } from "components/AboutPageSection";
 import { Button } from "components/Button";
-import { Navbar } from "components/Navbar";
 import { Page } from "components/Page";
 import { Stack } from "components/Stack";
 import { TextField } from "components/TextField";
@@ -74,9 +73,12 @@ export default function About(
   }
 
   return (
-    <Page title="About" background="blue">
-      <Navbar logoType="scrolly" backgroundColor="blue" />
-
+    <Page
+      title="About"
+      background="blue"
+      navbarLogoType="scrolly"
+      navbarBackgroundColor="blue"
+    >
       <div className={styles.HeroContainer}></div>
 
       <AboutPageSection wideLead lead={props.description} />

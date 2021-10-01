@@ -1,6 +1,5 @@
 import Head from "next/head";
 
-import { Navbar } from "components/Navbar";
 import { Page } from "components/Page";
 import { SEOImage } from "components/SEOImage";
 import { Stack } from "components/Stack";
@@ -48,8 +47,6 @@ export default function ProjectDetail({
         />
       </Head>
       <SEOImage src={reelCoverImage} />
-
-      <Navbar backgroundColor="black" />
 
       <div className={styles.HeroContainer}>
         <VideoEmbed coverImageUrl={reelCoverImage} videoUrl={reelUrl} />

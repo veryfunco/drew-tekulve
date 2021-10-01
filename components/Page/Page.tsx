@@ -3,6 +3,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import classnames from "classnames";
 
+import { Navbar } from "components/Navbar";
 import { SEOImage } from "components/SEOImage";
 import { Stack } from "components/Stack";
 import { useAppContext } from "lib/AppContext";
@@ -15,6 +16,8 @@ interface Props {
   background?: "black" | "blue";
   title?: string;
   padding?: boolean;
+  navbarLogoType?: Parameters<typeof Navbar>[0]["logoType"];
+  navbarBackgroundColor?: Parameters<typeof Navbar>[0]["backgroundColor"];
 }
 
 // For use on pages that define padding = false,
@@ -28,6 +31,8 @@ export function Page({
   title,
   background = "black",
   padding = true,
+  navbarLogoType,
+  navbarBackgroundColor,
 }: Props) {
   const router = useRouter();
   const { jobTitle, email, metaDescription, metaImage } = useAppContext();
@@ -94,6 +99,11 @@ export function Page({
             padding === false && styles["Container-noPadding"]
           )}
         >
+          <Navbar
+            backgroundColor={navbarBackgroundColor}
+            logoType={navbarLogoType}
+          />
+
           {children}
         </div>
 

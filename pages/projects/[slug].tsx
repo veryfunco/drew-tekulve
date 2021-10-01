@@ -3,7 +3,6 @@ import Head from "next/head";
 import Link from "next/link";
 
 import { Button } from "components/Button";
-import { Navbar } from "components/Navbar";
 import { Page } from "components/Page";
 import { Stack } from "components/Stack";
 import { StillsViewer } from "components/StillsViewer";
@@ -92,8 +91,6 @@ export default function ProjectDetail({
         />
       </Head>
       <SEOImage src={project.thumbnail} />
-
-      <Navbar backgroundColor="black" />
 
       {heroContent}
 
