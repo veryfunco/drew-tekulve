@@ -1,6 +1,6 @@
 backend:
   name: github
-  branch: add-stills-to-projects
+  branch: main
   repo: asmockler/drew-tekulve
   base_url: https://drew-tekulve.vercel.app
   auth_endpoint: api/auth_github
