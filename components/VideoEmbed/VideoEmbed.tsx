@@ -8,7 +8,7 @@ import { getVideoEmbedLink } from "lib/getVideoEmbedLink";
 import styles from "./VideoEmbed.module.css";
 
 interface Props {
-  videoUrl: string;
+  videoUrl?: string;
   coverImageUrl: string;
 }
 

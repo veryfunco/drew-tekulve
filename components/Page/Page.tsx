@@ -62,6 +62,11 @@ export function Page({
 
         <link rel="icon" href="/favicon.ico" />
 
+        <meta
+          name="theme-color"
+          content={background === "blue" ? "#1c19c7" : "#000000"}
+        />
+
         <link
           rel="preload"
           href="/fonts/SuisseIntlMono/SuisseIntlMono-Regular.otf"

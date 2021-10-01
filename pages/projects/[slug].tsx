@@ -6,6 +6,7 @@ import { Button } from "components/Button";
 import { Navbar } from "components/Navbar";
 import { Page } from "components/Page";
 import { Stack } from "components/Stack";
+import { StillsViewer } from "components/StillsViewer";
 import { VideoEmbed } from "components/VideoEmbed";
 import { StaticProps } from "types";
 import { allProjects } from "lib/data/allProjects";
@@ -58,6 +59,24 @@ export default function ProjectDetail({
   previousProject,
   nextProject,
 }: StaticProps<typeof getStaticProps>) {
+  let heroContent = null;
+  if (project.video_url != null) {
+    heroContent = (
+      <div className={styles.VideoHeroContainer}>
+        <VideoEmbed
+          videoUrl={project.video_url}
+          coverImageUrl={project.thumbnail}
+        />
+      </div>
+    );
+  } else if (project.stills.length > 0) {
+    heroContent = (
+      <div className={styles.StillsHeroContainer}>
+        <StillsViewer stills={project.stills} />
+      </div>
+    );
+  }
+
   return (
     <Page>
       <Head>
@@ -76,12 +95,7 @@ export default function ProjectDetail({
 
       <Navbar backgroundColor="black" />
 
-      <div className={styles.HeroContainer}>
-        <VideoEmbed
-          videoUrl={project.video_url}
-          coverImageUrl={project.thumbnail}
-        />
-      </div>
+      {heroContent}
 
       <div className={styles.DetailsContainer}>
         <Stack spacing="extraLoose" direction="column" align="center">

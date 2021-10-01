@@ -1,7 +1,11 @@
-.HeroContainer {
+.VideoHeroContainer {
   height: calc(90vh - var(--navbar-height));
   max-height: 700px;
   min-height: 300px;
+  padding-top: var(--navbar-height);
+}
+
+.StillsHeroContainer {
   padding-top: var(--navbar-height);
 }
 

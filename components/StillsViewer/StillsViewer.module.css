@@ -1,0 +1,26 @@
+.Container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 300px);
+}
+
+@media screen and (max-width: 600px) {
+  .Container {
+    grid-template-rows: repeat(2, 200px);
+  }
+}
+
+.ImageContainer {
+  padding: var(--spacing-extra-tight);
+  width: 100%;
+}
+
+.Image {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.ImageContainer:nth-child(3n + 0) {
+  grid-row: 1 / 3;
+}
