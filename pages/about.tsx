@@ -3,7 +3,6 @@ import { FormEvent, useState } from "react";
 
 import { AboutPageSection } from "components/AboutPageSection";
 import { Button } from "components/Button";
-import { Navbar } from "components/Navbar";
 import { Page } from "components/Page";
 import { Stack } from "components/Stack";
 import { TextField } from "components/TextField";

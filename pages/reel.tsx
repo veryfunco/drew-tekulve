@@ -1,6 +1,5 @@
 import Head from "next/head";
 
-import { Navbar } from "components/Navbar";
 import { Page } from "components/Page";
 import { SEOImage } from "components/SEOImage";
 import { Stack } from "components/Stack";

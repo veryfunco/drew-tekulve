@@ -5,7 +5,6 @@ import Link from "next/link";
 import { animated, useTransition } from "@react-spring/web";
 
 import { Button } from "components/Button";
-import { Navbar } from "components/Navbar";
 import { Container, Page } from "components/Page";
 import { Stack } from "components/Stack";
 
