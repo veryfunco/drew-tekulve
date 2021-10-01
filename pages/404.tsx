@@ -12,8 +12,6 @@ export const getStaticProps = async () => {
 export default function About() {
   return (
     <Page title="404">
-      <Navbar />
-
       <div className={styles.Container}>
         <h1>404</h1>
       </div>

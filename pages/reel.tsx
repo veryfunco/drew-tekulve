@@ -49,8 +49,6 @@ export default function ProjectDetail({
       </Head>
       <SEOImage src={reelCoverImage} />
 
-      <Navbar backgroundColor="black" />
-
       <div className={styles.HeroContainer}>
         <VideoEmbed coverImageUrl={reelCoverImage} videoUrl={reelUrl} />
       </div>

@@ -61,9 +61,7 @@ export default function Home(
   });
 
   return (
-    <Page title="Work" padding={false}>
-      <Navbar logoType="scrolly" />
-
+    <Page title="Work" padding={false} navbarLogoType="scrolly">
       <div className={styles.VideoBackground}>
         {lazyCanLoad ? (
           <iframe

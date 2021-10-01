@@ -93,8 +93,6 @@ export default function ProjectDetail({
       </Head>
       <SEOImage src={project.thumbnail} />
 
-      <Navbar backgroundColor="black" />
-
       {heroContent}
 
       <div className={styles.DetailsContainer}>
