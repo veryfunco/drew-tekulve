@@ -1,15 +1,29 @@
 {
-  "id": "43ed8524-8223-4d99-8378-85eb45388430",
-  "title": "Jimmer: The Lonely Master",
+  "video_url": "",
+  "stills": [
+    {
+      "image": "/images/untitled_2.28.1.jpg"
+    },
+    {
+      "image": "/images/untitled_1.2.1.jpg"
+    },
+    {
+      "image": "/images/untitled_1.311.1.jpg"
+    },
+    {
+      "image": "/images/untitled_1.355.1.jpg"
+    }
+  ],
+  "thumbnail": "/images/untitled_1.713.1.jpg",
   "subtitle": "",
-  "year": "2019",
-  "video_url": "https://www.byutv.org/player/41783558-65b2-4f7f-93c9-c16139e0ddf4/jimmer-the-lonely-master-jimmer-the-lonely-master",
-  "category": "Narrative",
+  "title": "Jimmer: The Lonely Master",
   "contributors": [
     {
       "name": "Scott Christopherson",
       "role": "Director"
     }
   ],
-  "thumbnail": "/images/untitled_1.713.1.jpg"
+  "id": "43ed8524-8223-4d99-8378-85eb45388430",
+  "year": "2019",
+  "category": "Narrative"
 }
