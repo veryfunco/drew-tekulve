@@ -1,0 +1,36 @@
+{
+  "stills": [
+    {
+      "image": "/images/minorsstillspng_1.1.9.png"
+    },
+    {
+      "image": "/images/minorsstillspng_1.1.2.png"
+    },
+    {
+      "image": "/images/minorsstillspng_1.1.7.png"
+    },
+    {
+      "image": "/images/minorsstillspng_1.1.5.png"
+    },
+    {
+      "image": "/images/minorsstillspng_1.1.3.png"
+    }
+  ],
+  "thumbnail": "/images/minorsstillspng_1.1.9.png",
+  "subtitle": "Sundance Grand Jury Prize - Short Film Directing 2019",
+  "title": "The Minors",
+  "contributors": [
+    {
+      "name": "Robert Machoian",
+      "role": "Director"
+    },
+    {
+      "name": "Oscar Ignacio Jimenez",
+      "role": "Director of Photography"
+    }
+  ],
+  "id": "c47d40dc-5b6d-4cf0-b61a-353a1d1e7227",
+  "description": "A slice of life film about a Grandpa and his grandsons.",
+  "year": "2019",
+  "category": "Narrative"
+}
