@@ -8,7 +8,7 @@ import { globalProps } from "lib/data/globalProps";
 import { reelPage } from "lib/data/reelPage";
 import { StaticProps } from "types";
 
-import styles from "styles/projects/Detail.module.css";
+import styles from "styles/Reel.module.css";
 
 export const getStaticProps = async () => {
   const global = await globalProps();
@@ -26,7 +26,7 @@ export const getStaticProps = async () => {
   };
 };
 
-export default function ProjectDetail({
+export default function Reel({
   reelUrl,
   reelCoverImage,
   description,
