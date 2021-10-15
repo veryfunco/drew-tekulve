@@ -25,7 +25,11 @@
     },
     {
       "name": "BBDO",
-      "logo": "/images/1200px-bbdo.2.png"
+      "logo": "/images/50_bbdo.png"
+    },
+    {
+      "name": "Struck",
+      "logo": "/images/struck.png"
     },
     {
       "name": "The Killing of Two Lovers",
@@ -34,10 +38,6 @@
     {
       "name": "Scenes from the Glittering World",
       "logo": "/images/04_scenes-from-the-glittering-world.png"
-    },
-    {
-      "name": "Struck",
-      "logo": "/images/struck.png"
     }
   ]
 }
