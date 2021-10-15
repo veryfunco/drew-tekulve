@@ -1,7 +1,7 @@
 {
   "description": "\nEverything from TV shows and commercials to feature films that have screened at Sundance Film Festival. Working primarily in DaVinci Resolve, with experience in HDR, ACES, and digital intermediate workflows.\n\n",
-  "clients_lead": "Utah Resolve Colorist who’s worked with Musical Artists like The Killers and Imagine Dragons, along with brands like Verizon and Wells Fargo.",
-  "contact_lead": "Whether you want a local Utah Resolve Colorist or a remote colorist, I’d love to work with you. Describe your project below and I’ll send you a quote.",
+  "clients_lead": "Utah Resolve Colorist who has worked with Musical Artists like The Killers and Imagine Dragons, along with commercial brands like Verizon and Wells Fargo and marketing agencies like BBDO.",
+  "contact_lead": "Whether you want a local Utah Resolve Colorist or a Remote Colorist, I’d love to work with you. Describe your project below and I’ll send you a quote.",
   "clients": [
     {
       "name": "Purple",
@@ -20,12 +20,12 @@
       "logo": "/images/union-6.svg"
     },
     {
-      "name": "USPS",
-      "logo": "/images/union-4.svg"
-    },
-    {
       "name": "Vivint SmartHome",
       "logo": "/images/union-7.svg"
+    },
+    {
+      "name": "BBDO",
+      "logo": "/images/1200px-bbdo.2.png"
     },
     {
       "name": "The Killing of Two Lovers",
@@ -34,6 +34,10 @@
     {
       "name": "Scenes from the Glittering World",
       "logo": "/images/04_scenes-from-the-glittering-world.png"
+    },
+    {
+      "name": "Struck",
+      "logo": "/images/struck.png"
     }
   ]
 }
