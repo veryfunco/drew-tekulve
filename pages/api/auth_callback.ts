@@ -1,6 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
-export default async (req: NextApiRequest, res: NextApiResponse) => {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
   const { code } = req.query;
 
   const tokenResponse = await fetch(
@@ -40,4 +43,4 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       })();
     </script>
   `);
-};
+}

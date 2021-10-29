@@ -90,7 +90,11 @@ export function Navbar({
           <div className={styles.StaticLogoContainer}>
             <Link href="/">
               <a>
-                <img src="/images/logo.svg" style={{ width: 150 }} />
+                <img
+                  src="/images/logo.svg"
+                  style={{ width: 150 }}
+                  alt="Drew Tekulve"
+                />
               </a>
             </Link>
           </div>
