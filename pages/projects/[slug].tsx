@@ -71,7 +71,7 @@ export default function ProjectDetail({
   } else if (project.stills.length > 0) {
     heroContent = (
       <div className={styles.StillsHeroContainer}>
-        <StillsViewer stills={project.stills} />
+        <StillsViewer stills={project.stills} projectName={project.title} />
       </div>
     );
   }
