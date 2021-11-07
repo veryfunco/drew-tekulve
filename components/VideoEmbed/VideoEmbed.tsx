@@ -42,7 +42,7 @@ export function VideoEmbed({ videoUrl, coverImageUrl }: Props) {
             />
             <div className={styles.PlayButtonContainer}>
               {videoUrl == null ? null : (
-                <Button wide onClick={() => setVideoActive(true)}>
+                <Button onClick={() => setVideoActive(true)} shadow wide>
                   Play
                 </Button>
               )}

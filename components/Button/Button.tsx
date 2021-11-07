@@ -18,6 +18,7 @@ interface Props {
   disabled?: boolean;
   href?: string;
   as?: "link" | "button";
+  shadow?: boolean;
 }
 
 type CommonButtonAnchorProps = AnchorHTMLAttributes<HTMLAnchorElement> &
@@ -35,6 +36,7 @@ export const Button = forwardRef<HTMLAnchorElement & HTMLButtonElement, Props>(
       loading,
       disabled,
       href,
+      shadow,
       ...props
     },
     ref
@@ -45,7 +47,8 @@ export const Button = forwardRef<HTMLAnchorElement & HTMLButtonElement, Props>(
         styles.Button,
         wide && styles["Button-wide"],
         transparent && styles["Button-transparent"],
-        loading && styles["Button-loading"]
+        loading && styles["Button-loading"],
+        shadow && styles["Button-shadow"]
       ),
     };
 
