@@ -4,5 +4,23 @@
   "year": "2022",
   "category": "Commercial",
   "video_url": "https://www.youtube.com/watch?v=JsAYQHH9U1k&ab_channel=DanceChurch",
-  "thumbnail": "/images/screen-shot-2022-02-19-at-2.10.48-pm.png"
+  "thumbnail": "/images/screen-shot-2022-02-19-at-2.10.48-pm.png",
+  "contributors": [
+    {
+      "name": "Talia Green",
+      "role": "Director"
+    },
+    {
+      "name": "Camille Durand",
+      "role": "Editor"
+    },
+    {
+      "name": "Electric Sheep",
+      "role": "Production Company"
+    },
+    {
+      "name": "Drew Tekulve",
+      "role": "Colorist"
+    }
+  ]
 }
