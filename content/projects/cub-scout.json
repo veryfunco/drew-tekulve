@@ -1,0 +1,38 @@
+{
+  "stills": [
+    {
+      "image": "/images/cub_1.28.1.png"
+    },
+    {
+      "image": "/images/cub_1.106.2.png"
+    },
+    {
+      "image": "/images/cub_1.188.1.png"
+    }
+  ],
+  "thumbnail": "/images/screen-shot-2022-02-19-at-1.48.02-pm.png",
+  "subtitle": "",
+  "title": "Cub Scout",
+  "contributors": [
+    {
+      "name": "Matt Heder",
+      "role": "Writer / Director"
+    },
+    {
+      "name": "Trevor McDonald",
+      "role": "Director of Photography"
+    },
+    {
+      "name": "Matt Heder",
+      "role": "Producer"
+    },
+    {
+      "name": "Drew Tekulve",
+      "role": "Colorist"
+    }
+  ],
+  "id": "655f81f4-6cd7-492c-9a0c-de58f64f4336",
+  "description": "Scout, a teenage boy mysteriously living alone in the woods, is harboring a monstrous secret.",
+  "year": "2022",
+  "category": "Narrative"
+}
