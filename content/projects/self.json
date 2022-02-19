@@ -1,0 +1,41 @@
+{
+  "id": "90b76afa-517c-4858-a35a-5f25c74a4b53",
+  "title": "Self",
+  "subtitle": "",
+  "year": "2020",
+  "category": "Narrative",
+  "contributors": [
+    {
+      "name": "Sir Thurston",
+      "role": "Director"
+    },
+    {
+      "name": "Bentle Rawle",
+      "role": "Director of Photography"
+    },
+    {
+      "name": "Josh Soyombo",
+      "role": "Editor"
+    },
+    {
+      "name": "Monarch",
+      "role": "Production Company"
+    },
+    {
+      "name": "Drew Tekulve",
+      "role": "Colorist"
+    }
+  ],
+  "stills": [
+    {
+      "image": "/images/img_3d319bc5397f-1.jpeg"
+    },
+    {
+      "image": "/images/img_e787c52847bf-1.jpeg"
+    },
+    {
+      "image": "/images/img_13d59e03eb61-1.jpeg"
+    }
+  ],
+  "thumbnail": "/images/img_cf34fd059953-1.jpeg"
+}
