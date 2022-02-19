@@ -1,0 +1,47 @@
+{
+  "id": "dbf90540-8668-4c3d-a1bb-cf18cb4db58a",
+  "title": "Intermountain Healthcare - Olympics",
+  "year": "2022",
+  "thumbnail": "/images/screen-shot-2022-02-19-at-2.08.08-pm.png",
+  "contributors": [
+    {
+      "name": "Chad Kirkland",
+      "role": "Director"
+    },
+    {
+      "name": "Hillary Kirkland",
+      "role": "Producer"
+    },
+    {
+      "name": "Bennet Duchin",
+      "role": "Director of Photography"
+    },
+    {
+      "name": "Jared Harris",
+      "role": "Executive Producer"
+    },
+    {
+      "name": "NewCompany TV",
+      "role": "Production Company"
+    },
+    {
+      "name": "Drew Tekulve",
+      "role": "Colorist"
+    }
+  ],
+  "stills": [
+    {
+      "image": "/images/olympic_luck_1.1.1.png"
+    },
+    {
+      "image": "/images/olympic_luck_1.10.1.png"
+    },
+    {
+      "image": "/images/olympic_luck_1.19.1.png"
+    },
+    {
+      "image": "/images/olympic_luck_1.6.1.png"
+    }
+  ],
+  "category": "Commercial"
+}
