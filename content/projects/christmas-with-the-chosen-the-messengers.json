@@ -1,0 +1,37 @@
+{
+  "id": "2c9f460e-935c-4a85-9c6a-7d2113631464",
+  "title": "Christmas with the Chosen - The Messengers",
+  "year": "2021",
+  "thumbnail": "/images/screen-shot-2021-12-21-at-2.06.47-pm.png",
+  "description": "Artists perform new and classic Christmas songs from the set of \"The Chosen.\"",
+  "category": "Music Video",
+  "contributors": [
+    {
+      "name": "Jacob Schwarz",
+      "role": "Co-Director"
+    },
+    {
+      "name": "Matt Siemers",
+      "role": "Producer"
+    },
+    {
+      "name": "Dallas Jenkins",
+      "role": "Co-Director"
+    },
+    {
+      "name": "Oscar Ignacio Jiménez",
+      "role": "Director of Photography"
+    }
+  ],
+  "stills": [
+    {
+      "image": "/images/screen-shot-2021-12-21-at-2.12.20-pm.png"
+    },
+    {
+      "image": "/images/screen-shot-2021-12-21-at-2.13.40-pm.png"
+    },
+    {
+      "image": "/images/screen-shot-2021-12-21-at-2.26.27-pm.png"
+    }
+  ]
+}
