@@ -1,15 +1,21 @@
 {
   "hero_video_url": "https://vimeo.com/543462168/03d3ae3dfc",
-  "reel_button_text": "Play 2021 reel",
+  "reel_button_text": "Play Color Reel",
   "projects": [
+    {
+      "project_id": "420c9abc-fce9-4e3e-a6bd-931a84725bc5"
+    },
+    {
+      "project_id": "348b459d-87f0-4774-b071-a76a21b98524"
+    },
+    {
+      "project_id": "ca46fd90-7d87-4577-b602-ecddb4333007"
+    },
     {
       "project_id": "785934ca-a744-492f-89ff-fd8a586a36fb"
     },
     {
       "project_id": "d9f2e812-e7a4-4cd4-bdcc-f09621735fdd"
-    },
-    {
-      "project_id": "ca46fd90-7d87-4577-b602-ecddb4333007"
     },
     {
       "project_id": "abc31958-230e-4baf-8684-710fedabd3e1"
