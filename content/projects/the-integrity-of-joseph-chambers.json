@@ -1,0 +1,58 @@
+{
+  "stills": [
+    {
+      "image": "/images/tiojc_1.86.1_l_small.png"
+    },
+    {
+      "image": "/images/tiojc_1.85.1_l_small.png"
+    },
+    {
+      "image": "/images/tiojc_1.84.1_l_small.png"
+    }
+  ],
+  "thumbnail": "/images/tiojc_1.97.1_l_small.png",
+  "subtitle": "Official Tribeca Selection",
+  "title": "The Integrity of Joseph Chambers",
+  "contributors": [
+    {
+      "name": "Robert Machoian",
+      "role": "Director"
+    },
+    {
+      "name": "Clayne Crawford, Jordana Brewster, Jeffrey Dean Morgan",
+      "role": "Starring"
+    },
+    {
+      "name": "Oscar Ignacio Jiménez",
+      "role": "Director of Photography"
+    },
+    {
+      "name": "Yvette M. Amirian",
+      "role": "Editor"
+    },
+    {
+      "name": "Laura Heberton, Clayne Crawford, John Foss, Bo Clancey",
+      "role": "Producers"
+    },
+    {
+      "name": "Ryan Sonderegger",
+      "role": "VFX Supervisor"
+    },
+    {
+      "name": "Peter Albrechtsen",
+      "role": "Sound Designer"
+    },
+    {
+      "name": "Paradox Post",
+      "role": "Color & Finishing"
+    },
+    {
+      "name": "Drew Tekulve",
+      "role": "Colorist"
+    }
+  ],
+  "id": "28ca2ec5-aae0-467d-98cf-f3e6b86439fa",
+  "description": "A family man, hoping to prove his survivalist capabilities and manliness to his family, decides to irresponsibly head off into the woods and go deer hunting by himself.",
+  "year": "2022",
+  "category": "Narrative"
+}
