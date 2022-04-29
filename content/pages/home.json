@@ -3,6 +3,9 @@
   "reel_button_text": "Play Color Reel",
   "projects": [
     {
+      "project_id": "28ca2ec5-aae0-467d-98cf-f3e6b86439fa"
+    },
+    {
       "project_id": "420c9abc-fce9-4e3e-a6bd-931a84725bc5"
     },
     {
@@ -133,9 +136,6 @@
     },
     {
       "project_id": "ea69253e-6a76-4ff0-be8e-416e75dfcb6a"
-    },
-    {
-      "project_id": "08a1ae61-fa96-4152-a60a-12bea6d1c875"
     }
   ]
 }
