@@ -24,16 +24,16 @@
       "logo": "/images/union-7.svg"
     },
     {
+      "name": "XBOX",
+      "logo": "/images/xbox2.png"
+    },
+    {
       "name": "BBDO",
       "logo": "/images/50_bbdo.png"
     },
     {
       "name": "ASUS",
       "logo": "/images/asustek-white-logo-small.png"
-    },
-    {
-      "name": "XBOX",
-      "logo": "/images/xbox2.png"
     },
     {
       "name": "Panasonic",
