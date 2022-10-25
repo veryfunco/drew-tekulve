@@ -1,0 +1,34 @@
+{
+  "id": "5377cfd0-d60d-4bc7-a42e-5bd99dd1b4c6",
+  "title": "St. Lucia - Gimme The Night",
+  "year": "2022",
+  "video_url": "https://www.youtube.com/watch?v=AthYIHSUNy4&ab_channel=St.Lucia",
+  "thumbnail": "/images/gimmenight_1.1.1-copy.png",
+  "contributors": [
+    {
+      "name": "Nicole Lipp",
+      "role": "Director"
+    },
+    {
+      "name": "Kyle Hartman",
+      "role": "Director of Photography"
+    },
+    {
+      "name": "All Your Friends Media",
+      "role": "Production Company"
+    },
+    {
+      "name": "St. Lucia",
+      "role": "Artist"
+    },
+    {
+      "name": "Drew Tekulve",
+      "role": "Colorist"
+    },
+    {
+      "name": "Paradox Post",
+      "role": "Finishing By"
+    }
+  ],
+  "category": "Music Video"
+}
