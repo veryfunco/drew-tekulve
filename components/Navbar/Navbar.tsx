@@ -89,40 +89,36 @@ export function Navbar({
         {logoType === "static" ? (
           <div className={styles.StaticLogoContainer}>
             <Link href="/">
-              <a>
-                <img
-                  src="/images/logo.svg"
-                  style={{ width: 150 }}
-                  alt="Drew Tekulve"
-                />
-              </a>
+              <img
+                src="/images/logo.svg"
+                style={{ width: 150 }}
+                alt="Drew Tekulve"
+              />
             </Link>
           </div>
         ) : null}
 
         <div className={styles.LinksContainer}>
           <Stack justify={isMobileNav ? "spaceBetween" : "end"} spacing="loose">
-            <Link href="/">
-              <a
-                className={classNames(
-                  styles.Link,
-                  (router.asPath === "/" ||
-                    router.route === "/projects/[slug]") &&
-                    styles["Link-active"]
-                )}
-              >
-                Work
-              </a>
+            <Link
+              href="/"
+              className={classNames(
+                styles.Link,
+                (router.asPath === "/" ||
+                  router.route === "/projects/[slug]") &&
+                  styles["Link-active"]
+              )}
+            >
+              Work
             </Link>
-            <Link href="/about">
-              <a
-                className={classNames(
-                  styles.Link,
-                  router.asPath === "/about" && styles["Link-active"]
-                )}
-              >
-                About
-              </a>
+            <Link
+              href="/about"
+              className={classNames(
+                styles.Link,
+                router.asPath === "/about" && styles["Link-active"]
+              )}
+            >
+              About
             </Link>
           </Stack>
         </div>

@@ -130,9 +130,7 @@ export default function ProjectDetail({
         <div className={styles.NavButtonsContainer}>
           <div />
           <div className={styles.NavText}>
-            <Link href="/">
-              <a>See more projects &rarr;</a>
-            </Link>
+            <Link href="/">See more projects &rarr;</Link>
           </div>
           <div />
         </div>

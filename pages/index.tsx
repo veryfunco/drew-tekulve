@@ -114,24 +114,22 @@ export default function Home(
               return (
                 <animated.div style={animatedStyles}>
                   <Link href={`/projects/${project.slug}`}>
-                    <a>
-                      <div className={styles.Project}>
-                        <Image
-                          height={250}
-                          width={500}
-                          src={project.thumbnail}
-                          className={styles.Thumbnail}
-                          layout="responsive"
-                          alt=""
-                        />
-                        <h3>{project.title}</h3>
-                        {project.subtitle == null ||
-                        project.subtitle === "" ? null : (
-                          <p>{project.subtitle}</p>
-                        )}
-                        <p>{project.year}</p>
-                      </div>
-                    </a>
+                    <div className={styles.Project}>
+                      <Image
+                        height={250}
+                        width={500}
+                        src={project.thumbnail}
+                        className={styles.Thumbnail}
+                        layout="responsive"
+                        alt=""
+                      />
+                      <h3>{project.title}</h3>
+                      {project.subtitle == null ||
+                      project.subtitle === "" ? null : (
+                        <p>{project.subtitle}</p>
+                      )}
+                      <p>{project.year}</p>
+                    </div>
                   </Link>
                 </animated.div>
               );
