@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { animated, useTransition } from "@react-spring/web";
 
 import { Button } from "components/Button";

@@ -1,6 +1,6 @@
 import { useEffect, useState, useMemo } from "react";
 import { InferGetStaticPropsType } from "next";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
 import { animated, useTransition } from "@react-spring/web";
 
