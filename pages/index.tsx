@@ -78,7 +78,7 @@ export default function Home(
         ) : null}
 
         <div className={styles.ReelButton}>
-          <Link href="/reel" passHref>
+          <Link href="/reel" passHref legacyBehavior>
             <Button as="link">{props.reelButtonText}</Button>
           </Link>
         </div>
@@ -113,7 +113,7 @@ export default function Home(
             {transition((animatedStyles, project) => {
               return (
                 <animated.div style={animatedStyles}>
-                  <Link href={`/projects/${project.slug}`}>
+                  <Link href={`/projects/${project.slug}`} legacyBehavior>
                     <div className={styles.Project}>
                       <Image
                         height={250}

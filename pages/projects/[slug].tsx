@@ -142,7 +142,7 @@ export default function ProjectDetail({
                 &larr;
               </Button>
             ) : (
-              <Link href={`/projects/${previousProject}`} passHref>
+              <Link href={`/projects/${previousProject}`} passHref legacyBehavior>
                 <Button as="link" aria-label="View previous project">
                   &larr;
                 </Button>
@@ -160,7 +160,7 @@ export default function ProjectDetail({
                 &rarr;
               </Button>
             ) : (
-              <Link href={`/projects/${nextProject}`} passHref>
+              <Link href={`/projects/${nextProject}`} passHref legacyBehavior>
                 <Button as="link" aria-label="View next project">
                   &rarr;
                 </Button>
