@@ -142,7 +142,11 @@ export default function ProjectDetail({
                 &larr;
               </Button>
             ) : (
-              <Link href={`/projects/${previousProject}`} passHref legacyBehavior>
+              <Link
+                href={`/projects/${previousProject}`}
+                passHref
+                legacyBehavior
+              >
                 <Button as="link" aria-label="View previous project">
                   &larr;
                 </Button>
