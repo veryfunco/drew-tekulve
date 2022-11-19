@@ -82,5 +82,6 @@
 
   .FilterButtonContainer {
     overflow-x: scroll;
+    padding: var(--spacing-base) 0;
   }
 }

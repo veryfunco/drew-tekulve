@@ -134,7 +134,7 @@ export default function Home(
                 ))}
               </Stack>
               {selectedCategory === "Narrative" ? (
-                <Stack align="center">
+                <Stack align="center" wrap={false}>
                   <div className={styles.SubcategoryIcon}>
                     <Image src={ArrowRightIcon} alt="" />
                   </div>
