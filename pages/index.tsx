@@ -14,6 +14,8 @@ import { globalProps } from "lib/data/globalProps";
 import { homePage } from "lib/data/homePage";
 import { getVideoEmbedLink } from "lib/getVideoEmbedLink";
 
+import ArrowRightIcon from "public/icons/arrow-down-right.svg";
+
 import styles from "styles/Home.module.css";
 
 export const getStaticProps = async () => {
@@ -65,7 +67,7 @@ export default function Home(
       const filteredBySubcategory = filteredByCategory.filter(
         (project) =>
           selectedSubcategory == null ||
-          project.subcategory === selectedSubcategory
+          project.narrative_subcategory === selectedSubcategory
       );
 
       return filteredBySubcategory;
@@ -133,7 +135,10 @@ export default function Home(
               </Stack>
               {selectedCategory === "Narrative" ? (
                 <Stack align="center">
-                  <p>&rarr;</p>
+                  <div className={styles.SubcategoryIcon}>
+                    <Image src={ArrowRightIcon} alt="" />
+                  </div>
+
                   <Button
                     onClick={() => handleSubcategoryButtonClick(null)}
                     wide
@@ -141,6 +146,7 @@ export default function Home(
                   >
                     All
                   </Button>
+
                   {props.narrativeProjectSubcategories.map((subcategory) => {
                     return (
                       <Button
