@@ -1,4 +1,12 @@
 {
+  "stills": [
+    {
+      "image": "/images/piecemaker_1.207.1.png"
+    },
+    {
+      "image": "/images/piecemaker_1.346.1.png"
+    }
+  ],
   "thumbnail": "/images/piecemaker_1.204.1.png",
   "narrative_subcategory": "Television",
   "subtitle": "Magnolia Network",
