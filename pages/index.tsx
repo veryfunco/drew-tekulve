@@ -9,21 +9,26 @@ import { Container, Page } from "components/Page";
 import { Stack } from "components/Stack";
 
 import { allProjectCategories } from "lib/data/allProjectCategories";
+import { allNarrativeProjectSubcategories } from "lib/data/allNarrativeProjectSubcategories";
 import { globalProps } from "lib/data/globalProps";
 import { homePage } from "lib/data/homePage";
 import { getVideoEmbedLink } from "lib/getVideoEmbedLink";
+
+import ArrowRightIcon from "public/icons/arrow-down-right.svg";
 
 import styles from "styles/Home.module.css";
 
 export const getStaticProps = async () => {
   const global = await globalProps();
   const categories = await allProjectCategories();
+  const narrativeProjectSubcategories = await allNarrativeProjectSubcategories();
   const { projects, hero_video_url, reel_button_text } = await homePage();
 
   return {
     props: {
       global,
       categories,
+      narrativeProjectSubcategories,
       projects,
       heroVideoUrl: hero_video_url,
       reelButtonText: reel_button_text,
@@ -35,25 +40,45 @@ export default function Home(
   props: InferGetStaticPropsType<typeof getStaticProps>
 ) {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [selectedSubcategory, setSelectedSubcategory] = useState<string | null>(
+    null
+  );
   const [lazyCanLoad, setLazyCanLoad] = useState(false);
 
   useEffect(() => {
     setLazyCanLoad(true);
   }, []);
 
-  function handleCategoryButtonClick(category: string) {
+  function handleCategoryButtonClick(category: string | null) {
     setSelectedCategory(category);
   }
 
+  function handleSubcategoryButtonClick(subcategory: string | null) {
+    setSelectedSubcategory(subcategory);
+  }
+
   const filteredProjects = useMemo(() => {
-    return props.projects.filter(
+    const filteredByCategory = props.projects.filter(
       (project) =>
         selectedCategory == null || selectedCategory === project.category
     );
-  }, [props.projects, selectedCategory]);
+
+    if (selectedCategory === "Narrative") {
+      const filteredBySubcategory = filteredByCategory.filter(
+        (project) =>
+          selectedSubcategory == null ||
+          project.narrative_subcategory === selectedSubcategory
+      );
+
+      return filteredBySubcategory;
+    } else {
+      return filteredByCategory;
+    }
+  }, [props.projects, selectedCategory, selectedSubcategory]);
 
   const transition = useTransition(filteredProjects, {
-    keys: selectedCategory,
+    // keys: (item) => item.title,
+    keys: `${selectedCategory}-${selectedSubcategory}`,
     enter: { opacity: 1, transform: "translate3d(0, 0px, 0)" },
     from: { opacity: 0, transform: "translate3d(0, 20px, 0)" },
     trail: 100,
@@ -89,23 +114,54 @@ export default function Home(
           <p className={styles.FilterTitle}>Filter work by category</p>
 
           <div className={styles.FilterButtonContainer}>
-            <Stack align="center" wrap={false}>
-              <Button
-                onClick={() => handleCategoryButtonClick(null)}
-                wide
-                transparent={selectedCategory != null}
-              >
-                All
-              </Button>
-              {props.categories.map((category) => (
+            <Stack direction="column">
+              <Stack align="center" wrap={false}>
                 <Button
-                  transparent={selectedCategory !== category.title}
-                  onClick={() => handleCategoryButtonClick(category.title)}
-                  key={category.title}
+                  onClick={() => handleCategoryButtonClick(null)}
+                  wide
+                  transparent={selectedCategory != null}
                 >
-                  {category.title}
+                  All
                 </Button>
-              ))}
+                {props.categories.map((category) => (
+                  <Button
+                    transparent={selectedCategory !== category.title}
+                    onClick={() => handleCategoryButtonClick(category.title)}
+                    key={category.title}
+                  >
+                    {category.title}
+                  </Button>
+                ))}
+              </Stack>
+              {selectedCategory === "Narrative" ? (
+                <Stack align="center" wrap={false}>
+                  <div className={styles.SubcategoryIcon}>
+                    <Image src={ArrowRightIcon} alt="" />
+                  </div>
+
+                  <Button
+                    onClick={() => handleSubcategoryButtonClick(null)}
+                    wide
+                    transparent={selectedSubcategory != null}
+                  >
+                    All
+                  </Button>
+
+                  {props.narrativeProjectSubcategories.map((subcategory) => {
+                    return (
+                      <Button
+                        key={subcategory.title}
+                        onClick={() =>
+                          handleSubcategoryButtonClick(subcategory.title)
+                        }
+                        transparent={selectedSubcategory !== subcategory.title}
+                      >
+                        {subcategory.title}
+                      </Button>
+                    );
+                  })}
+                </Stack>
+              ) : null}
             </Stack>
           </div>
 
