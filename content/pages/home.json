@@ -3,7 +3,16 @@
   "reel_button_text": "Play Color Reel",
   "projects": [
     {
+      "project_id": "ad3b7317-780b-457a-81db-5ed1139649b3"
+    },
+    {
+      "project_id": "2c04a150-5e74-4da6-b875-3750b472d921"
+    },
+    {
       "project_id": "28ca2ec5-aae0-467d-98cf-f3e6b86439fa"
+    },
+    {
+      "project_id": "3bc8fb5e-2124-4160-a8dc-43de2c65f46c"
     },
     {
       "project_id": "5377cfd0-d60d-4bc7-a42e-5bd99dd1b4c6"
@@ -105,16 +114,10 @@
       "project_id": "9a9b42a9-d35b-405a-95bd-4cab3573fb62"
     },
     {
-      "project_id": "54971934-5bde-4111-aece-e5ca6c7096a7"
-    },
-    {
       "project_id": "53bce7da-4641-46e1-979d-7c9cd811201a"
     },
     {
       "project_id": "43cf91ab-fcaf-4480-9001-3fb5fae885c7"
-    },
-    {
-      "project_id": "b559250c-63b5-434a-b9b0-aff93987b699"
     },
     {
       "project_id": "c88ec1f5-4f95-4667-9a46-29bd6d4c880e"
@@ -127,9 +130,6 @@
     },
     {
       "project_id": "6073749b-07eb-4ed8-b50d-0c1331538a0a"
-    },
-    {
-      "project_id": "97cf41a7-9e8a-42d7-bd61-2b01cd2d3dd1"
     },
     {
       "project_id": "185d4341-701e-4ad8-b9f8-99ee5cd84e98"
