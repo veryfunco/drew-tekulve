@@ -1,11 +1,8 @@
 {
-  "id": "cd76d38f-853d-445b-91fa-2050ecb87fa4",
-  "title": "Strong Enough",
-  "year": "2023",
   "video_url": "https://www.youtube.com/watch?v=IGXQVIfNiKA",
-  "description": "A cross-training athlete on the path to become a pro tests her limits one afternoon by pursuing several world-records just as conflict from her dissolving marriage collides, threatening to derail her.",
   "thumbnail": "/images/strongenough_1.4.12.png",
-  "category": "Narrative",
+  "narrative_subcategory": "Features",
+  "title": "Strong Enough",
   "contributors": [
     {
       "name": "John Foss",
@@ -31,5 +28,9 @@
       "name": "Drew Tekulve",
       "role": "Colorist"
     }
-  ]
+  ],
+  "id": "cd76d38f-853d-445b-91fa-2050ecb87fa4",
+  "description": "A cross-training athlete on the path to become a pro tests her limits one afternoon by pursuing several world-records just as conflict from her dissolving marriage collides, threatening to derail her.",
+  "year": "2023",
+  "category": "Narrative"
 }
