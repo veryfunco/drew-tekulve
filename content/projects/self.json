@@ -1,9 +1,19 @@
 {
-  "id": "90b76afa-517c-4858-a35a-5f25c74a4b53",
-  "title": "Self",
+  "stills": [
+    {
+      "image": "/images/img_3d319bc5397f-1.jpeg"
+    },
+    {
+      "image": "/images/img_e787c52847bf-1.jpeg"
+    },
+    {
+      "image": "/images/img_13d59e03eb61-1.jpeg"
+    }
+  ],
+  "thumbnail": "/images/img_cf34fd059953-1.jpeg",
+  "narrative_subcategory": "Shorts",
   "subtitle": "",
-  "year": "2020",
-  "category": "Narrative",
+  "title": "Self",
   "contributors": [
     {
       "name": "Sir Thurston",
@@ -26,16 +36,7 @@
       "role": "Colorist"
     }
   ],
-  "stills": [
-    {
-      "image": "/images/img_3d319bc5397f-1.jpeg"
-    },
-    {
-      "image": "/images/img_e787c52847bf-1.jpeg"
-    },
-    {
-      "image": "/images/img_13d59e03eb61-1.jpeg"
-    }
-  ],
-  "thumbnail": "/images/img_cf34fd059953-1.jpeg"
+  "id": "90b76afa-517c-4858-a35a-5f25c74a4b53",
+  "year": "2020",
+  "category": "Narrative"
 }
