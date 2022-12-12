@@ -1,0 +1,28 @@
+{
+  "video_url": "https://www.youtube.com/watch?v=f9wuC3HrpqY&ab_channel=BYUtv",
+  "thumbnail": "/images/default_1.33.1.png",
+  "narrative_subcategory": "Television",
+  "subtitle": "Season 3",
+  "title": "Artful",
+  "contributors": [
+    {
+      "name": "Ethan Vincent",
+      "role": "Director"
+    },
+    {
+      "name": "Marty Patch, Nancy Moore, Andra Duke, Michael Dunn",
+      "role": "Executive Producers"
+    },
+    {
+      "name": "Monument TV",
+      "role": "Production Company"
+    },
+    {
+      "name": "BYUtv",
+      "role": "Network"
+    }
+  ],
+  "id": "3bc8fb5e-2124-4160-a8dc-43de2c65f46c",
+  "year": "2022",
+  "category": "Narrative"
+}
