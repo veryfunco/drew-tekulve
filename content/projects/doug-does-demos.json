@@ -1,11 +1,8 @@
 {
-  "id": "64f76167-86bc-4178-82d4-cb0611e96efc",
-  "thumbnail": "/images/doug.jpeg",
-  "title": "Doug Does Demos",
-  "year": "2020",
   "video_url": "https://vimeo.com/399359880",
-  "description": "Doug Bagdorlf is forced to confront the darkest parts of himself when he sets out to make a Youtube tutorial.",
-  "category": "Narrative",
+  "thumbnail": "/images/doug.jpeg",
+  "narrative_subcategory": "Shorts",
+  "title": "Doug Does Demos",
   "contributors": [
     {
       "name": "Michael Friberg",
@@ -23,5 +20,9 @@
       "name": "Drew Tekulve",
       "role": "Colorist"
     }
-  ]
+  ],
+  "id": "64f76167-86bc-4178-82d4-cb0611e96efc",
+  "description": "Doug Bagdorlf is forced to confront the darkest parts of himself when he sets out to make a Youtube tutorial.",
+  "year": "2020",
+  "category": "Narrative"
 }
