@@ -1,7 +1,7 @@
 backend:
   name: github
   branch: main
-  repo: asmockler/drew-tekulve
+  repo: veryfunco/drew-tekulve
   base_url: https://drew-tekulve.vercel.app
   auth_endpoint: api/auth_github
 media_folder: "public/images"
