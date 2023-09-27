@@ -1,13 +1,13 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import sgMail from "@sendgrid/mail";
+import { Resend } from "resend";
 
 import { sleep } from "lib/sleep";
 
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse
+  res: NextApiResponse,
 ) {
   if (req.method !== "POST") {
     res.status(404);
@@ -27,12 +27,12 @@ export default async function handler(
   const { name, email, subject, message, recipientEmail } = req.body;
 
   try {
-    await sgMail.send({
+    await resend.sendEmail({
       to:
         process.env.NODE_ENV === "production"
           ? recipientEmail
           : "asmockler@gmail.com",
-      from: "asmockler@gmail.com",
+      from: "no-reply@noreply.veryfun.company",
       subject: `\\(^ヮ^)/ Contact form submission: ${subject}`,
       html: `
         <h1 style="font-family: sans-serif; font-size: 20px;">∠( ᐛ 」∠)_ Someone filled out your contact form!</h1>
@@ -41,6 +41,7 @@ export default async function handler(
         <p style="font-family: sans-serif"><strong>Message</strong>: ${message}</p>
       `,
     });
+
     res.status(200).json({});
   } catch (error) {
     res.status(500).json({ error });
