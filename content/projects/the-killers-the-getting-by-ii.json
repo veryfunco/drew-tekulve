@@ -3,7 +3,7 @@
   "title": "The Killers - The Getting By II",
   "year": "2022",
   "video_url": "https://www.youtube.com/watch?v=llZ-z4R-MZ8&ab_channel=TheKillersMusic",
-  "thumbnail": "/images/screen-shot-2022-04-13-at-12.26.33-pm.png",
+  "thumbnail": "/images/thegettingby_1.1.19-2.jpg",
   "contributors": [
     {
       "name": "Robert Machoian",
@@ -22,5 +22,6 @@
       "role": "Colorist & Digital Intermediate"
     }
   ],
-  "category": "Music Video"
+  "category": "Music Video",
+  "narrative_subcategory": "Features"
 }
