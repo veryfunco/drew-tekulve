@@ -1,0 +1,27 @@
+{
+  "id": "bd03b9b8-5365-4405-ae71-989c05e38b1b",
+  "title": "Skullcandy - Crasher ANC 2",
+  "year": "2023",
+  "thumbnail": "/images/skullcandy_1.20.1.jpg",
+  "video_url": "https://www.youtube.com/watch?v=uOqvYKwIeP4&t=3s&ab_channel=Skullcandy",
+  "category": "Commercial",
+  "contributors": [
+    {
+      "name": "Adam Deleeuw",
+      "role": "Creative Director"
+    },
+    {
+      "name": "Trent Jones",
+      "role": "Editor"
+    },
+    {
+      "name": "Trent Jones",
+      "role": "DP"
+    },
+    {
+      "name": "Drew Tekulve at Paradox Post",
+      "role": "Colorist"
+    }
+  ],
+  "narrative_subcategory": "Features"
+}
