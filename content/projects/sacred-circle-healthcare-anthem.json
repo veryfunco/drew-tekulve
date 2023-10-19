@@ -1,8 +1,8 @@
 {
   "id": "abc31958-230e-4baf-8684-710fedabd3e1",
   "title": "Sacred Circle Healthcare - Anthem",
-  "year": "2022",
-  "thumbnail": "/images/screen-shot-2022-04-13-at-12.19.00-pm.png",
+  "year": "2021",
+  "thumbnail": "/images/sacred-circle_1.37.1.jpg",
   "category": "Commercial",
   "contributors": [
     {
@@ -30,5 +30,6 @@
       "role": "Colorist"
     }
   ],
-  "video_url": "https://vimeo.com/663161151"
+  "video_url": "https://vimeo.com/663161151",
+  "narrative_subcategory": "Shorts"
 }
