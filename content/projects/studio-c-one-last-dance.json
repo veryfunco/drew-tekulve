@@ -1,9 +1,9 @@
 {
-  "id": "ea69253e-6a76-4ff0-be8e-416e75dfcb6a",
-  "title": "Studio C - One Last Dance",
   "video_url": "https://youtu.be/EA3qE3TiFsE",
-  "year": "2017",
   "thumbnail": "/images/unnamed.png",
+  "narrative_subcategory": "Television",
+  "subtitle": "Seasons 3-10",
+  "title": "Studio C",
   "contributors": [
     {
       "name": "Jed Wells",
@@ -26,6 +26,7 @@
       "role": "Colorist"
     }
   ],
-  "category": "Narrative",
-  "narrative_subcategory": "Television"
+  "id": "ea69253e-6a76-4ff0-be8e-416e75dfcb6a",
+  "year": "2017",
+  "category": "Narrative"
 }
