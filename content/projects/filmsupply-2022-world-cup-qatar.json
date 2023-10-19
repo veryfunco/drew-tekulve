@@ -1,10 +1,9 @@
 {
-  "id": "e903b57e-16fa-427a-8d9a-f8a752e155ca",
-  "title": "Filmsupply - 2022 World Cup Qatar",
-  "year": "2022",
-  "thumbnail": "/images/screen-shot-2022-02-19-at-1.44.29-pm.png",
   "video_url": "https://www.youtube.com/watch?v=uscqBpcqGWs&ab_channel=PierceTews",
-  "category": "Commercial",
+  "stills": [],
+  "thumbnail": "/images/fs_soccer_1.33.1_fix2.jpg",
+  "narrative_subcategory": "Shorts",
+  "title": "Filmsupply - 2022 World Cup Qatar",
   "contributors": [
     {
       "name": "Pierce Tews",
@@ -19,9 +18,7 @@
       "role": "Colorist"
     }
   ],
-  "stills": [
-    {
-      "image": "/images/screen-shot-2022-02-19-at-1.46.24-pm.png"
-    }
-  ]
+  "id": "e903b57e-16fa-427a-8d9a-f8a752e155ca",
+  "year": "2022",
+  "category": "Commercial"
 }
