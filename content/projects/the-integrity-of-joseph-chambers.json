@@ -1,16 +1,7 @@
 {
-  "stills": [
-    {
-      "image": "/images/tiojc_1.86.1_l_small.png"
-    },
-    {
-      "image": "/images/tiojc_1.85.1_l_small.png"
-    },
-    {
-      "image": "/images/tiojc_1.84.1_l_small.png"
-    }
-  ],
-  "thumbnail": "/images/tiojc_1.97.1_l_small.png",
+  "video_url": "https://www.youtube.com/watch?v=Rv699tusufY&ab_channel=LoudandClearReviews",
+  "stills": [],
+  "thumbnail": "/images/tiojc_1.191.1.jpg",
   "narrative_subcategory": "Features",
   "subtitle": "Official Tribeca Selection",
   "title": "The Integrity of Joseph Chambers",
