@@ -1,15 +1,9 @@
 {
-  "stills": [
-    {
-      "image": "/images/piecemaker_1.207.1.png"
-    },
-    {
-      "image": "/images/piecemaker_1.346.1.png"
-    }
-  ],
-  "thumbnail": "/images/piecemaker_1.204.1.png",
+  "video_url": "https://www.youtube.com/watch?v=690ymlMqC74",
+  "stills": [],
+  "thumbnail": "/images/pm_103_kona_1.382.1.jpg",
   "narrative_subcategory": "Television",
-  "subtitle": "Magnolia Network",
+  "subtitle": "MAX x Magnolia Network",
   "title": "The Piece Maker",
   "contributors": [
     {
