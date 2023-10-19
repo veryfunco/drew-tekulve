@@ -3,7 +3,7 @@
   "title": "St. Lucia - Gimme The Night",
   "year": "2022",
   "video_url": "https://www.youtube.com/watch?v=AthYIHSUNy4&ab_channel=St.Lucia",
-  "thumbnail": "/images/gimmenight_1.1.1-copy.png",
+  "thumbnail": "/images/gimmenight_1.97.2.jpg",
   "contributors": [
     {
       "name": "Nicole Lipp",
@@ -30,5 +30,6 @@
       "role": "Finishing By"
     }
   ],
-  "category": "Music Video"
+  "category": "Music Video",
+  "narrative_subcategory": "Features"
 }
