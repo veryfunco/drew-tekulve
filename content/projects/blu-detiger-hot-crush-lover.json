@@ -2,7 +2,7 @@
   "id": "8659f309-f13b-475d-a283-4b22095b1fde",
   "title": "Blu DeTiger - Hot Crush Lover",
   "year": "2022",
-  "thumbnail": "/images/untitled_1.95.1.png",
+  "thumbnail": "/images/blu.jpg",
   "category": "Music Video",
   "video_url": "https://www.youtube.com/watch?v=9gtosXjzt-o&ab_channel=BluDeTigerVEVO",
   "contributors": [
@@ -30,5 +30,6 @@
       "name": "Drew Tekulve",
       "role": "Colorist"
     }
-  ]
+  ],
+  "narrative_subcategory": "Features"
 }
