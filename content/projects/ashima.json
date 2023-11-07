@@ -1,0 +1,44 @@
+{
+  "stills": [
+    {
+      "image": "/images/ashima_stills_2.20.1.jpg"
+    },
+    {
+      "image": "/images/ashima_stills_1.553.1.jpg"
+    }
+  ],
+  "thumbnail": "/images/ashima_stills_1.434.1.jpg",
+  "narrative_subcategory": "Features",
+  "subtitle": "Official DOC NYC Selection",
+  "title": "Ashima",
+  "contributors": [
+    {
+      "name": "Kenji Tsukamoto",
+      "role": "Director"
+    },
+    {
+      "name": "Minji Chang",
+      "role": "Producer"
+    },
+    {
+      "name": "Dave Boyle",
+      "role": "Producer"
+    },
+    {
+      "name": "Samuel Rong",
+      "role": "Editor"
+    },
+    {
+      "name": "Stephen Urata (Skywalker Sound)",
+      "role": "Sound Mixer"
+    },
+    {
+      "name": "Drew Tekulve",
+      "role": "Colorist"
+    }
+  ],
+  "id": "8e832ae0-1b8e-4140-b34c-bf2f053507b2",
+  "description": "Ashima Shiraishi and her father travel from New York to South Africa to conquer a V14 boulder problem.\n\n",
+  "year": "2023",
+  "category": "Narrative"
+}
