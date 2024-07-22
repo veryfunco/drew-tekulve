@@ -1,7 +1,7 @@
 {
-  "description": "Grading everything from commercials to feature films that have screened at prestigious film festivals, \nthis fella has experience in HDR, ACES, and digital intermediate workflows.\n\nDrew says he likes almost all genres of music. Send him an album recommendation and you'll be his friend.\n",
+  "description": "Grading everything from commercials to feature films that have screened at prestigious film festivals, \nthis fella has experience in HDR, ACES, and digital intermediate workflows.\n",
   "clients_lead": "Drew is a Colorist based out of Los Angeles, having spent many years working in the Utah film industry. He has amassed a lengthy list of clientele, ranging from big brand names to various ad agencies.",
-  "contact_lead": "If you're looking for an experienced colorist based in Los Angeles, or if you need something graded remotely, I’d love to work with you. Describe your project below and I’ll send you a quote.\n\n",
+  "contact_lead": "If you're looking for an experienced colorist based in Los Angeles, or if you need something graded remotely, I’d love to work with you. Describe your project below and I’ll send you a quote. (HOT TIP: Send him an album recommendation and you'll be his friend.)\n\n",
   "clients": [
     {
       "name": "Purple",
@@ -33,7 +33,7 @@
     },
     {
       "name": "ASUS",
-      "logo": "/images/asustek-white-logo-small.png"
+      "logo": "/images/asus_logo.svg"
     },
     {
       "name": "Panasonic",
