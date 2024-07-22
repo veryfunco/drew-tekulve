@@ -20,8 +20,16 @@
       "logo": "/images/sxf_long.png"
     },
     {
+      "name": "Disney",
+      "logo": "/images/disney.svg"
+    },
+    {
       "name": "Verizon",
       "logo": "/images/union-5.svg"
+    },
+    {
+      "name": "Olympics",
+      "logo": "/images/olympics.svg"
     },
     {
       "name": "Wells Fargo",
@@ -30,6 +38,10 @@
     {
       "name": "T-Mobile",
       "logo": "/images/union-6.svg"
+    },
+    {
+      "name": "Roku",
+      "logo": "/images/roku_logowhite.svg"
     },
     {
       "name": "Purple",

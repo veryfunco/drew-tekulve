@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="svg2985" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" version="1.1" viewBox="0 0 1000 311.2">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clippath);
+      }
+
+      .cls-2, .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        stroke-width: 0px;
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-3" x="-118.6" y="-125.2" width="1237.1" height="581.7"/>
+    </clipPath>
+  </defs>
+  <sodipodi:namedview id="namedview2987" bordercolor="#666666" borderopacity="1" fit-margin-bottom="0.5" fit-margin-left="0.5" fit-margin-right="0.5" fit-margin-top="0.5" gridtolerance="10" guidetolerance="10" inkscape:current-layer="g2993" inkscape:cx="506.66822" inkscape:cy="-145.04628" inkscape:pageopacity="0" inkscape:pageshadow="2" inkscape:window-height="1039" inkscape:window-maximized="0" inkscape:window-width="1189" inkscape:window-x="723" inkscape:window-y="-21" inkscape:zoom="0.41414141" objecttolerance="10" pagecolor="#ffffff" showgrid="false"/>
+  <g id="g2993" inkscape:groupmode="layer" inkscape:label="gbtv_roku_setup_guide">
+    <g id="g3013">
+      <g>
+        <rect class="cls-2" x="-118.6" y="-125.2" width="1237.1" height="581.7"/>
+        <g class="cls-1">
+          <g id="g3015">
+            <g id="g3021">
+              <path id="path3023" class="cls-3" d="M157.8,102.5c0-28.4-22.8-51.2-50.8-51.2h-25.2v102h25.2c27.9,0,50.8-22.9,50.8-50.8M272.3,305.9h-92.4l-73.3-101.8h-24.7v101.6H.5V.5h116.6c67.2,0,122.1,45.7,122.1,102s-21,65-53.1,83.7l86.1,119.7" inkscape:connector-curvature="0"/>
+            </g>
+            <g id="g3025">
+              <path id="path3027" class="cls-3" d="M364.2,120.8c-21.5,0-39.8,29.2-39.8,65.4s18.3,65.4,39.8,65.4,40.3-29.3,40.3-65.4-18.3-65.4-40.3-65.4M489.5,186.2c0,69.1-56.2,124.5-125.3,124.5s-124.9-55.3-124.9-124.5,55.8-124.4,124.9-124.4,125.3,55.4,125.3,124.4" inkscape:connector-curvature="0"/>
+            </g>
+            <g id="g3029">
+              <path id="path3031" class="cls-3" d="M680.5,66.8l-93.8,93.8v-94.1h-81.4v239.1h81.4v-97l97.9,97h102.5l-124.4-124.4,103.1-103v141.9c0,47.1,28.3,90.6,99.7,90.6s65-19.2,80.1-36.6l36.6,31.6h17.4V66.8h-81.4v154.6c-9.2,16-21.9,26.1-41.7,26.1s-29.2-11.9-29.2-49.9V66.8s-166.7,0-166.7,0Z" inkscape:connector-curvature="0"/>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
