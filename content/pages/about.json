@@ -4,8 +4,20 @@
   "contact_lead": "If you're looking for an experienced colorist based in Los Angeles, or if you need something graded remotely, I’d love to work with you. Describe your project below and I’ll send you a quote. (HOT TIP: Send him an album recommendation and you'll be his friend.)\n\n",
   "clients": [
     {
-      "name": "Purple",
-      "logo": "/images/union-3.svg"
+      "name": "XBOX",
+      "logo": "/images/xbox_logo.svg"
+    },
+    {
+      "name": "Canon",
+      "logo": "/images/canon.svg"
+    },
+    {
+      "name": "Brooks",
+      "logo": "/images/brooks_sports_201x_logo.svg"
+    },
+    {
+      "name": "Savage x Fenty",
+      "logo": "/images/sxf_long.png"
     },
     {
       "name": "Verizon",
@@ -20,16 +32,16 @@
       "logo": "/images/union-6.svg"
     },
     {
+      "name": "Purple",
+      "logo": "/images/union-3.svg"
+    },
+    {
       "name": "Vivint SmartHome",
       "logo": "/images/union-7.svg"
     },
     {
-      "name": "XBOX",
-      "logo": "/images/xboxxvg-test2.svg"
-    },
-    {
       "name": "BBDO",
-      "logo": "/images/50_bbdo.png"
+      "logo": "/images/bbdo.svg"
     },
     {
       "name": "ASUS",
@@ -37,15 +49,43 @@
     },
     {
       "name": "Panasonic",
-      "logo": "/images/panasonic_logo.png"
+      "logo": "/images/panasonic_logo_-blue-.svg"
     },
     {
-      "name": "The Killing of Two Lovers",
-      "logo": "/images/frame.svg"
+      "name": "Skullcandy",
+      "logo": "/images/skullcandy-logo_long.svg"
     },
     {
-      "name": "Scenes from the Glittering World",
-      "logo": "/images/04_scenes-from-the-glittering-world.png"
+      "name": "La Victoria",
+      "logo": "/images/lavic.svg"
+    },
+    {
+      "name": "Herdez Salsa",
+      "logo": "/images/herdez.svg"
+    },
+    {
+      "name": "Kodiak Cakes",
+      "logo": "/images/kodiakblue.png"
+    },
+    {
+      "name": "F45",
+      "logo": "/images/f452.png"
+    },
+    {
+      "name": "Sundance",
+      "logo": "/images/sff20_officialselection_laurel.png"
+    },
+    {
+      "name": "Tribeca",
+      "logo": "/images/tribeca.svg"
+    },
+    {
+      "name": "SXSW",
+      "logo": "/images/sxsw.svg"
+    },
+    {
+      "name": "DOC NYC",
+      "logo": "/images/docnyc.png"
     }
   ]
 }

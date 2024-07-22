@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" version="1.1" viewBox="0 0 1000 209.2">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <sodipodi:namedview id="namedview12" bordercolor="#666666" borderopacity="1" gridtolerance="10" guidetolerance="10" inkscape:current-layer="Layer_1" inkscape:cx="611.40177" inkscape:cy="160.75581" inkscape:pageopacity="0" inkscape:pageshadow="2" inkscape:window-height="705" inkscape:window-maximized="1" inkscape:window-width="1366" inkscape:window-x="-8" inkscape:window-y="-8" inkscape:zoom="0.70710678" objecttolerance="10" pagecolor="#ffffff" showgrid="false"/>
+  <g id="g3">
+    <g id="g5">
+      <g id="g7">
+        <g id="g9">
+          <path id="path11" class="cls-1" d="M163.3,188.8c-46.5,0-84.2-37.7-84.2-84.2S116.8,20.4,163.3,20.4s31.7,4.7,44.6,12.8l-44.6,71.4,84-48.5c-9.1-14.5-22.2-27.1-38-36.6C189.1,7.5,161.1,0,130.1,0,85.9,0,47.2,16.1,25.5,40.1,9.5,57.9,0,80.3,0,104.6s9.5,46.7,25.5,64.5c21.7,24.1,59.9,40,103.3,40s81.6-16,103.3-40c1.2-1.3,2.3-2.7,3.4-4.1l-3.3-12.3c-15.2,21.8-40.5,36-69,36" inkscape:connector-curvature="0"/>
+          <path id="path13" class="cls-1" d="M441.7,204.1l-35.3-131.5c-5.7-21.3-25-36.9-48.1-36.9s-11.7,1.1-17,3l-75.9,27.6h78.1l13.3,49.8c-12.9-11.1-29.8-17.9-48.2-17.9-36.6,0-66.3,24.6-66.3,54.8s29.7,54.9,66.3,54.9,49.7-12.9,64.1-32.8l7.7,28.9h61.2M334.2,183.7c-16.9,0-30.6-13.7-30.6-30.6s13.7-30.6,30.6-30.6,30.6,13.7,30.6,30.6-13.7,30.6-30.6,30.6Z" inkscape:connector-curvature="0"/>
+          <path id="path15" class="cls-1" d="M585.5,35.7c-4.6,0-9,1-12.9,2.9l-48.7,22.7c-2.4-14.5-15-25.6-30.2-25.6s-9,1-12.9,2.9l-59.5,27.7h41.8v137.8h61.2v-122.5c0-8.4,6.8-15.3,15.3-15.3s15.3,6.9,15.3,15.3v122.5h61.2V66.3c0-16.9-13.7-30.6-30.6-30.6" inkscape:connector-curvature="0"/>
+          <path id="path17" class="cls-1" d="M969.4,35.7c-4.6,0-9,1-13,2.9l-48.7,22.7c-2.4-14.5-15-25.6-30.2-25.6s-9,1-13,2.9l-59.5,27.7h41.8v137.8h61.2v-122.5c0-8.4,6.9-15.3,15.3-15.3s15.3,6.9,15.3,15.3v122.5h61.3V66.3c0-16.9-13.7-30.6-30.6-30.6" inkscape:connector-curvature="0"/>
+          <path id="path19" class="cls-1" d="M815,122.5c0,47.9-38.8,86.7-86.7,86.7s-86.8-38.8-86.8-86.7,38.8-86.7,86.8-86.7,86.7,38.8,86.7,86.7M731.9,62.1c-2.7-10.2-13.2-16.3-23.4-13.5-10.2,2.7-16.3,13.2-13.5,23.4l29.7,110.9c2.8,10.2,13.2,16.3,23.4,13.6,10.2-2.8,16.3-13.3,13.5-23.5l-29.7-110.9Z" inkscape:connector-curvature="0"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
