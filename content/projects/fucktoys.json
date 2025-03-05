@@ -1,0 +1,47 @@
+{
+  "stills": [
+    {
+      "image": "/images/ft_r4__1.193.1_rec709_gamma2.2.jpg"
+    },
+    {
+      "image": "/images/ft_r5__1.253.1.t_rec709_gamma2.2.jpg"
+    },
+    {
+      "image": "/images/ft_r1__1.1.1.t_rec709_gamma2.2.jpg"
+    }
+  ],
+  "thumbnail": "/images/ftoys_1.jpg",
+  "narrative_subcategory": "Features",
+  "subtitle": "Official SXSW Selection",
+  "title": "Fucktoys",
+  "contributors": [
+    {
+      "name": "Annapurna Sriram",
+      "role": "Writer and Director"
+    },
+    {
+      "name": "Tim Petryni",
+      "role": "Producer"
+    },
+    {
+      "name": "Cory Freiman-Lott",
+      "role": "Director of Photography"
+    },
+    {
+      "name": "Rob Bowman",
+      "role": "Post Producer"
+    },
+    {
+      "name": "Lilly Wild",
+      "role": "Editor"
+    },
+    {
+      "name": "Drew Tekulve",
+      "role": "Colorist"
+    }
+  ],
+  "id": "bfc2cf6e-bfb4-4f8c-92cc-b99e58b70f38",
+  "description": "A young woman seeks to break a curse by raising $1000 for psychics in a pre-millennium alternate universe. She navigates the seedy underbelly of Trashtown via scooter, encountering bizarre characters along the way.",
+  "year": "2025",
+  "category": "Narrative"
+}
