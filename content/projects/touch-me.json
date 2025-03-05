@@ -1,0 +1,36 @@
+{
+  "thumbnail": "/images/touch-me.jpg",
+  "narrative_subcategory": "Features",
+  "subtitle": "Official Sundance and SXSW Selection",
+  "title": "Touch Me",
+  "contributors": [
+    {
+      "name": "Аddison Heimann",
+      "role": "Writer & Director"
+    },
+    {
+      "name": "Dustin Supencheck",
+      "role": "Director of Photography"
+    },
+    {
+      "name": "John Humber, David Lawson Jr",
+      "role": "Producers"
+    },
+    {
+      "name": "Aaron Moorhead, Olivia Taylor Dudley, Justin Benson",
+      "role": "Executive Producers"
+    },
+    {
+      "name": "Jess Weber Johnson",
+      "role": "Editor"
+    },
+    {
+      "name": "Drew Tekulve",
+      "role": "Senior Colorist"
+    }
+  ],
+  "id": "5fc54851-f617-44a6-bc04-2ee748fb2489",
+  "description": "Two codependent best friends become addicted to the heroin-like touch of an alien narcissist who may or may not be trying to take over the world.",
+  "year": "2025",
+  "category": "Narrative"
+}
