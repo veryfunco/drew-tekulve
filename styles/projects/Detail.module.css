@@ -1,3 +1,7 @@
+.EmptyHeroContainer {
+  height: 150px;
+}
+
 .VideoHeroContainer {
   height: calc(90vh - var(--navbar-height));
   max-height: 700px;

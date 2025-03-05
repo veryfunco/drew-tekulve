@@ -58,7 +58,7 @@ export default function ProjectDetail({
   previousProject,
   nextProject,
 }: StaticProps<typeof getStaticProps>) {
-  let heroContent = null;
+  let heroContent = <div className={styles.EmptyHeroContainer} />;
   if (project.video_url != null) {
     heroContent = (
       <div className={styles.VideoHeroContainer}>
