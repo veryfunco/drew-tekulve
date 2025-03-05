@@ -3,7 +3,22 @@
   "reel_button_text": "Play Color Reel",
   "projects": [
     {
+      "project_id": "bfc2cf6e-bfb4-4f8c-92cc-b99e58b70f38"
+    },
+    {
+      "project_id": "92e19c71-38f7-476e-b8e8-73204c841844"
+    },
+    {
       "project_id": "5fc54851-f617-44a6-bc04-2ee748fb2489"
+    },
+    {
+      "project_id": "ad3b7317-780b-457a-81db-5ed1139649b3"
+    },
+    {
+      "project_id": "28ca2ec5-aae0-467d-98cf-f3e6b86439fa"
+    },
+    {
+      "project_id": "ca46fd90-7d87-4577-b602-ecddb4333007"
     },
     {
       "project_id": "8e832ae0-1b8e-4140-b34c-bf2f053507b2"
@@ -12,13 +27,7 @@
       "project_id": "c1db4402-d303-4550-a0fb-59ab7536b3d6"
     },
     {
-      "project_id": "ad3b7317-780b-457a-81db-5ed1139649b3"
-    },
-    {
       "project_id": "2c04a150-5e74-4da6-b875-3750b472d921"
-    },
-    {
-      "project_id": "28ca2ec5-aae0-467d-98cf-f3e6b86439fa"
     },
     {
       "project_id": "3bc8fb5e-2124-4160-a8dc-43de2c65f46c"
@@ -36,16 +45,7 @@
       "project_id": "8659f309-f13b-475d-a283-4b22095b1fde"
     },
     {
-      "project_id": "ca46fd90-7d87-4577-b602-ecddb4333007"
-    },
-    {
-      "project_id": "ca46fd90-7d87-4577-b602-ecddb4333007"
-    },
-    {
       "project_id": "348b459d-87f0-4774-b071-a76a21b98524"
-    },
-    {
-      "project_id": "d9f2e812-e7a4-4cd4-bdcc-f09621735fdd"
     },
     {
       "project_id": "d9f2e812-e7a4-4cd4-bdcc-f09621735fdd"
@@ -55,9 +55,6 @@
     },
     {
       "project_id": "abc31958-230e-4baf-8684-710fedabd3e1"
-    },
-    {
-      "project_id": "90b76afa-517c-4858-a35a-5f25c74a4b53"
     },
     {
       "project_id": "90b76afa-517c-4858-a35a-5f25c74a4b53"
@@ -75,9 +72,6 @@
       "project_id": "60ccebab-fc02-445e-93d9-583a117f2c4f"
     },
     {
-      "project_id": "60ccebab-fc02-445e-93d9-583a117f2c4f"
-    },
-    {
       "project_id": "4d651463-0447-4bc2-8ff6-fd92a7a8fd35"
     },
     {
@@ -87,13 +81,7 @@
       "project_id": "99f37fdc-5f1c-4944-8fdd-c0bd26893899"
     },
     {
-      "project_id": "998eae94-d305-49d4-995e-733c13eb1c81"
-    },
-    {
       "project_id": "2c9f460e-935c-4a85-9c6a-7d2113631464"
-    },
-    {
-      "project_id": "655f81f4-6cd7-492c-9a0c-de58f64f4336"
     },
     {
       "project_id": "655f81f4-6cd7-492c-9a0c-de58f64f4336"
@@ -103,12 +91,6 @@
     },
     {
       "project_id": "b0bcf60a-ce2d-46d5-b056-00f4ae3db706"
-    },
-    {
-      "project_id": "bc0b43c6-ecb8-40af-9d7f-42f63a074702"
-    },
-    {
-      "project_id": "732f3cc8-8a33-4885-8d45-e8fbecb798e2"
     },
     {
       "project_id": "732f3cc8-8a33-4885-8d45-e8fbecb798e2"
@@ -123,13 +105,7 @@
       "project_id": "9a9b42a9-d35b-405a-95bd-4cab3573fb62"
     },
     {
-      "project_id": "9a9b42a9-d35b-405a-95bd-4cab3573fb62"
-    },
-    {
       "project_id": "43cf91ab-fcaf-4480-9001-3fb5fae885c7"
-    },
-    {
-      "project_id": "c88ec1f5-4f95-4667-9a46-29bd6d4c880e"
     },
     {
       "project_id": "c88ec1f5-4f95-4667-9a46-29bd6d4c880e"
@@ -142,9 +118,6 @@
     },
     {
       "project_id": "185d4341-701e-4ad8-b9f8-99ee5cd84e98"
-    },
-    {
-      "project_id": "ea69253e-6a76-4ff0-be8e-416e75dfcb6a"
     },
     {
       "project_id": "ea69253e-6a76-4ff0-be8e-416e75dfcb6a"
