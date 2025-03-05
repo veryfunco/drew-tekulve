@@ -1,0 +1,28 @@
+{
+  "video_url": "https://www.youtube.com/watch?v=qgcOsW0gdgM",
+  "thumbnail": "/images/eclipse.jpg",
+  "narrative_subcategory": "Features",
+  "subtitle": "Official SXSW Selection",
+  "title": "Cera Gibson - Eclipse",
+  "contributors": [
+    {
+      "name": "Alex Vaughn",
+      "role": "Director"
+    },
+    {
+      "name": "Bentley Rawle",
+      "role": "Cinematographer"
+    },
+    {
+      "name": "Jasmine Stack",
+      "role": "Choreographer & Editor"
+    },
+    {
+      "name": "Drew Tekulve",
+      "role": "Colorist"
+    }
+  ],
+  "id": "92e19c71-38f7-476e-b8e8-73204c841844",
+  "year": "2025",
+  "category": "Music Video"
+}
