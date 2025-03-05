@@ -1,4 +1,9 @@
 {
+  "stills": [
+    {
+      "image": "/images/touch-me.jpg"
+    }
+  ],
   "thumbnail": "/images/touch-me.jpg",
   "narrative_subcategory": "Features",
   "subtitle": "Official Sundance and SXSW Selection",
