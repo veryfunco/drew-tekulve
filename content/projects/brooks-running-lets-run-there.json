@@ -1,0 +1,23 @@
+{
+  "id": "8370c37f-6c2b-4dc8-a150-c0cef6f72a3a",
+  "title": "Brooks Running - Let's Run There",
+  "year": "2024",
+  "thumbnail": "/images/brooks2.jpg",
+  "video_url": "https://player.vimeo.com/video/951295893",
+  "category": "Commercial",
+  "narrative_subcategory": "Shorts",
+  "contributors": [
+    {
+      "name": "Tim Kemple",
+      "role": "Director"
+    },
+    {
+      "name": "Camp4 Collective",
+      "role": "Agency"
+    },
+    {
+      "name": "Paradox Post",
+      "role": "Color House"
+    }
+  ]
+}
