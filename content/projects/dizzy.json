@@ -1,0 +1,35 @@
+{
+  "stills": [
+    {
+      "image": "/images/dizzy1.jpg"
+    },
+    {
+      "image": "/images/dizzy4.jpg"
+    },
+    {
+      "image": "/images/dizzy5.jpg"
+    }
+  ],
+  "thumbnail": "/images/dizzy3.jpg",
+  "narrative_subcategory": "Shorts",
+  "subtitle": "Official Beverly Hills Film Selection",
+  "title": "Dizzy",
+  "contributors": [
+    {
+      "name": "Zac La Roc",
+      "role": "Director"
+    },
+    {
+      "name": "Daniel Contaldo",
+      "role": "Director of Photography"
+    },
+    {
+      "name": "Nick Cassavetes",
+      "role": "Executive Producer"
+    }
+  ],
+  "id": "4dbbe921-4080-498f-af57-aa2ebb974e26",
+  "description": "Dylan and Lizzy are young and bored. They drop acid, steal a car, and head out to have some fun.",
+  "year": "2025",
+  "category": "Narrative"
+}
