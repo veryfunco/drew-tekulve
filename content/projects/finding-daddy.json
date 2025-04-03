@@ -1,0 +1,33 @@
+{
+  "id": "df7ca286-c5c3-4e8d-847f-f5c3b61fb4d3",
+  "title": "Finding Daddy",
+  "year": "2024",
+  "thumbnail": "/images/findingdaddy1.jpg",
+  "category": "Narrative",
+  "narrative_subcategory": "Shorts",
+  "contributors": [
+    {
+      "name": "Emily Wilson",
+      "role": "Written and Directed By:"
+    },
+    {
+      "name": "Suki-Rose Etter",
+      "role": "Producer"
+    },
+    {
+      "name": "Kelsey Talton",
+      "role": "Director of Photography"
+    }
+  ],
+  "stills": [
+    {
+      "image": "/images/findingdaddy1.jpg"
+    },
+    {
+      "image": "/images/findingdaddy2.jpg"
+    },
+    {
+      "image": "/images/findingdaddy3.jpg"
+    }
+  ]
+}
