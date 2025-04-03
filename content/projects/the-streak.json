@@ -1,0 +1,39 @@
+{
+  "stills": [
+    {
+      "image": "/images/streak1.jpg"
+    },
+    {
+      "image": "/images/streak2.jpg"
+    },
+    {
+      "image": "/images/streak3.jpg"
+    }
+  ],
+  "thumbnail": "/images/streak1.jpg",
+  "narrative_subcategory": "Features",
+  "subtitle": "Official Heartland Film Selection",
+  "title": "The Streak",
+  "contributors": [
+    {
+      "name": "Kelyn Ikegami",
+      "role": "Director"
+    },
+    {
+      "name": "Jared Jakins",
+      "role": "Director of Photography"
+    },
+    {
+      "name": "Hunter Phillips",
+      "role": "Producer"
+    },
+    {
+      "name": "The Plains",
+      "role": "Production Company"
+    }
+  ],
+  "id": "4177a905-3398-4b2e-8bcd-0ffde9ccb09b",
+  "description": "In 1987, baseball players arrived in Salt Lake City to play for the Trappers, an unaffiliated team in the lowest level of the minor leagues. All had been passed over by professional scouts, and the Trappers represented their last shot at getting to the big leagues. ",
+  "year": "2024",
+  "category": "Narrative"
+}
