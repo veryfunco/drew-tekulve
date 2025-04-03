@@ -1,0 +1,27 @@
+{
+  "id": "6b9b14cd-b033-4a06-83fd-b1a444723091",
+  "title": "Dickies: F/W '24",
+  "year": "2024",
+  "thumbnail": "/images/dickies1.jpg",
+  "video_url": "https://vimeo.com/1019279110",
+  "category": "Commercial",
+  "contributors": [
+    {
+      "name": "Michael Friberg",
+      "role": "Director"
+    },
+    {
+      "name": "Bennett Duchin",
+      "role": "Director of Photography"
+    },
+    {
+      "name": "Vince Mauro",
+      "role": "Producer"
+    },
+    {
+      "name": "Peter Jodlowski",
+      "role": "Editor"
+    }
+  ],
+  "narrative_subcategory": "Shorts"
+}
