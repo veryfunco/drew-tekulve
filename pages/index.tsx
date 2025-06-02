@@ -8,10 +8,7 @@ import { Button } from "components/Button";
 import { Container, Page } from "components/Page";
 import { Stack } from "components/Stack";
 
-import {
-  allProjectCategories,
-  getSubcategoriesForCategory,
-} from "lib/data/allProjectCategories";
+import { allProjectCategories } from "lib/data/allProjectCategories";
 import { globalProps } from "lib/data/globalProps";
 import { homePage } from "lib/data/homePage";
 import { getVideoEmbedLink } from "lib/getVideoEmbedLink";
@@ -58,7 +55,6 @@ export default function Home(
     setSelectedSubcategory(subcategory);
   }
 
-  // Get subcategories for the selected category
   const currentSubcategories = useMemo(() => {
     if (!selectedCategory) return [];
     const category = props.categories.find(
@@ -93,7 +89,6 @@ export default function Home(
   ]);
 
   const transition = useTransition(filteredProjects, {
-    // keys: (item) => item.title,
     keys: `${selectedCategory}-${selectedSubcategory}`,
     enter: { opacity: 1, transform: "translate3d(0, 0px, 0)" },
     from: { opacity: 0, transform: "translate3d(0, 20px, 0)" },
