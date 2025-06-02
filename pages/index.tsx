@@ -8,8 +8,10 @@ import { Button } from "components/Button";
 import { Container, Page } from "components/Page";
 import { Stack } from "components/Stack";
 
-import { allProjectCategories } from "lib/data/allProjectCategories";
-import { allNarrativeProjectSubcategories } from "lib/data/allNarrativeProjectSubcategories";
+import {
+  allProjectCategories,
+  getSubcategoriesForCategory,
+} from "lib/data/allProjectCategories";
 import { globalProps } from "lib/data/globalProps";
 import { homePage } from "lib/data/homePage";
 import { getVideoEmbedLink } from "lib/getVideoEmbedLink";
@@ -21,14 +23,12 @@ import styles from "styles/Home.module.css";
 export const getStaticProps = async () => {
   const global = await globalProps();
   const categories = await allProjectCategories();
-  const narrativeProjectSubcategories = await allNarrativeProjectSubcategories();
   const { projects, hero_video_url, reel_button_text } = await homePage();
 
   return {
     props: {
       global,
       categories,
-      narrativeProjectSubcategories,
       projects,
       heroVideoUrl: hero_video_url,
       reelButtonText: reel_button_text,
@@ -51,11 +51,21 @@ export default function Home(
 
   function handleCategoryButtonClick(category: string | null) {
     setSelectedCategory(category);
+    setSelectedSubcategory(null); // Reset subcategory when category changes
   }
 
   function handleSubcategoryButtonClick(subcategory: string | null) {
     setSelectedSubcategory(subcategory);
   }
+
+  // Get subcategories for the selected category
+  const currentSubcategories = useMemo(() => {
+    if (!selectedCategory) return [];
+    const category = props.categories.find(
+      (cat) => cat.title === selectedCategory
+    );
+    return category?.subcategories || [];
+  }, [selectedCategory, props.categories]);
 
   const filteredProjects = useMemo(() => {
     const filteredByCategory = props.projects.filter(
@@ -63,18 +73,24 @@ export default function Home(
         selectedCategory == null || selectedCategory === project.category
     );
 
-    if (selectedCategory === "Narrative") {
+    if (selectedCategory && currentSubcategories.length > 0) {
       const filteredBySubcategory = filteredByCategory.filter(
         (project) =>
           selectedSubcategory == null ||
-          project.narrative_subcategory === selectedSubcategory
+          project.narrative_subcategory === selectedSubcategory ||
+          project.subcategory === selectedSubcategory
       );
 
       return filteredBySubcategory;
     } else {
       return filteredByCategory;
     }
-  }, [props.projects, selectedCategory, selectedSubcategory]);
+  }, [
+    props.projects,
+    selectedCategory,
+    selectedSubcategory,
+    currentSubcategories,
+  ]);
 
   const transition = useTransition(filteredProjects, {
     // keys: (item) => item.title,
@@ -133,7 +149,7 @@ export default function Home(
                   </Button>
                 ))}
               </Stack>
-              {selectedCategory === "Narrative" ? (
+              {selectedCategory && currentSubcategories.length > 0 ? (
                 <Stack align="center" wrap={false}>
                   <div className={styles.SubcategoryIcon}>
                     <Image src={ArrowRightIcon} alt="" />
@@ -147,7 +163,7 @@ export default function Home(
                     All
                   </Button>
 
-                  {props.narrativeProjectSubcategories.map((subcategory) => {
+                  {currentSubcategories.map((subcategory) => {
                     return (
                       <Button
                         key={subcategory.title}

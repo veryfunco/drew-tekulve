@@ -30,13 +30,11 @@ collections:
         collection: "project_category"
         value_field: title
         search_fields: ["title"]
-      - label: "Narrative Subcategory"
-        name: narrative_subcategory
-        widget: relation
-        collection: narrative_project_subcategory
-        value_field: title
-        search_fields: ["title"]
-        hint: 'Only applicable if category is "Narrative"'
+      - label: "Subcategory"
+        name: subcategory
+        widget: string
+        required: false
+        hint: "Only applicable if the selected category has subcategories. Enter the exact subcategory title."
       - label: Contributors
         name: contributors
         widget: list
@@ -61,13 +59,19 @@ collections:
     format: json
     fields:
       - { label: "Title", name: "title", widget: "string" }
-  - name: "narrative_project_subcategory"
-    label: "Narrative project Subcategory"
-    folder: "content/narrative_project_subcategories"
-    create: true
-    format: json
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Order",
+          name: "order",
+          widget: "number",
+          hint: "Determines the display order of categories (0, 1, 2, etc.)",
+        }
+      - label: "Subcategories"
+        name: "subcategories"
+        widget: "list"
+        required: false
+        hint: "Optional subcategories for this category"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
   - name: "pages"
     label: "Pages"
     files:
