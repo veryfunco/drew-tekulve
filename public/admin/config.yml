@@ -39,8 +39,8 @@ collections:
         name: contributors
         widget: list
         fields:
-          - { label: Name, name: name, widget: string }
           - { label: Role, name: role, widget: string }
+          - { label: Name, name: name, widget: string }
           - {
               label: Website,
               name: website,
