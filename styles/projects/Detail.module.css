@@ -3,22 +3,25 @@
 }
 
 .VideoHeroContainer {
-  height: calc(90vh - var(--navbar-height));
-  max-height: 700px;
-  min-height: 300px;
+  height: 600px;
   padding-top: var(--navbar-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .StillsHeroContainer {
-  height: calc(90vh - var(--navbar-height));
-  max-height: 700px;
-  min-height: 300px;
+  height: 600px;
   padding-top: var(--navbar-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .DetailsContainer {
   margin: var(--spacing-loose) 0 var(--spacing-extra-loose);
   text-align: center;
+  position: relative;
 }
 
 .Title {
@@ -28,18 +31,27 @@
 }
 
 .TitleWithButtonsContainer {
-  align-items: center;
   display: flex;
   justify-content: center;
   margin: auto;
   max-width: 600px;
   width: 100%;
-  gap: 40px;
 }
 
-.TitleButtonPrevious,
+.TitleButtonPrevious {
+  position: absolute;
+  left: calc(50% - 400px);
+  top: 60px;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
 .TitleButtonNext {
-  flex-shrink: 0;
+  position: absolute;
+  right: calc(50% - 400px);
+  top: 60px;
+  transform: translateY(-50%);
+  z-index: 10;
 }
 
 .Subtitle {
@@ -82,7 +94,26 @@
 }
 
 @media screen and (max-width: 600px) {
-  .HeroContainer {
-    height: 65vh;
+  .VideoHeroContainer,
+  .StillsHeroContainer {
+    height: 450px;
+  }
+
+  .TitleButtonPrevious {
+    left: calc(50% - 250px);
+  }
+
+  .TitleButtonNext {
+    right: calc(50% - 250px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .TitleButtonPrevious {
+    left: calc(50% - 180px);
+  }
+
+  .TitleButtonNext {
+    right: calc(50% - 180px);
   }
 }
