@@ -28,10 +28,8 @@ export const getStaticProps = async (
     return { notFound: true };
   }
 
-  const {
-    previous: previousProject,
-    next: nextProject,
-  } = await adjacentProjects(project.id);
+  const { previous: previousProject, next: nextProject } =
+    await adjacentProjects(project.id);
 
   return {
     props: {
@@ -96,83 +94,79 @@ export default function ProjectDetail({
 
       <div className={styles.DetailsContainer}>
         <Stack spacing="extraLoose" direction="column" align="center">
-          <Stack spacing="extraTight" direction="column">
-            <h2 className={styles.Title}>{project.title}</h2>
-            {project.subtitle == null || project.subtitle === "" ? null : (
-              <p className={styles.Subtitle}>{project.subtitle}</p>
-            )}
-          </Stack>
+          <div className={styles.TitleWithButtonsContainer}>
+            <div className={styles.TitleButtonPrevious}>
+              {previousProject == null ? (
+                <Button disabled aria-hidden="true">
+                  &larr;
+                </Button>
+              ) : (
+                <Link
+                  href={`/projects/${previousProject}`}
+                  passHref
+                  legacyBehavior
+                >
+                  <Button as="link" aria-label="View previous project">
+                    &larr;
+                  </Button>
+                </Link>
+              )}
+            </div>
 
-          <Stack direction="column" spacing="tight">
+            <Stack spacing="extraTight" direction="column" align="center">
+              <h2 className={styles.Title}>{project.title}</h2>
+              {project.subtitle == null || project.subtitle === "" ? null : (
+                <p className={styles.Subtitle}>{project.subtitle}</p>
+              )}
+            </Stack>
+
+            <div className={styles.TitleButtonNext}>
+              {nextProject == null ? (
+                <Button disabled aria-hidden="true">
+                  &rarr;
+                </Button>
+              ) : (
+                <Link href={`/projects/${nextProject}`} passHref legacyBehavior>
+                  <Button as="link" aria-label="View next project">
+                    &rarr;
+                  </Button>
+                </Link>
+              )}
+            </div>
+          </div>
+
+          <Stack direction="column">
             <p>
               {project.year} – {project.category}
             </p>
+            {project.contributors == null
+              ? null
+              : project.contributors.map(({ name, role, website }) => (
+                  <div key={`${name}-${role}`} className={styles.Contributor}>
+                    <p>{role}</p>
+                    {website ? (
+                      <p style={{ textTransform: "uppercase" }}>
+                        <a
+                          href={website}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={styles.ContributorLink}
+                        >
+                          {name}
+                        </a>
+                      </p>
+                    ) : (
+                      <p style={{ textTransform: "uppercase" }}>{name}</p>
+                    )}
+                  </div>
+                ))}
             {project.description == null ||
             project.description === "" ? null : (
               <p className={styles.Description}>{project.description}</p>
             )}
           </Stack>
-
-          <Stack direction="column">
-            {project.contributors == null
-              ? null
-              : project.contributors.map(({ name, role }) => (
-                  <div key={`${name}-${role}`} className={styles.Contributor}>
-                    <p>{role}</p>
-                    <p style={{ textTransform: "uppercase" }}>{name}</p>
-                  </div>
-                ))}
-          </Stack>
         </Stack>
       </div>
-
-      {nextProject == null && previousProject == null ? (
-        <div className={styles.NavButtonsContainer}>
-          <div />
-          <div className={styles.NavText}>
-            <Link href="/">See more projects &rarr;</Link>
-          </div>
-          <div />
-        </div>
-      ) : (
-        <div className={styles.NavButtonsContainer}>
-          <div className={styles.ButtonPrevious}>
-            {previousProject == null ? (
-              <Button disabled aria-hidden="true">
-                &larr;
-              </Button>
-            ) : (
-              <Link
-                href={`/projects/${previousProject}`}
-                passHref
-                legacyBehavior
-              >
-                <Button as="link" aria-label="View previous project">
-                  &larr;
-                </Button>
-              </Link>
-            )}
-          </div>
-
-          <div className={styles.NavText}>
-            <p>See more projects</p>
-          </div>
-
-          <div className={styles.ButtonNext}>
-            {nextProject == null ? (
-              <Button disabled aria-hidden="true">
-                &rarr;
-              </Button>
-            ) : (
-              <Link href={`/projects/${nextProject}`} passHref legacyBehavior>
-                <Button as="link" aria-label="View next project">
-                  &rarr;
-                </Button>
-              </Link>
-            )}
-          </div>
-        </div>
-      )}
     </Page>
   );
 }

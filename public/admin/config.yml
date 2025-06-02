@@ -41,6 +41,13 @@ collections:
         fields:
           - { label: Name, name: name, widget: string }
           - { label: Role, name: role, widget: string }
+          - {
+              label: Website,
+              name: website,
+              widget: string,
+              required: false,
+              hint: "Optional link to contributor's website",
+            }
       - label: Stills
         name: stills
         widget: list

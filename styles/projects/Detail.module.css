@@ -24,6 +24,21 @@
   text-transform: uppercase;
 }
 
+.TitleWithButtonsContainer {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  max-width: 600px;
+  width: 100%;
+  gap: 40px;
+}
+
+.TitleButtonPrevious,
+.TitleButtonNext {
+  flex-shrink: 0;
+}
+
 .Subtitle {
   text-transform: uppercase;
 }
@@ -52,6 +67,15 @@
 .Description {
   margin: auto;
   max-width: 450px;
+}
+
+.ContributorLink {
+  text-decoration: underline;
+  transition: opacity 0.2s ease;
+}
+
+.ContributorLink:hover {
+  opacity: 0.7;
 }
 
 @media screen and (max-width: 600px) {
