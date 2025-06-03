@@ -174,7 +174,7 @@ export function Page({
 
           <div className={styles.CopyrightContainer}>
             &copy;{new Date().getFullYear()} All Rights Reserved <br />
-            Tekulve LLC
+            Lemus Film Company LLC
           </div>
         </footer>
       </div>
