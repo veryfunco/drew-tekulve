@@ -36,7 +36,7 @@ export function ScrollyLogo({ scrollAmount }: Props) {
     >
       <Link href="/">
         <animated.img
-          src="/images/logo.svg"
+          src="/images/logo-dt.svg"
           style={{
             width: animatedStyles.width,
             maxWidth: "85vw",

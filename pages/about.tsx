@@ -15,12 +15,8 @@ import styles from "styles/About.module.css";
 
 export const getStaticProps = async () => {
   const global = await globalProps();
-  const {
-    description,
-    clients_lead,
-    clients,
-    contact_lead,
-  } = await aboutPage();
+  const { description, clients_lead, clients, contact_lead } =
+    await aboutPage();
 
   return {
     props: {
@@ -75,9 +71,9 @@ export default function About(
   return (
     <Page
       title="About"
-      background="blue"
+      background="green"
       navbarLogoType="scrolly"
-      navbarBackgroundColor="blue"
+      navbarBackgroundColor="green"
     >
       <div className={styles.HeroContainer}></div>
 

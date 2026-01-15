@@ -17,7 +17,7 @@ const ScrollyLogo = dynamic(() => import("./components/ScrollyLogo"), {
 const MOBILE_NAV_BREAKPOINT_WIDTH = 700;
 
 interface Props {
-  backgroundColor?: "black" | "blue";
+  backgroundColor?: "black" | "green";
   logoType?: "static" | "scrolly";
 }
 
@@ -63,8 +63,8 @@ export function Navbar({
   let background: string;
   if (backgroundColor === "black") {
     background = "var(--color-black)";
-  } else if (backgroundColor === "blue") {
-    background = "var(--color-blue)";
+  } else if (backgroundColor === "green") {
+    background = "var(--color-green)";
   } else {
     throw new Error(`Unrecognized color ${backgroundColor}`);
   }
@@ -90,7 +90,7 @@ export function Navbar({
           <div className={styles.StaticLogoContainer}>
             <Link href="/">
               <img
-                src="/images/logo.svg"
+                src="/images/logo-dt.svg"
                 style={{ width: 150 }}
                 alt="Drew Tekulve"
               />

@@ -13,7 +13,7 @@ import styles from "./Page.module.css";
 
 interface Props {
   children: ReactNode;
-  background?: "black" | "blue";
+  background?: "black" | "green";
   title?: string;
   padding?: boolean;
   navbarLogoType?: Parameters<typeof Navbar>[0]["logoType"];
@@ -69,7 +69,7 @@ export function Page({
 
         <meta
           name="theme-color"
-          content={background === "blue" ? "#1c19c7" : "#000000"}
+          content={background === "green" ? "#295D41" : "#000000"}
         />
 
         <link
@@ -90,7 +90,7 @@ export function Page({
       <div
         className={classnames(
           styles.Page,
-          background === "blue" && styles["Page-blue"]
+          background === "green" && styles["Page-green"]
         )}
       >
         <div
